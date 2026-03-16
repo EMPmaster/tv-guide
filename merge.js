@@ -1,33 +1,42 @@
 const fs = require('fs');
 const path = require('path');
 
-const XML_FOLDER = './xml/';
-const FINAL_FILE = './merged.xml';
+const XML_DIR = path.join(__dirname, 'xml');
+const OUTPUT_FILE = path.join(__dirname, 'merged_guide.xml');
 
 function merge() {
-  if (!fs.existsSync(XML_FOLDER)) {
-    console.error('[Merge] ❌ xml/ folder not found. Run scrapers first!');
-    process.exit(1);
+  console.log('[Merge] Starting merge process...');
+  
+  if (!fs.existsSync(XML_DIR)) {
+      console.log('[Merge] No xml directory found. Nothing to merge.');
+      return;
   }
 
-  const files = fs.readdirSync(XML_FOLDER).filter(f => f.endsWith('.xml'));
+  let combinedContent = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Merged Master Scraper">\n`;
+  
+  const files = fs.readdirSync(XML_DIR).filter(f => f.endsWith('.xml'));
+  
   if (files.length === 0) {
-    console.error('[Merge] ❌ No XML files found in xml/ folder.');
-    process.exit(1);
+      console.log('[Merge] No XML files found in xml/ directory.');
+      return;
   }
-
-  let combined = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Multi-Source EPG">\n`;
 
   files.forEach(file => {
-    console.log(`[Merge] Adding ${file}...`);
-    let content = fs.readFileSync(path.join(XML_FOLDER, file), 'utf-8');
-    content = content.replace(/<\?xml.*?\?>/g, '').replace(/<tv[^>]*>/g, '').replace(/<\/tv>/g, '').trim();
-    combined += content + '\n';
+    console.log(`[Merge] Reading ${file}...`);
+    let content = fs.readFileSync(path.join(XML_DIR, file), 'utf-8');
+    
+    // Strip out XML declarations and <tv> tags so we only get the inner <channel> and <programme> blocks
+    content = content.replace(/<\?xml.*?\?>/g, '')
+                     .replace(/<tv.*?>/g, '')
+                     .replace(/<\/tv>/g, '')
+                     .trim();
+                     
+    combinedContent += content + '\n';
   });
 
-  combined += `</tv>`;
-  fs.writeFileSync(FINAL_FILE, combined, 'utf-8');
-  console.log(`[Merge] ✅ Done! Saved to ${FINAL_FILE} (${files.length} source(s) merged)`);
+  combinedContent += '</tv>';
+  fs.writeFileSync(OUTPUT_FILE, combinedContent, 'utf-8');
+  console.log(`[Merge] Successfully merged ${files.length} files into ${OUTPUT_FILE}`);
 }
 
 merge();
