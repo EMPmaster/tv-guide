@@ -2,9 +2,8 @@ name: Generate EPG
 
 on:
   schedule:
-    # Runs at minute 0 past every 12th hour
     - cron: '0 */12 * * *'
-  workflow_dispatch: # This allows you to click a button to run it manually!
+  workflow_dispatch:
 
 jobs:
   build:
@@ -19,13 +18,16 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run EPG Scraper
-        run: node epg.js
+      - name: Run Mako scraper
+        run: node scrapers/mako.js
+
+      - name: Merge all guides
+        run: node scrapers/merge.js
 
       - name: Commit and Push changes
         run: |
           git config --global user.name "epg-bot"
           git config --global user.email "bot@epg.local"
-          git add custom_guide.xml
+          git add merged.xml
           git diff --quiet && git diff --staged --quiet || git commit -m "Automated EPG Update"
           git push
