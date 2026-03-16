@@ -1,24 +1,33 @@
 const fs = require('fs');
 const path = require('path');
 
-const scraperFolder = './scrapers/';
-const finalFile = './custom_guide.xml';
+const XML_FOLDER = './xml/';
+const FINAL_FILE = './custom_guide.xml';
 
 function merge() {
-  let combinedContent = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n';
-  
-  const files = fs.readdirSync(scraperFolder).filter(f => f.endsWith('.xml'));
-  
+  if (!fs.existsSync(XML_FOLDER)) {
+    console.error('[Merge] ❌ xml/ folder not found. Run scrapers first!');
+    process.exit(1);
+  }
+
+  const files = fs.readdirSync(XML_FOLDER).filter(f => f.endsWith('.xml'));
+  if (files.length === 0) {
+    console.error('[Merge] ❌ No XML files found in xml/ folder.');
+    process.exit(1);
+  }
+
+  let combined = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Multi-Source EPG">\n`;
+
   files.forEach(file => {
-    let content = fs.readFileSync(path.join(scraperFolder, file), 'utf-8');
-    // Remove the <?xml...?> and <tv> tags from individual files so they fit in the master
-    content = content.replace(/<\?xml.*\?>/g, '').replace(/<tv.*>/g, '').replace(/<\/tv>/g, '');
-    combinedContent += content;
+    console.log(`[Merge] Adding ${file}...`);
+    let content = fs.readFileSync(path.join(XML_FOLDER, file), 'utf-8');
+    content = content.replace(/<\?xml.*?\?>/g, '').replace(/<tv[^>]*>/g, '').replace(/<\/tv>/g, '').trim();
+    combined += content + '\n';
   });
 
-  combinedContent += '</tv>';
-  fs.writeFileSync(finalFile, combinedContent);
-  console.log("Merged all guides into custom_guide.xml");
+  combined += `</tv>`;
+  fs.writeFileSync(FINAL_FILE, combined, 'utf-8');
+  console.log(`[Merge] ✅ Done! Saved to ${FINAL_FILE} (${files.length} source(s) merged)`);
 }
 
 merge();
