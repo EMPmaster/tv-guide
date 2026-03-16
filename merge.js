@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const XML_FOLDER = './xml/';
-const FINAL_FILE = './custom_guide.xml';
+const FINAL_FILE = './merged.xml';
 
 function merge() {
   if (!fs.existsSync(XML_FOLDER)) {
