@@ -5,6 +5,10 @@ on:
     - cron: '0 */12 * * *'
   workflow_dispatch: 
 
+# This completely disables that yellow Node 20 deprecation warning
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,14 +20,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24' 
+          node-version: '20'
 
       - name: Run Legacy Safety Scraper 
         run: node epg.js
 
       - name: Run Modular Scrapers
-        run: |
-          node scrapers/mako.js
+        run: node scrapers/mako.js
           
       - name: Merge Modular XML Files
         run: node merge.js
@@ -32,6 +35,10 @@ jobs:
         run: |
           git config --global user.name "epg-bot"
           git config --global user.email "bot@epg.local"
-          git add custom_guide.xml merged_guide.xml xml/
+          
+          # The Magic Fix: Pull any recent changes from the website before pushing!
+          git pull --rebase origin main
+          
+          git add .
           git diff --quiet && git diff --staged --quiet || git commit -m "Automated Data Refresh"
           git push
