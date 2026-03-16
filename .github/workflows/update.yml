@@ -16,13 +16,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Run Mako scraper
         run: node scrapers/mako.js
 
       - name: Merge all guides
-        run: node scrapers/merge.js
+        run: node merge.js
 
       - name: Commit and Push changes
         run: |
