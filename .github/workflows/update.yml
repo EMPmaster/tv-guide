@@ -5,7 +5,7 @@ on:
     - cron: '0 */12 * * *'
   workflow_dispatch: 
 
-# This completely disables that yellow Node 20 deprecation warning
+# This completely disables that yellow Node 20 deprecation warning!
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24' 
 
       - name: Run Legacy Safety Scraper 
         run: node epg.js
@@ -36,9 +36,12 @@ jobs:
           git config --global user.name "epg-bot"
           git config --global user.email "bot@epg.local"
           
-          # The Magic Fix: Pull any recent changes from the website before pushing!
+          # THE MAGIC FIX: This checks for any changes YOU made and downloads them before saving!
           git pull --rebase origin main
           
+          # Add all files, including the new xml/ folder
           git add .
+          
+          # Only save if something actually changed
           git diff --quiet && git diff --staged --quiet || git commit -m "Automated Data Refresh"
           git push
