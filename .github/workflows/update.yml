@@ -3,7 +3,7 @@ name: Generate EPG
 on:
   schedule:
     - cron: '0 */12 * * *'
-  workflow_dispatch:
+  workflow_dispatch: 
 
 jobs:
   build:
@@ -16,21 +16,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24' 
 
-      - name: Create xml directory
-        run: mkdir -p xml
+      - name: Run Legacy Safety Scraper 
+        run: node epg.js
 
-      - name: Run Mako scraper
-        run: node scrapers/mako.js
-
-      - name: Merge all guides
+      - name: Run Modular Scrapers
+        run: |
+          node scrapers/mako.js
+          
+      - name: Merge Modular XML Files
         run: node merge.js
 
       - name: Commit and Push changes
         run: |
           git config --global user.name "epg-bot"
           git config --global user.email "bot@epg.local"
-          git add merged.xml
-          git diff --quiet && git diff --staged --quiet || git commit -m "Automated EPG Update"
+          git add custom_guide.xml merged_guide.xml xml/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Automated Data Refresh"
           git push
