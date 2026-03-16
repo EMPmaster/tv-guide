@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Create xml directory
+        run: mkdir -p xml
+
       - name: Run Mako scraper
         run: node scrapers/mako.js
 
