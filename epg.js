@@ -1,7 +1,6 @@
 const fs = require('fs');
 
 const MAKO_API_URL = 'https://www.mako.co.il/AjaxPage?jspName=EPGResponse.jsp';
-const ROKUIL_URL = 'https://raw.githubusercontent.com/RokuIL/Live-From-Israel/master/EPG/WGP/guide.xml';
 const OUTPUT_FILE = './custom_guide.xml'; 
 
 const keshetDatabase = {
@@ -34,9 +33,10 @@ async function buildGuide() {
     const jsonData = await response.json();
     const programs = jsonData.programs;
 
+    // If they block us or the format changes, just log the error and exit gracefully.
     if (!programs || !Array.isArray(programs)) {
-        console.warn(`[Warning] Native API blocked. Falling back to RokuIL...`);
-        return await buildFallbackGuide();
+        console.error(`[Error] Native API blocked or invalid format. No data generated.`);
+        return;
     }
 
     let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Native Mako Scraper">\n`;
@@ -95,70 +95,8 @@ async function buildGuide() {
     console.log(`[Success] Guide saved to ${OUTPUT_FILE}`);
 
   } catch (error) {
-    console.error(`[Error] Native fetch threw an error. Triggering fallback...`);
-    await buildFallbackGuide();
+    console.error(`[Error] Native fetch threw an error:`, error.message);
   }
 }
 
-async function buildFallbackGuide() {
-  try {
-    console.log(`[EPG] Fetching RokuIL XMLTV (Fallback)...`);
-    const response = await fetch(ROKUIL_URL);
-    let xml = await response.text();
-
-    let newXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Fallback RokuIL Scraper">\n`;
-    newXml += `  <channel id="Keshet 12">\n    <display-name>Keshet 12</display-name>\n  </channel>\n`;
-
-    const programmeRegex = /<programme[^>]*channel="Keshet 12"[^>]*>([\s\S]*?)<\/programme>/g;
-    let match;
-
-    while ((match = programmeRegex.exec(xml)) !== null) {
-      let rawContent = match[1];
-      let attributes = match[0].match(/<programme([^>]+)>/)[1]; 
-
-      let startMatch = attributes.match(/start="(\d{4})(\d{2})(\d{2})/);
-      let year = startMatch ? startMatch[1] : '2026';
-      let month = startMatch ? startMatch[2] : '01';
-      let day = startMatch ? startMatch[3] : '01';
-
-      let titleMatch = rawContent.match(/<title[^>]*>(.*?)<\/title>/);
-      let descMatch = rawContent.match(/<desc[^>]*>(.*?)<\/desc>/);
-      let rawTitle = titleMatch ? titleMatch[1] : 'Unknown';
-      let description = descMatch ? descMatch[1] : '';
-      let showTitle = rawTitle;
-      let episodeName = '';
-
-      if (rawTitle.includes(' - ')) {
-        let parts = rawTitle.split(' - ');
-        showTitle = parts[0].trim();
-        episodeName = parts.slice(1).join(' - ').trim();
-      }
-
-      let category = 'Series';
-      let foundInDb = false;
-      for (const [knownShow, data] of Object.entries(keshetDatabase)) {
-        if (showTitle.includes(knownShow)) { category = data.type; foundInDb = true; break; }
-      }
-      if (!foundInDb) {
-        if (newsKeywords.some(kw => showTitle.includes(kw))) category = 'News';
-        else if (showTitle.includes('סרט')) category = 'Movie';
-      }
-
-      newXml += `  <programme${attributes}>\n    <title lang="he">${showTitle}</title>\n`;
-      if (episodeName) newXml += `    <sub-title lang="he">${episodeName}</sub-title>\n`;
-      if (description) newXml += `    <desc lang="he">${description}</desc>\n`;
-      newXml += `    <category lang="en">${category}</category>\n`;
-      if (category !== 'Movie') newXml += `    <episode-num system="original-air-date">${year}-${month}-${day}</episode-num>\n`;
-      newXml += `  </programme>\n`;
-    }
-
-    newXml += `</tv>`;
-    fs.writeFileSync(OUTPUT_FILE, newXml, 'utf-8');
-    console.log(`[Success] Fallback Guide saved to ${OUTPUT_FILE}`);
-  } catch (error) {
-     console.error('Fatal Error: Both Native and Fallback EPG failed!', error);
-  }
-}
-
-// Single execution for Cloud automation
 buildGuide();
