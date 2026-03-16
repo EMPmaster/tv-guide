@@ -1,0 +1,31 @@
+name: Generate EPG
+
+on:
+  schedule:
+    # Runs at minute 0 past every 12th hour
+    - cron: '0 */12 * * *'
+  workflow_dispatch: # This allows you to click a button to run it manually!
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run EPG Scraper
+        run: node epg.js
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "epg-bot"
+          git config --global user.email "bot@epg.local"
+          git add custom_guide.xml
+          git diff --quiet && git diff --staged --quiet || git commit -m "Automated EPG Update"
+          git push
