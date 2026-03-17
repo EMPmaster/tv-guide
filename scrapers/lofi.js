@@ -21,11 +21,9 @@ function buildGuide() {
   perfectXml += `  <channel id="LofiGirl">\n    <display-name>Lofi Girl Radio</display-name>\n  </channel>\n`;
 
   const now = new Date();
-  
-  // FIX 1: Start from 24 hours AGO to ensure there are zero timezone gaps right now
+  // Start from 24 hours AGO to ensure there are zero timezone gaps right now
   const startOfDay = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 1, 0, 0, 0));
 
-  // FIX 2: Generate 42 blocks of 4-hours each (Exactly 7 days of safe, manageable blocks for Plex)
   for (let i = 0; i < 42; i++) { 
      let blockStart = new Date(startOfDay.getTime() + (i * 4 * 60 * 60 * 1000));
      let blockEnd = new Date(blockStart.getTime() + (4 * 60 * 60 * 1000));
@@ -35,11 +33,15 @@ function buildGuide() {
 
      perfectXml += `  <programme start="${start}" stop="${stop}" channel="LofiGirl">\n`;
      perfectXml += `    <title lang="en">Lofi Girl Radio</title>\n`;
-     // Per your request!
-     perfectXml += `    <sub-title lang="en">Live from YouTube</sub-title>\n`;
+     // The Subtitle you wanted
+     perfectXml += `    <sub-title lang="en">🎵 Live from YouTube</sub-title>\n`;
      perfectXml += `    <desc lang="en">A 24/7 continuous stream of lo-fi hip hop beats. Perfect for studying, working, or relaxing.</desc>\n`;
      perfectXml += `    <category lang="en">Music</category>\n`;
      perfectXml += `    <icon src="${LOFI_LOGO}" />\n`;
+     
+     // THE MAGIC FIX: Forces Plex into TV Show mode so it actually displays the Subtitle
+     perfectXml += `    <episode-num system="xmltv_ns">0.${i}.0/1</episode-num>\n`;
+     
      perfectXml += `  </programme>\n`;
   }
 
