@@ -9,7 +9,7 @@ if (!fs.existsSync(XML_DIR)){
 }
 const OUTPUT_FILE = path.join(XML_DIR, 'cnbc.xml'); 
 
-// A reliable .svg render of the CNBC logo directly from Wikimedia servers
+// A reliable .png render of the CNBC logo
 const FALLBACK_LOGO = "https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png";
 
 function getXMLTVTime(epochMs) {
@@ -49,14 +49,14 @@ async function buildGuide() {
       let showTitle = item.title || 'CNBC Broadcast';
       let description = item.description ? item.description.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
       
-      // PLEX FIX: Force a Season (Year) and Episode (Month+Day)
-      // This mathematically prevents Plex from classifying it as a movie.
+      // EPG FIX: Force a Season (Year) and Episode (Month+Day)
+      // This mathematically prevents media servers from classifying it as a movie.
       let fakeSeason = d.getUTCFullYear();
       let fakeEpisode = `${d.getUTCMonth() + 1}${String(d.getUTCDate()).padStart(2, '0')}`;
       
       perfectXml += `  <programme start="${start}" stop="${stop}" channel="CNBC">\n`;
       perfectXml += `    <title lang="en">${showTitle}</title>\n`;
-      // Plex requires a sub-title to reliably flag it as a TV Show
+      // DVRs require a sub-title to reliably flag it as a TV Show
       perfectXml += `    <sub-title lang="en">Live Broadcast</sub-title>\n`; 
       if (description) perfectXml += `    <desc lang="en">${description}</desc>\n`;
       perfectXml += `    <category lang="en">News</category>\n`;
