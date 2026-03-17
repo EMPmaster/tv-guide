@@ -48,7 +48,6 @@ async function buildGuide() {
       let showTitle = item.title || 'CNBC Broadcast';
       let description = item.description ? item.description.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
       
-      // -- DYNAMIC CATEGORY LOGIC --
       let rawGenre = item.displayGenre || 'News';
       let cleanGenre = rawGenre === 'Bus./financial' ? 'Business' : rawGenre;
 
@@ -63,10 +62,15 @@ async function buildGuide() {
       
       perfectXml += `  <programme start="${start}" stop="${stop}" channel="CNBC">\n`;
       perfectXml += `    <title lang="en">${showTitle}</title>\n`;
-      perfectXml += `    <sub-title lang="en">Live Broadcast</sub-title>\n`; 
+      
+      // THE FIX: Only add a subtitle if CNBC provides a real secondary title. No more "Live Broadcast" spam!
+      if (item.secondaryTitle) {
+          let cleanSub = item.secondaryTitle.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          perfectXml += `    <sub-title lang="en">${cleanSub}</sub-title>\n`; 
+      }
+      
       if (description) perfectXml += `    <desc lang="en">${description}</desc>\n`;
       
-      // Inject the dynamic genres into the XML
       perfectXml += `    <category lang="en">${cleanGenre}</category>\n`;
       if (cleanGenre === 'Business') perfectXml += `    <category lang="en">News</category>\n`;
       perfectXml += `    <category lang="en">Series</category>\n`;
