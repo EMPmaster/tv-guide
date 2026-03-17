@@ -3,7 +3,8 @@ const path = require('path');
 const crypto = require('crypto');
 const sharp = require('sharp');
 
-const KAN_API_URL = 'https://www.kan.org.il/umbraco/surface/LoadBroadcastSchedule/LoadSchedule?channelId=4444&currentPageId=1517';
+// The base API URL without a date parameter
+const KAN_BASE_API = 'https://www.kan.org.il/umbraco/surface/LoadBroadcastSchedule/LoadSchedule?channelId=4444&currentPageId=1517';
 
 // Folders
 const XML_DIR = path.join(__dirname, '../xml');
@@ -31,7 +32,6 @@ function formatXMLTV(dateStr) {
     return `${year}${month}${day}${hh}${mm}${ss} +0000`;
 }
 
-// Cleans up images older than 7 days so your GitHub repo doesn't bloat
 function cleanupOldImages() {
     const files = fs.readdirSync(IMAGES_DIR);
     const now = Date.now();
@@ -47,16 +47,13 @@ function cleanupOldImages() {
     });
 }
 
-// Downloads and shrinks the image
 async function processImage(url) {
     if (!url) return null;
     
-    // Create a unique filename based on the URL
     const hash = crypto.createHash('md5').update(url).digest('hex');
     const filename = `${hash}.jpg`;
     const filePath = path.join(IMAGES_DIR, filename);
 
-    // If we already downloaded this image recently, skip downloading it again
     if (!fs.existsSync(filePath)) {
         try {
             const response = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
@@ -65,7 +62,6 @@ async function processImage(url) {
             const arrayBuffer = await response.arrayBuffer();
             const buffer = Buffer.from(arrayBuffer);
             
-            // Resize to 400px wide and save
             await sharp(buffer)
                 .resize(400, null, { withoutEnlargement: true })
                 .jpeg({ quality: 80 })
@@ -86,38 +82,64 @@ async function buildGuide() {
     console.log(`[Kan 11] Cleaning old images...`);
     cleanupOldImages();
 
-    console.log(`[Kan 11] Fetching HTML schedule...`);
-    const response = await fetch(KAN_API_URL, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
-    });
-
-    const html = await response.text();
-    const blocks = html.split('class="results-item').slice(1);
     const programs = [];
 
-    blocks.forEach(block => {
-        const timeMatch = block.match(/data-date-utc="([^"]+)"/);
-        const titleMatch = block.match(/class="program-title">([^<]+)<\/h3>/);
-        const descMatch = block.match(/class="program-description">([\s\S]*?)<\/div>/);
-        const imgMatch = block.match(/src="([^"]+)"/);
+    // --- NEW: 3-DAY LOOKAHEAD LOOP ---
+    for (let daysAhead = 0; daysAhead < 3; daysAhead++) {
+        const d = new Date();
+        d.setDate(d.getDate() + daysAhead);
+        
+        // Format date to DD-MM-YYYY for Kan's API
+        const dayStr = String(d.getDate()).padStart(2, '0') + '-' + 
+                       String(d.getMonth() + 1).padStart(2, '0') + '-' + 
+                       d.getFullYear();
+                       
+        const fetchUrl = `${KAN_BASE_API}&day=${dayStr}`;
+        console.log(`[Kan 11] Fetching HTML schedule for ${dayStr}...`);
 
-        if (timeMatch && titleMatch) {
-            let startUtc = timeMatch[1];
-            let title = titleMatch[1].trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            let desc = descMatch ? descMatch[1].trim().replace(/<[^>]*>?/gm, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
-            
-            let img = imgMatch ? imgMatch[1] : '';
-            if (img) {
-                img = img.split('?')[0];
-                if (!img.startsWith('http')) img = 'https://www.kan.org.il' + img;
-                img = img.replace('https://mobapi.kan.org.il', 'https://www.kan.org.il');
+        const response = await fetch(fetchUrl, {
+          headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+        });
+
+        const html = await response.text();
+        const blocks = html.split('class="results-item').slice(1);
+
+        blocks.forEach(block => {
+            const timeMatch = block.match(/data-date-utc="([^"]+)"/);
+            const titleMatch = block.match(/class="program-title">([^<]+)<\/h3>/);
+            const descMatch = block.match(/class="program-description">([\s\S]*?)<\/div>/);
+            const imgMatch = block.match(/src="([^"]+)"/);
+
+            if (timeMatch && titleMatch) {
+                let startUtc = timeMatch[1];
+                let title = titleMatch[1].trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                let desc = descMatch ? descMatch[1].trim().replace(/<[^>]*>?/gm, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
+                
+                let img = imgMatch ? imgMatch[1] : '';
+                if (img) {
+                    img = img.split('?')[0];
+                    if (!img.startsWith('http')) img = 'https://www.kan.org.il' + img;
+                    img = img.replace('https://mobapi.kan.org.il', 'https://www.kan.org.il');
+                }
+
+                // Prevent overlapping duplicates across days
+                if (!programs.find(p => p.start === startUtc && p.title === title)) {
+                    programs.push({ 
+                        start: startUtc, 
+                        sortKey: formatXMLTV(startUtc), // Added for perfect chronological sorting
+                        title: title, 
+                        desc: desc, 
+                        rawIcon: img 
+                    });
+                }
             }
+        });
+    }
 
-            programs.push({ start: startUtc, title: title, desc: desc, rawIcon: img });
-        }
-    });
+    // Sort all 3 days chronologically so the EPG flows perfectly
+    programs.sort((a, b) => a.sortKey.localeCompare(b.sortKey));
 
-    console.log(`[Kan 11] Processing ${programs.length} images...`);
+    console.log(`[Kan 11] Processing ${programs.length} total programs...`);
     
     let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Kan 11 Scraper">\n`;
     perfectXml += `  <channel id="Kan 11">\n    <display-name>Kan 11</display-name>\n  </channel>\n`;
@@ -126,8 +148,8 @@ async function buildGuide() {
         const item = programs[i];
         const nextItem = programs[i + 1];
         
-        const startXml = formatXMLTV(item.start);
-        const stopXml = nextItem ? formatXMLTV(nextItem.start) : formatXMLTV(item.start.replace(/(\d+):/, (match, p1) => (parseInt(p1)+1) + ":"));
+        const startXml = item.sortKey;
+        const stopXml = nextItem ? nextItem.sortKey : formatXMLTV(item.start.replace(/(\d+):/, (match, p1) => (parseInt(p1)+1) + ":"));
         const airDate = item.start.split(' ')[0].split('.').reverse().map(n => n.padStart(2, '0')).join('-');
 
         let category = 'Series';
@@ -135,7 +157,6 @@ async function buildGuide() {
         if (isNews) category = 'News';
         else if (item.title.includes('סרט')) category = 'Movie';
 
-        // Actually download/resize the image and get the GitHub URL back
         const finalIconUrl = await processImage(item.rawIcon);
 
         perfectXml += `  <programme start="${startXml}" stop="${stopXml}" channel="Kan 11">\n`;
