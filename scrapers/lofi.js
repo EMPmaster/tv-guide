@@ -18,7 +18,7 @@ function buildGuide() {
   console.log(`[Lofi] Generating continuous EPG...`);
   
   let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Lofi Generator">\n`;
-  perfectXml += `  <channel id="LofiGirl">\n    <display-name>Lofi Girl Radio</display-name>\n  </channel>\n`;
+  perfectXml += `  <channel id="Lofi Girl">\n    <display-name>Lofi Girl Radio</display-name>\n  </channel>\n`;
 
   const now = new Date();
   const startOfDay = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 1, 0, 0, 0));
