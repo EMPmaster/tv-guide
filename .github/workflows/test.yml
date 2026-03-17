@@ -16,14 +16,17 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install Dependencies
+        run: npm install
+
       - name: Run Specific Scraper
         run: |
           node scrapers/kan.js
 
-      - name: Commit and Push Test XML
+      - name: Commit and Push Test XML & Images
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add xml/*.xml
-          git commit -m "🧪 Test Run: Updated kan.xml" || true
+          git add xml/*.xml images/
+          git commit -m "🧪 Test Run: Updated kan.xml and downloaded images" || true
           git push
