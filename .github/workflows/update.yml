@@ -25,8 +25,9 @@ jobs:
         run: node epg.js
 
       - name: Run Modular Scrapers
-        run: node scrapers/mako.js
-        node scrapers/cnbc.js
+        run: |
+          node scrapers/mako.js
+          node scrapers/cnbc.js
           
       - name: Merge Modular XML Files
         run: node merge.js
@@ -36,14 +37,7 @@ jobs:
           git config --global user.name "epg-bot"
           git config --global user.email "bot@epg.local"
           
-          # 1. Stage the new XML files
           git add .
-          
-          # 2. Save (Commit) the files locally first!
           git diff --quiet && git diff --staged --quiet || git commit -m "Automated Data Refresh"
-          
-          # 3. NOW safely check the cloud for any changes you made manually
           git pull --rebase origin main
-          
-          # 4. Upload everything to GitHub
           git push
