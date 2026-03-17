@@ -9,6 +9,9 @@ if (!fs.existsSync(XML_DIR)){
 }
 const OUTPUT_FILE = path.join(XML_DIR, 'kan.xml'); 
 
+// Added the Keyword list to catch News broadcasts!
+const newsKeywords = ['חדשות', 'מבזק', 'מהדורה', 'משדר', 'מהצד השני', 'כאן'];
+
 function formatXMLTV(dateStr) {
     const parts = dateStr.split(' ');
     const dateParts = parts[0].split('.');
@@ -44,30 +47,43 @@ async function buildGuide() {
 
         if (timeMatch && titleMatch) {
             let startUtc = timeMatch[1];
-            let title = titleMatch[1].trim();
+            let rawTitle = titleMatch[1].trim();
             let desc = descMatch ? descMatch[1].trim().replace(/<[^>]*>?/gm, '') : '';
             
-            // --- THE IMAGE CAR WASH ---
+            // --- MAKO TITLE SPLITTER LOGIC ---
+            let showTitle = rawTitle;
+            let episodeName = '';
+            const dashRegex = /\s*[-–]\s*/;
+            if (dashRegex.test(rawTitle)) {
+                let parts = rawTitle.split(dashRegex);
+                showTitle = parts[0].trim();
+                episodeName = parts.slice(1).join(' - ').trim();
+            }
+
+            // --- MAKO CATEGORY LOGIC ---
+            let category = 'Series';
+            let isNews = newsKeywords.some(keyword => showTitle.includes(keyword));
+            if (isNews) {
+                category = 'News';
+            } else if (showTitle.includes('סרט')) {
+                category = 'Movie';
+            }
+
+            // --- IMAGE CLEANER ---
             let img = imgMatch ? imgMatch[1] : '';
             if (img) {
-                // 1. Strip the resizing query so it ends cleanly in .jpg
-                img = img.split('?')[0];
-                
-                // 2. Force it off the restricted mobapi domain and onto the public www domain
-                img = img.replace('https://mobapi.kan.org.il', 'https://www.kan.org.il');
-                
-                // 3. Fix relative paths
+                img = img.split('?')[0]; // Strip resizing junk
                 if (!img.startsWith('http')) {
                     img = 'https://www.kan.org.il' + img;
                 }
-                
-                // 4. Safely URL-encode any Hebrew characters so Plex doesn't crash
-                img = encodeURI(decodeURI(img));
+                img = encodeURI(decodeURI(img)); // Safe encode
             }
 
             programs.push({
                 start: startUtc,
-                title: title,
+                showTitle: showTitle,
+                episodeName: episodeName,
+                category: category,
                 desc: desc,
                 icon: img
             });
@@ -87,10 +103,11 @@ async function buildGuide() {
         const airDate = item.start.split(' ')[0].split('.').reverse().map(n => n.padStart(2, '0')).join('-');
 
         perfectXml += `  <programme start="${startXml}" stop="${stopXml}" channel="Kan 11">\n`;
-        perfectXml += `    <title lang="he">${item.title}</title>\n`;
+        perfectXml += `    <title lang="he">${item.showTitle}</title>\n`;
+        if (item.episodeName) perfectXml += `    <sub-title lang="he">${item.episodeName}</sub-title>\n`;
         if (item.desc) perfectXml += `    <desc lang="he">${item.desc}</desc>\n`;
-        perfectXml += `    <category lang="en">Series</category>\n`;
-        perfectXml += `    <episode-num system="original-air-date">${airDate}</episode-num>\n`;
+        perfectXml += `    <category lang="en">${item.category}</category>\n`;
+        if (item.category !== 'Movie') perfectXml += `    <episode-num system="original-air-date">${airDate}</episode-num>\n`;
         if (item.icon) perfectXml += `    <icon src="${item.icon}" />\n`;
         perfectXml += `  </programme>\n`;
     }
