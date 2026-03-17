@@ -17,7 +17,7 @@ function getXMLTVTime(epochMs) {
 
 async function buildGuide() {
   try {
-    console.log(`[CNBC] Fetching data and posters...`);
+    console.log(`[CNBC] Fetching data...`);
     const response = await fetch(CNBC_API_URL, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/122.0.0.0 Safari/537.36',
@@ -33,38 +33,54 @@ async function buildGuide() {
     if (scheduleData.live) programs.push(scheduleData.live);
     if (scheduleData.comingUp) programs = programs.concat(scheduleData.comingUp);
 
-    let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="CNBC Scraper v2">\n`;
-    perfectXml += `  <channel id="CNBC">\n    <display-name>CNBC</display-name>\n  </channel>\n`;
+    let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="CNBC Scraper v3">\n`;
+    
+    // Added the CNBC Logo directly to the Channel Block
+    perfectXml += `  <channel id="CNBC">\n    <display-name>CNBC</display-name>\n    <icon src="https://upload.wikimedia.org/wikipedia/commons/e/e3/CNBC_logo.png" />\n  </channel>\n`;
 
     for (const item of programs) {
-      const start = getXMLTVTime(item.startTime * 1000);
-      const stop = getXMLTVTime(item.endTime * 1000);
-      let showTitle = item.title || 'CNBC';
+      const startMs = item.startTime * 1000;
+      const stopMs = item.endTime * 1000;
+      const start = getXMLTVTime(startMs);
+      const stop = getXMLTVTime(stopMs);
+      
+      let showTitle = item.title || 'CNBC Programming';
       let description = item.description ? item.description.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
       
-      // POSTER LOGIC:
-      // We use the episodeGuid to pull from the Gracenote image database.
-      // This is what most professional EPG providers do.
-      let iconTag = '';
-      if (item.episodeGuid) {
-          // We extract the base ID (usually the part after EP)
-          const imageId = item.episodeGuid.replace('EP', '');
-          // This URL is a common mirror for high-res US TV posters
-          const posterUrl = `https://zap2it.tmsimg.com/assets/p${parseInt(imageId)}_b_v8_ad.jpg`;
-          iconTag = `    <icon src="${posterUrl}" />\n`;
+      // FIX 1: Force Plex to recognize it as a TV Series
+      let category1 = 'Series';
+      let category2 = item.displayGenre || 'News';
+
+      // FIX 2: Translate the Season/Episode numbers so Plex auto-downloads the posters
+      let episodeTag = '';
+      if (item.tvSeasonNumber !== null && item.seriesEpisodeNumber !== null) {
+          // xmltv_ns requires the numbers to be zero-indexed (Season 1 = 0)
+          let s = Math.max(0, item.tvSeasonNumber - 1);
+          let e = Math.max(0, item.seriesEpisodeNumber - 1);
+          episodeTag = `    <episode-num system="xmltv_ns">${s}.${e}.</episode-num>\n`;
+      } else {
+          // Fallback to Date if it's a special broadcast
+          const d = new Date(startMs);
+          const pad = (n) => String(n).padStart(2, '0');
+          episodeTag = `    <episode-num system="original-air-date">${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}</episode-num>\n`;
       }
+
+      // FIX 3: Fallback CNBC Image for the show itself
+      let iconTag = `    <icon src="https://upload.wikimedia.org/wikipedia/commons/e/e3/CNBC_logo.png" />\n`;
 
       perfectXml += `  <programme start="${start}" stop="${stop}" channel="CNBC">\n`;
       perfectXml += `    <title lang="en">${showTitle}</title>\n`;
       if (description) perfectXml += `    <desc lang="en">${description}</desc>\n`;
-      perfectXml += `    <category lang="en">News</category>\n`;
+      perfectXml += `    <category lang="en">${category1}</category>\n`;
+      perfectXml += `    <category lang="en">${category2}</category>\n`;
+      perfectXml += episodeTag;
       perfectXml += iconTag;
       perfectXml += `  </programme>\n`;
     }
 
     perfectXml += `</tv>`;
     fs.writeFileSync(OUTPUT_FILE, perfectXml, 'utf-8');
-    console.log(`[CNBC] Success with images!`);
+    console.log(`[CNBC] Success! Saved to ${OUTPUT_FILE}`);
 
   } catch (error) {
     console.error(`[CNBC Error]`, error.message);
