@@ -3,24 +3,6 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260317130000 +0000" stop="20260317150000 +0000" channel="CNBC">
-    <title lang="en">Squawk on the Street</title>
-    <desc lang="en">Taking viewers onto the floor of the exchange, right to the posts where the big companies in the world trade; tick charts track the action of every trade of every stock; the treasury, currency and commodity action in real time.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S54E2843</episode-num>
-  </programme>
-  <programme start="20260317150000 +0000" stop="20260317160000 +0000" channel="CNBC">
-    <title lang="en">Money Movers</title>
-    <desc lang="en">Anchors Carl Quintanilla and Sara Eisen focus on what is moving the stock markets, the agenda for the business day, detailed data on individual stocks, sectors and the indices that investors and traders want.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S54E589</episode-num>
-  </programme>
   <programme start="20260317160000 +0000" stop="20260317170000 +0000" channel="CNBC">
     <title lang="en">Halftime Report</title>
     <desc lang="en">The front lines of market coverage; host Scott Wapner and the top investors get to the heart of the action as it's happening and help set the agenda for the rest of the day.</desc>
