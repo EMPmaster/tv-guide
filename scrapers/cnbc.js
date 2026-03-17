@@ -9,7 +9,6 @@ if (!fs.existsSync(XML_DIR)){
 }
 const OUTPUT_FILE = path.join(XML_DIR, 'cnbc.xml'); 
 
-// A reliable .png render of the CNBC logo
 const FALLBACK_LOGO = "https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png";
 
 function getXMLTVTime(epochMs) {
@@ -49,20 +48,25 @@ async function buildGuide() {
       let showTitle = item.title || 'CNBC Broadcast';
       let description = item.description ? item.description.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
       
-      // EPG FIX: Force a Season (Year) and Episode (Month+Day)
-      // This mathematically prevents media servers from classifying it as a movie.
+      // EPG FIX: Try to use native season/episode data. 
+      // If none exists, build a truly unique ID using Year, Month, Day, Hour, and Minute.
+      let realSeason = item.tvSeasonNumber;
+      let realEpisode = item.seriesEpisodeNumber;
+
       let fakeSeason = d.getUTCFullYear();
-      let fakeEpisode = `${d.getUTCMonth() + 1}${String(d.getUTCDate()).padStart(2, '0')}`;
+      let fakeEpisode = `${d.getUTCMonth() + 1}${String(d.getUTCDate()).padStart(2, '0')}${String(d.getUTCHours()).padStart(2, '0')}${String(d.getUTCMinutes()).padStart(2, '0')}`;
+
+      let finalSeason = realSeason ? realSeason : fakeSeason;
+      let finalEpisode = realEpisode ? realEpisode : fakeEpisode;
       
       perfectXml += `  <programme start="${start}" stop="${stop}" channel="CNBC">\n`;
       perfectXml += `    <title lang="en">${showTitle}</title>\n`;
-      // DVRs require a sub-title to reliably flag it as a TV Show
       perfectXml += `    <sub-title lang="en">Live Broadcast</sub-title>\n`; 
       if (description) perfectXml += `    <desc lang="en">${description}</desc>\n`;
       perfectXml += `    <category lang="en">News</category>\n`;
       perfectXml += `    <category lang="en">Series</category>\n`;
       perfectXml += `    <icon src="${FALLBACK_LOGO}" />\n`;
-      perfectXml += `    <episode-num system="onscreen">S${fakeSeason}E${fakeEpisode}</episode-num>\n`;
+      perfectXml += `    <episode-num system="onscreen">S${finalSeason}E${finalEpisode}</episode-num>\n`;
       perfectXml += `  </programme>\n`;
     }
 
