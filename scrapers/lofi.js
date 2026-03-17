@@ -18,6 +18,7 @@ function buildGuide() {
   console.log(`[Lofi] Generating continuous EPG...`);
   
   let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Lofi Generator">\n`;
+  // THE FIX: Space added to match tvg-id="Lofi Girl"
   perfectXml += `  <channel id="Lofi Girl">\n    <display-name>Lofi Girl Radio</display-name>\n  </channel>\n`;
 
   const now = new Date();
@@ -30,7 +31,8 @@ function buildGuide() {
      const start = getXMLTVTime(blockStart);
      const stop = getXMLTVTime(blockEnd);
 
-     perfectXml += `  <programme start="${start}" stop="${stop}" channel="LofiGirl">\n`;
+     // THE FIX: Space added here too so the programs attach to the channel correctly
+     perfectXml += `  <programme start="${start}" stop="${stop}" channel="Lofi Girl">\n`;
      perfectXml += `    <title lang="en">Lofi Girl Radio</title>\n`;
      perfectXml += `    <sub-title lang="en">🎵 Live from YouTube</sub-title>\n`;
      perfectXml += `    <desc lang="en">A 24/7 continuous stream of lo-fi hip hop beats. Perfect for studying, working, or relaxing.</desc>\n`;
