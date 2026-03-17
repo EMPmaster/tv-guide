@@ -9,7 +9,7 @@ if (!fs.existsSync(XML_DIR)){
 }
 const OUTPUT_FILE = path.join(XML_DIR, 'cnbc.xml'); 
 
-// A reliable .png render of the CNBC logo directly from Wikimedia servers
+// A reliable .svg render of the CNBC logo directly from Wikimedia servers
 const FALLBACK_LOGO = "https://upload.wikimedia.org/wikipedia/commons/b/bc/CNBC_2025.svg";
 
 function getXMLTVTime(epochMs) {
