@@ -5,26 +5,48 @@ const sharp = require('sharp');
 
 const KAN_BASE_API = 'https://www.kan.org.il/umbraco/surface/LoadBroadcastSchedule/LoadSchedule?channelId=4444&currentPageId=1517';
 
-// --- FOLDER ARCHITECTURE ---
+// --- CLEANER FOLDER ARCHITECTURE ---
 const XML_DIR = path.join(__dirname, '../xml');
 const IMAGES_DIR = path.join(__dirname, '../images/kan');
 const DIR_ORIGINAL = path.join(IMAGES_DIR, 'original');
-const DIR_400 = path.join(IMAGES_DIR, 'cropped_400');
-const DIR_SQUARE = path.join(IMAGES_DIR, 'cropped_square');
+const DIR_LANDSCAPE = path.join(IMAGES_DIR, 'landscape');
 
-// Base URL for the XML to point to (we will point Plex to the square ones to prevent cutoff)
-const IMAGES_BASE_URL = 'https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/cropped_square';
+// We point Plex to the clean, borderless landscape images
+const IMAGES_BASE_URL = 'https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape';
 
-// Create all folders if they don't exist
-[XML_DIR, IMAGES_DIR, DIR_ORIGINAL, DIR_400, DIR_SQUARE].forEach(dir => {
+[XML_DIR, IMAGES_DIR, DIR_ORIGINAL, DIR_LANDSCAPE].forEach(dir => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
 const OUTPUT_FILE = path.join(XML_DIR, 'kan.xml'); 
 const newsKeywords = ['חדשות', 'מבזק', 'מהדורה', 'משדר מיוחד', 'הלילה', 'הבוקר', 'שבע עם', 'שש עם', 'חמש עם'];
-
-// VIP List to track which images are actively being used right now
 const activeImageHashes = new Set();
+
+// Fixes HTML gibberish like &#x27; from Kan's website
+function decodeHtml(html) {
+    if (!html) return '';
+    return html
+        .replace(/&#x27;/g, "'")
+        .replace(/&#39;/g, "'")
+        .replace(/&quot;/g, '"')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>');
+}
+
+// Safely escapes characters specifically for XML
+function escapeXml(unsafe) {
+    if (!unsafe) return '';
+    return unsafe.replace(/[<>&'"]/g, function (c) {
+        switch (c) {
+            case '<': return '&lt;';
+            case '>': return '&gt;';
+            case '&': return '&amp;';
+            case '\'': return '&apos;';
+            case '"': return '&quot;';
+        }
+    });
+}
 
 function formatXMLTV(dateStr) {
     const parts = dateStr.split(' ');
@@ -39,22 +61,16 @@ function formatXMLTV(dateStr) {
     return `${year}${month}${day}${hh}${mm}${ss} +0000`;
 }
 
-// Downloads, caches, and generates the different cropped versions
 async function processImage(url) {
     if (!url) return null;
     
-    // Create a unique hash for the filename
     const hash = crypto.createHash('md5').update(url).digest('hex');
     const filename = `${hash}.jpg`;
-    
-    // Add to the VIP list so it doesn't get deleted
     activeImageHashes.add(filename);
 
     const origPath = path.join(DIR_ORIGINAL, filename);
-    const path400 = path.join(DIR_400, filename);
-    const pathSquare = path.join(DIR_SQUARE, filename);
+    const pathLandscape = path.join(DIR_LANDSCAPE, filename);
 
-    // If it doesn't exist, we download and process it
     if (!fs.existsSync(origPath)) {
         try {
             const response = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
@@ -63,24 +79,14 @@ async function processImage(url) {
             const arrayBuffer = await response.arrayBuffer();
             const buffer = Buffer.from(arrayBuffer);
             
-            // 1. Save Original
             fs.writeFileSync(origPath, buffer);
             
-            // 2. Save Cropped 400 (Landscape - Keeps aspect ratio)
+            // Just shrink it to 800px wide. No black borders. Plex will crop it naturally.
             await sharp(buffer)
-                .resize(400, null, { withoutEnlargement: true })
-                .jpeg({ quality: 80 })
-                .toFile(path400);
+                .resize(800, null, { withoutEnlargement: true })
+                .jpeg({ quality: 85 })
+                .toFile(pathLandscape);
 
-            // 3. Save Cropped Square (400x400 - Pads with black borders so NOTHING gets cut off in Plex)
-            await sharp(buffer)
-                .resize(400, 400, {
-                    fit: 'contain',
-                    background: { r: 0, g: 0, b: 0, alpha: 1 } // Black padding
-                })
-                .jpeg({ quality: 80 })
-                .toFile(pathSquare);
-                
             console.log(`[Kan 11] Downloaded & Processed: ${filename}`);
         } catch (err) {
             console.error(`[Kan 11] Failed to process image ${url} - ${err.message}`);
@@ -88,16 +94,14 @@ async function processImage(url) {
         }
     }
     
-    // Return the URL pointing to the perfectly padded square image
     return `${IMAGES_BASE_URL}/${filename}`;
 }
 
-// The Ultimate Zero-Bloat Cleanup Routine
 function cleanupOrphans() {
     console.log(`[Kan 11] Running Zero-Bloat Orphan Cleanup...`);
     let deletedCount = 0;
 
-    [DIR_ORIGINAL, DIR_400, DIR_SQUARE].forEach(dir => {
+    [DIR_ORIGINAL, DIR_LANDSCAPE].forEach(dir => {
         if (fs.existsSync(dir)) {
             const files = fs.readdirSync(dir);
             files.forEach(file => {
@@ -115,7 +119,6 @@ async function buildGuide() {
   try {
     const uniquePrograms = new Map();
 
-    // Loop 3 times (Today, Tomorrow, Day After)
     for (let i = 0; i < 3; i++) {
         let targetDate = new Date();
         targetDate.setDate(targetDate.getDate() + i);
@@ -124,8 +127,6 @@ async function buildGuide() {
         let mm = String(targetDate.getMonth() + 1).padStart(2, '0');
         let yyyy = targetDate.getFullYear();
         let fetchUrl = `${KAN_BASE_API}&day=${dd}-${mm}-${yyyy}`;
-
-        console.log(`[Kan 11] Fetching schedule for ${dd}-${mm}-${yyyy}...`);
         
         const response = await fetch(fetchUrl, {
             headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
@@ -142,8 +143,10 @@ async function buildGuide() {
 
             if (timeMatch && titleMatch) {
                 let startUtc = timeMatch[1];
-                let title = titleMatch[1].trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-                let desc = descMatch ? descMatch[1].trim().replace(/<[^>]*>?/gm, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
+                
+                // Decode HTML gibberish FIRST, then safely strip tags
+                let decodedTitle = decodeHtml(titleMatch[1].trim());
+                let decodedDesc = descMatch ? decodeHtml(descMatch[1].trim()).replace(/<[^>]*>?/gm, '') : '';
                 
                 let img = imgMatch ? imgMatch[1] : '';
                 if (img) {
@@ -153,7 +156,7 @@ async function buildGuide() {
                 }
 
                 if (!uniquePrograms.has(startUtc)) {
-                    uniquePrograms.set(startUtc, { start: startUtc, title: title, desc: desc, rawIcon: img });
+                    uniquePrograms.set(startUtc, { start: startUtc, title: decodedTitle, desc: decodedDesc, rawIcon: img });
                 }
             }
         });
@@ -162,8 +165,6 @@ async function buildGuide() {
     const programs = Array.from(uniquePrograms.values()).sort((a, b) => {
         return formatXMLTV(a.start).localeCompare(formatXMLTV(b.start));
     });
-
-    console.log(`[Kan 11] Processing ${programs.length} total programs across 3 days...`);
     
     let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Kan 11 Scraper">\n`;
     perfectXml += `  <channel id="Kan 11">\n    <display-name>Kan 11</display-name>\n  </channel>\n`;
@@ -181,32 +182,32 @@ async function buildGuide() {
         if (isNews) category = 'News';
         else if (item.title.includes('סרט')) category = 'Movie';
 
-        // --- SMART EPISODE EXTRACTION ---
         let episodeNumXml = `<episode-num system="original-air-date">${airDate}</episode-num>`;
         let cleanTitle = item.title;
 
-        // Check if the title has Season/Episode logic (עונה X / פרק Y)
         let seasonMatch = item.title.match(/עונה\s*(\d+)/);
         let episodeMatch = item.title.match(/פרק\s*(\d+)/);
 
         if (seasonMatch || episodeMatch) {
-            let s = seasonMatch ? seasonMatch[1] : "1"; // Default to S1 if no season is written
+            let s = seasonMatch ? seasonMatch[1] : "1";
             let e = episodeMatch ? episodeMatch[1] : "";
-            
             if (e) {
                 episodeNumXml = `<episode-num system="onscreen">S${s}E${e}</episode-num>`;
-                // Clean the title by splitting at dashes so "טהרן 2 - פרק 7" becomes just "טהרן 2"
                 cleanTitle = item.title.split(/[-–:]/)[0].trim();
             }
         }
 
-        // Process the image and get the URL pointing to the square padded version
         const finalIconUrl = await processImage(item.rawIcon);
 
+        // Escape everything just before injecting into XML to guarantee Plex doesn't crash
+        const xmlTitle = escapeXml(cleanTitle);
+        const xmlSubTitle = escapeXml(item.title);
+        const xmlDesc = escapeXml(item.desc);
+
         perfectXml += `  <programme start="${startXml}" stop="${stopXml}" channel="Kan 11">\n`;
-        perfectXml += `    <title lang="he">${cleanTitle}</title>\n`;
-        if (cleanTitle !== item.title) perfectXml += `    <sub-title lang="he">${item.title}</sub-title>\n`;
-        if (item.desc) perfectXml += `    <desc lang="he">${item.desc}</desc>\n`;
+        perfectXml += `    <title lang="he">${xmlTitle}</title>\n`;
+        if (cleanTitle !== item.title) perfectXml += `    <sub-title lang="he">${xmlSubTitle}</sub-title>\n`;
+        if (item.desc) perfectXml += `    <desc lang="he">${xmlDesc}</desc>\n`;
         perfectXml += `    <category lang="en">${category}</category>\n`;
         if (category !== 'Movie') perfectXml += `    ${episodeNumXml}\n`;
         if (finalIconUrl) perfectXml += `    <icon src="${finalIconUrl}" />\n`;
@@ -215,9 +216,6 @@ async function buildGuide() {
 
     perfectXml += `</tv>`;
     fs.writeFileSync(OUTPUT_FILE, perfectXml, 'utf-8');
-    console.log(`[Kan 11] Success! Saved ${programs.length} programs to ${OUTPUT_FILE}`);
-
-    // Call the cleanup routine AFTER all images have been processed and added to the VIP list
     cleanupOrphans();
 
   } catch (error) {
