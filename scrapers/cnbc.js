@@ -9,15 +9,8 @@ if (!fs.existsSync(XML_DIR)){
 }
 const OUTPUT_FILE = path.join(XML_DIR, 'cnbc.xml'); 
 
-// THE POSTER DICTIONARY: 
-// Direct, reliable, high-res TMDB/TVDB .jpg links. No Wikimedia SVGs!
-const posterDatabase = {
-    "Shark Tank": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nOItJ1D6b1L6S0GzT72L50tN1gX.jpg",
-    "Mad Money": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7k1P4j4xQ1r2F7Yx0FkLzC5Y6D.jpg", // Example URL
-    "Squawk Box": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/9q8K3M4pY6N1TzV2bL8G5jH9X1.jpg", // Example URL
-    // The ultimate fallback CNBC Logo (Hosted cleanly, pure JPG)
-    "FALLBACK": "https://i.imgur.com/3q1Z9kY.jpg" 
-};
+// A reliable .png render of the CNBC logo directly from Wikimedia servers
+const FALLBACK_LOGO = "https://upload.wikimedia.org/wikipedia/commons/b/bc/CNBC_2025.svg";
 
 function getXMLTVTime(epochMs) {
   const d = new Date(epochMs);
@@ -42,7 +35,7 @@ async function buildGuide() {
     if (scheduleData.live) programs.push(scheduleData.live);
     if (scheduleData.comingUp) programs = programs.concat(scheduleData.comingUp);
 
-    let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="CNBC Bulletproof">\n`;
+    let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="CNBC Scraper">\n`;
     perfectXml += `  <channel id="CNBC">\n    <display-name>CNBC</display-name>\n  </channel>\n`;
 
     for (const item of programs) {
@@ -56,11 +49,8 @@ async function buildGuide() {
       let showTitle = item.title || 'CNBC Broadcast';
       let description = item.description ? item.description.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
       
-      // Look up the image in our dictionary, or use the fallback
-      let posterUrl = posterDatabase[showTitle] || posterDatabase["FALLBACK"];
-
-      // PLEX FIX: Force a Season and Episode number based on the date (e.g., Season 2026, Episode 317)
-      // This mathematically guarantees Plex cannot classify it as a movie.
+      // PLEX FIX: Force a Season (Year) and Episode (Month+Day)
+      // This mathematically prevents Plex from classifying it as a movie.
       let fakeSeason = d.getUTCFullYear();
       let fakeEpisode = `${d.getUTCMonth() + 1}${String(d.getUTCDate()).padStart(2, '0')}`;
       
@@ -71,14 +61,14 @@ async function buildGuide() {
       if (description) perfectXml += `    <desc lang="en">${description}</desc>\n`;
       perfectXml += `    <category lang="en">News</category>\n`;
       perfectXml += `    <category lang="en">Series</category>\n`;
-      perfectXml += `    <icon src="${posterUrl}" />\n`;
+      perfectXml += `    <icon src="${FALLBACK_LOGO}" />\n`;
       perfectXml += `    <episode-num system="onscreen">S${fakeSeason}E${fakeEpisode}</episode-num>\n`;
       perfectXml += `  </programme>\n`;
     }
 
     perfectXml += `</tv>`;
     fs.writeFileSync(OUTPUT_FILE, perfectXml, 'utf-8');
-    console.log(`[CNBC] Success! Saved with images to ${OUTPUT_FILE}`);
+    console.log(`[CNBC] Success! Saved to ${OUTPUT_FILE}`);
 
   } catch (error) {
     console.error(`[CNBC Error]`, error.message);
