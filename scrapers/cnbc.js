@@ -48,8 +48,10 @@ async function buildGuide() {
       let showTitle = item.title || 'CNBC Broadcast';
       let description = item.description ? item.description.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
       
-      // EPG FIX: Try to use native season/episode data. 
-      // If none exists, build a truly unique ID using Year, Month, Day, Hour, and Minute.
+      // -- DYNAMIC CATEGORY LOGIC --
+      let rawGenre = item.displayGenre || 'News';
+      let cleanGenre = rawGenre === 'Bus./financial' ? 'Business' : rawGenre;
+
       let realSeason = item.tvSeasonNumber;
       let realEpisode = item.seriesEpisodeNumber;
 
@@ -63,8 +65,12 @@ async function buildGuide() {
       perfectXml += `    <title lang="en">${showTitle}</title>\n`;
       perfectXml += `    <sub-title lang="en">Live Broadcast</sub-title>\n`; 
       if (description) perfectXml += `    <desc lang="en">${description}</desc>\n`;
-      perfectXml += `    <category lang="en">News</category>\n`;
+      
+      // Inject the dynamic genres into the XML
+      perfectXml += `    <category lang="en">${cleanGenre}</category>\n`;
+      if (cleanGenre === 'Business') perfectXml += `    <category lang="en">News</category>\n`;
       perfectXml += `    <category lang="en">Series</category>\n`;
+      
       perfectXml += `    <icon src="${FALLBACK_LOGO}" />\n`;
       perfectXml += `    <episode-num system="onscreen">S${finalSeason}E${finalEpisode}</episode-num>\n`;
       perfectXml += `  </programme>\n`;
