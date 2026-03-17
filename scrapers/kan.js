@@ -5,7 +5,7 @@ const sharp = require('sharp');
 
 const KAN_BASE_API = 'https://www.kan.org.il/umbraco/surface/LoadBroadcastSchedule/LoadSchedule?channelId=4444&currentPageId=1517';
 
-// Cleaner folder structure
+// Folders and URLs
 const XML_DIR = path.join(__dirname, '../xml');
 const IMAGES_DIR = path.join(__dirname, '../images/kan');
 const IMAGES_BASE_URL = 'https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan';
@@ -79,7 +79,6 @@ async function buildGuide() {
     console.log(`[Kan 11] Cleaning old images...`);
     cleanupOldImages();
 
-    // Use a Map to prevent duplicates if the API accidentally returns the same show twice
     const uniquePrograms = new Map();
 
     // Loop 3 times (Today, Tomorrow, Day After)
@@ -87,11 +86,13 @@ async function buildGuide() {
         let targetDate = new Date();
         targetDate.setDate(targetDate.getDate() + i);
         
-        // Format YYYY-MM-DD for the API
-        let dateParam = `${targetDate.getFullYear()}-${String(targetDate.getMonth()+1).padStart(2,'0')}-${String(targetDate.getDate()).padStart(2,'0')}`;
-        let fetchUrl = `${KAN_BASE_API}&date=${dateParam}`;
+        // THE FIX: Format DD-MM-YYYY for the API
+        let dd = String(targetDate.getDate()).padStart(2, '0');
+        let mm = String(targetDate.getMonth() + 1).padStart(2, '0');
+        let yyyy = targetDate.getFullYear();
+        let fetchUrl = `${KAN_BASE_API}&day=${dd}-${mm}-${yyyy}`;
 
-        console.log(`[Kan 11] Fetching schedule for ${dateParam}...`);
+        console.log(`[Kan 11] Fetching schedule for ${dd}-${mm}-${yyyy}...`);
         
         const response = await fetch(fetchUrl, {
             headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
@@ -118,7 +119,6 @@ async function buildGuide() {
                     img = img.replace('https://mobapi.kan.org.il', 'https://www.kan.org.il');
                 }
 
-                // Add to Map using the Start Time as a unique key
                 if (!uniquePrograms.has(startUtc)) {
                     uniquePrograms.set(startUtc, { start: startUtc, title: title, desc: desc, rawIcon: img });
                 }
@@ -126,12 +126,11 @@ async function buildGuide() {
         });
     }
 
-    // Convert the Map back to a sorted Array
     const programs = Array.from(uniquePrograms.values()).sort((a, b) => {
         return formatXMLTV(a.start).localeCompare(formatXMLTV(b.start));
     });
 
-    console.log(`[Kan 11] Processing ${programs.length} total images across 3 days...`);
+    console.log(`[Kan 11] Processing ${programs.length} total programs across 3 days...`);
     
     let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Kan 11 Scraper">\n`;
     perfectXml += `  <channel id="Kan 11">\n    <display-name>Kan 11</display-name>\n  </channel>\n`;
