@@ -3,15 +3,6 @@
 <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260317100000 +0000" stop="20260317130000 +0000" channel="CNBC">
-    <title lang="en">Squawk Box</title>
-    <desc lang="en">The big names in business and politics tell their important stories in this pre-market morning news and talk program; from professional traders to casual investors.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S54E1813</episode-num>
-  </programme>
   <programme start="20260317130000 +0000" stop="20260317150000 +0000" channel="CNBC">
     <title lang="en">Squawk on the Street</title>
     <desc lang="en">Taking viewers onto the floor of the exchange, right to the posts where the big companies in the world trade; tick charts track the action of every trade of every stock; the treasury, currency and commodity action in real time.</desc>
@@ -141,7 +132,7 @@
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
     <episode-num system="onscreen">S9E355</episode-num>
   </programme>
-<channel id="LofiGirl">
+<channel id="Lofi Girl">
     <display-name>Lofi Girl Radio</display-name>
   </channel>
   <programme start="20260316000000 +0000" stop="20260316040000 +0000" channel="LofiGirl">
