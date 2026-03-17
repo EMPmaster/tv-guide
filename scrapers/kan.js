@@ -46,19 +46,22 @@ async function buildGuide() {
         if (timeMatch && titleMatch) {
             let startUtc = timeMatch[1];
             
-            // Strictly escape characters for XML
             let title = titleMatch[1].trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let desc = descMatch ? descMatch[1].trim().replace(/<[^>]*>?/gm, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
             
+            // --- THE IMAGE CAR WASH ---
             let img = imgMatch ? imgMatch[1] : '';
             if (img) {
-                img = img.split('?')[0]; // Remove rmode=pad garbage
+                img = img.split('?')[0]; // 1. Remove existing garbage
                 if (!img.startsWith('http')) {
                     img = 'https://www.kan.org.il' + img;
                 }
+                // 2. Force it to the public domain
                 img = img.replace('https://mobapi.kan.org.il', 'https://www.kan.org.il');
-                // Safely URL-encode Hebrew characters so Plex image fetcher doesn't crash
-                img = encodeURI(decodeURI(img)).replace(/&/g, '&amp;');
+                // 3. Safely URL-encode Hebrew characters
+                img = encodeURI(decodeURI(img));
+                // 4. THE FIX: Force the CDN to shrink the image to match Mako's size!
+                img = img + '?width=624';
             }
 
             programs.push({ start: startUtc, title: title, desc: desc, icon: img });
