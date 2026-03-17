@@ -34,47 +34,35 @@ async function buildGuide() {
     if (scheduleData.comingUp) programs = programs.concat(scheduleData.comingUp);
 
     let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="CNBC Scraper v3">\n`;
-    
-    // Added the CNBC Logo directly to the Channel Block
-    perfectXml += `  <channel id="CNBC">\n    <display-name>CNBC</display-name>\n    <icon src="https://upload.wikimedia.org/wikipedia/commons/e/e3/CNBC_logo.png" />\n  </channel>\n`;
+    perfectXml += `  <channel id="CNBC">\n    <display-name>CNBC</display-name>\n  </channel>\n`;
 
     for (const item of programs) {
       const startMs = item.startTime * 1000;
       const stopMs = item.endTime * 1000;
+      
       const start = getXMLTVTime(startMs);
       const stop = getXMLTVTime(stopMs);
-      
+
+      const d = new Date(startMs);
+      const pad = (n) => String(n).padStart(2, '0');
+      const airDate = `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
+
       let showTitle = item.title || 'CNBC Programming';
       let description = item.description ? item.description.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
-      
-      // FIX 1: Force Plex to recognize it as a TV Series
-      let category1 = 'Series';
-      let category2 = item.displayGenre || 'News';
-
-      // FIX 2: Translate the Season/Episode numbers so Plex auto-downloads the posters
-      let episodeTag = '';
-      if (item.tvSeasonNumber !== null && item.seriesEpisodeNumber !== null) {
-          // xmltv_ns requires the numbers to be zero-indexed (Season 1 = 0)
-          let s = Math.max(0, item.tvSeasonNumber - 1);
-          let e = Math.max(0, item.seriesEpisodeNumber - 1);
-          episodeTag = `    <episode-num system="xmltv_ns">${s}.${e}.</episode-num>\n`;
-      } else {
-          // Fallback to Date if it's a special broadcast
-          const d = new Date(startMs);
-          const pad = (n) => String(n).padStart(2, '0');
-          episodeTag = `    <episode-num system="original-air-date">${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}</episode-num>\n`;
-      }
-
-      // FIX 3: Fallback CNBC Image for the show itself
-      let iconTag = `    <icon src="https://upload.wikimedia.org/wikipedia/commons/e/e3/CNBC_logo.png" />\n`;
+      let isReality = item.displayGenre === 'Reality';
 
       perfectXml += `  <programme start="${start}" stop="${stop}" channel="CNBC">\n`;
       perfectXml += `    <title lang="en">${showTitle}</title>\n`;
       if (description) perfectXml += `    <desc lang="en">${description}</desc>\n`;
-      perfectXml += `    <category lang="en">${category1}</category>\n`;
-      perfectXml += `    <category lang="en">${category2}</category>\n`;
-      perfectXml += episodeTag;
-      perfectXml += iconTag;
+      
+      // MAGIC FIX: Force Plex to recognize these as TV Shows/Series, not Movies
+      perfectXml += `    <category lang="en">Series</category>\n`;
+      perfectXml += `    <category lang="en">${isReality ? 'Reality' : 'News'}</category>\n`;
+      perfectXml += `    <episode-num system="original-air-date">${airDate}</episode-num>\n`;
+      
+      // FALLBACK ICON: High-res CNBC PNG. (Plex's internal matcher will likely overwrite this with real posters anyway)
+      perfectXml += `    <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/1024px-CNBC_logo.svg.png" />\n`;
+      
       perfectXml += `  </programme>\n`;
     }
 
