@@ -28,6 +28,7 @@ jobs:
         run: |
           node scrapers/mako.js
           node scrapers/cnbc.js
+          node scrapers/lofi.js
           
       - name: Merge Modular XML Files
         run: node merge.js
