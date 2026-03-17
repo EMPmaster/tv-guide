@@ -3,15 +3,6 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260317170000 +0000" stop="20260317180000 +0000" channel="CNBC">
-    <title lang="en">The Exchange</title>
-    <desc lang="en">Anchor Kelly Evans reports on the important stories to markets and investors; reporters provide actionable information to viewers as they make daily investment decisions.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S54E1673</episode-num>
-  </programme>
   <programme start="20260317180000 +0000" stop="20260317190000 +0000" channel="CNBC">
     <title lang="en">Power Lunch</title>
     <desc lang="en">Focusing on real-time market coverage, breaking news and up-to-the-instant stock moving information; delving into the economy, the markets, real estate, media and technology -- any place where there's money to be made.</desc>
