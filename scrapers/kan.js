@@ -1,33 +1,91 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
+const sharp = require('sharp');
 
 const KAN_API_URL = 'https://www.kan.org.il/umbraco/surface/LoadBroadcastSchedule/LoadSchedule?channelId=4444&currentPageId=1517';
 
+// Folders
 const XML_DIR = path.join(__dirname, '../xml');
-if (!fs.existsSync(XML_DIR)){
-    fs.mkdirSync(XML_DIR, { recursive: true });
-}
-const OUTPUT_FILE = path.join(XML_DIR, 'kan.xml'); 
+const IMAGES_DIR = path.join(__dirname, '../images/kan.images');
 
+// Your raw GitHub URL where Plex will fetch the images from
+const IMAGES_BASE_URL = 'https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan.images';
+
+if (!fs.existsSync(XML_DIR)) fs.mkdirSync(XML_DIR, { recursive: true });
+if (!fs.existsSync(IMAGES_DIR)) fs.mkdirSync(IMAGES_DIR, { recursive: true });
+
+const OUTPUT_FILE = path.join(XML_DIR, 'kan.xml'); 
 const newsKeywords = ['חדשות', 'מבזק', 'מהדורה', 'משדר מיוחד', 'הלילה', 'הבוקר', 'שבע עם', 'שש עם', 'חמש עם'];
 
 function formatXMLTV(dateStr) {
     const parts = dateStr.split(' ');
     const dateParts = parts[0].split('.');
     const timeParts = parts[1].split(':');
-    
     const day = dateParts[0].padStart(2, '0');
     const month = dateParts[1].padStart(2, '0');
     const year = dateParts[2];
     const hh = timeParts[0].padStart(2, '0');
     const mm = timeParts[1].padStart(2, '0');
     const ss = timeParts[2].padStart(2, '0');
-    
     return `${year}${month}${day}${hh}${mm}${ss} +0000`;
+}
+
+// Cleans up images older than 7 days so your GitHub repo doesn't bloat
+function cleanupOldImages() {
+    const files = fs.readdirSync(IMAGES_DIR);
+    const now = Date.now();
+    const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
+    
+    files.forEach(file => {
+        const filePath = path.join(IMAGES_DIR, file);
+        const stats = fs.statSync(filePath);
+        if (now - stats.mtimeMs > SEVEN_DAYS) {
+            fs.unlinkSync(filePath);
+            console.log(`[Kan 11] Deleted old image: ${file}`);
+        }
+    });
+}
+
+// Downloads and shrinks the image
+async function processImage(url) {
+    if (!url) return null;
+    
+    // Create a unique filename based on the URL
+    const hash = crypto.createHash('md5').update(url).digest('hex');
+    const filename = `${hash}.jpg`;
+    const filePath = path.join(IMAGES_DIR, filename);
+
+    // If we already downloaded this image recently, skip downloading it again
+    if (!fs.existsSync(filePath)) {
+        try {
+            const response = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            
+            const arrayBuffer = await response.arrayBuffer();
+            const buffer = Buffer.from(arrayBuffer);
+            
+            // Resize to 400px wide and save
+            await sharp(buffer)
+                .resize(400, null, { withoutEnlargement: true })
+                .jpeg({ quality: 80 })
+                .toFile(filePath);
+                
+            console.log(`[Kan 11] Downloaded & Resized: ${filename}`);
+        } catch (err) {
+            console.error(`[Kan 11] Failed to process image ${url} - ${err.message}`);
+            return null;
+        }
+    }
+    
+    return `${IMAGES_BASE_URL}/${filename}`;
 }
 
 async function buildGuide() {
   try {
+    console.log(`[Kan 11] Cleaning old images...`);
+    cleanupOldImages();
+
     console.log(`[Kan 11] Fetching HTML schedule...`);
     const response = await fetch(KAN_API_URL, {
       headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
@@ -45,29 +103,22 @@ async function buildGuide() {
 
         if (timeMatch && titleMatch) {
             let startUtc = timeMatch[1];
-            
             let title = titleMatch[1].trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let desc = descMatch ? descMatch[1].trim().replace(/<[^>]*>?/gm, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
             
-            // --- THE IMAGE CAR WASH ---
             let img = imgMatch ? imgMatch[1] : '';
             if (img) {
-                img = img.split('?')[0]; // 1. Remove existing garbage
-                if (!img.startsWith('http')) {
-                    img = 'https://www.kan.org.il' + img;
-                }
-                // 2. Force it to the public domain
+                img = img.split('?')[0];
+                if (!img.startsWith('http')) img = 'https://www.kan.org.il' + img;
                 img = img.replace('https://mobapi.kan.org.il', 'https://www.kan.org.il');
-                // 3. Safely URL-encode Hebrew characters
-                img = encodeURI(decodeURI(img));
-                // 4. THE FIX: Force the CDN to shrink the image to match Mako's size!
-                img = img + '?width=624';
             }
 
-            programs.push({ start: startUtc, title: title, desc: desc, icon: img });
+            programs.push({ start: startUtc, title: title, desc: desc, rawIcon: img });
         }
     });
 
+    console.log(`[Kan 11] Processing ${programs.length} images...`);
+    
     let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Kan 11 Scraper">\n`;
     perfectXml += `  <channel id="Kan 11">\n    <display-name>Kan 11</display-name>\n  </channel>\n`;
 
@@ -84,12 +135,15 @@ async function buildGuide() {
         if (isNews) category = 'News';
         else if (item.title.includes('סרט')) category = 'Movie';
 
+        // Actually download/resize the image and get the GitHub URL back
+        const finalIconUrl = await processImage(item.rawIcon);
+
         perfectXml += `  <programme start="${startXml}" stop="${stopXml}" channel="Kan 11">\n`;
         perfectXml += `    <title lang="he">${item.title}</title>\n`;
         if (item.desc) perfectXml += `    <desc lang="he">${item.desc}</desc>\n`;
         perfectXml += `    <category lang="en">${category}</category>\n`;
         if (category !== 'Movie') perfectXml += `    <episode-num system="original-air-date">${airDate}</episode-num>\n`;
-        if (item.icon) perfectXml += `    <icon src="${item.icon}" />\n`;
+        if (finalIconUrl) perfectXml += `    <icon src="${finalIconUrl}" />\n`;
         perfectXml += `  </programme>\n`;
     }
 
