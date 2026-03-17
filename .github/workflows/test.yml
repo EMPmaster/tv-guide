@@ -19,7 +19,7 @@ jobs:
       - name: Run Specific Scraper
         # CHANGE THIS LINE to whichever script you are actively testing!
         run: |
-          node scrapers/kan.js
+          node scrapers/kan11.js
 
       - name: Commit and Push Test XML
         run: |
