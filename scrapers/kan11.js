@@ -8,7 +8,7 @@ const XML_DIR = path.join(__dirname, '../xml');
 if (!fs.existsSync(XML_DIR)){
     fs.mkdirSync(XML_DIR, { recursive: true });
 }
-const OUTPUT_FILE = path.join(XML_DIR, 'kan.xml'); 
+const OUTPUT_FILE = path.join(XML_DIR, 'kan11.xml'); 
 
 function formatXMLTV(dateStr) {
     // Input format: "17.3.2026 22:53:00"
