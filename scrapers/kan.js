@@ -5,16 +5,14 @@ const sharp = require('sharp');
 
 const KAN_BASE_API = 'https://www.kan.org.il/umbraco/surface/LoadBroadcastSchedule/LoadSchedule?channelId=4444&currentPageId=1517';
 
-// --- CLEANER FOLDER ARCHITECTURE ---
+// --- CLEAN FOLDER ARCHITECTURE ---
 const XML_DIR = path.join(__dirname, '../xml');
 const IMAGES_DIR = path.join(__dirname, '../images/kan');
-const DIR_ORIGINAL = path.join(IMAGES_DIR, 'original');
 const DIR_LANDSCAPE = path.join(IMAGES_DIR, 'landscape');
 
-// We point Plex to the clean, borderless landscape images
 const IMAGES_BASE_URL = 'https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape';
 
-[XML_DIR, IMAGES_DIR, DIR_ORIGINAL, DIR_LANDSCAPE].forEach(dir => {
+[XML_DIR, IMAGES_DIR, DIR_LANDSCAPE].forEach(dir => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
@@ -25,16 +23,10 @@ const activeImageHashes = new Set();
 // Fixes HTML gibberish like &#x27; from Kan's website
 function decodeHtml(html) {
     if (!html) return '';
-    return html
-        .replace(/&#x27;/g, "'")
-        .replace(/&#39;/g, "'")
-        .replace(/&quot;/g, '"')
-        .replace(/&amp;/g, '&')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>');
+    return html.replace(/&#x27;/g, "'").replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 }
 
-// Safely escapes characters specifically for XML
+// Escapes special characters strictly for XML injection
 function escapeXml(unsafe) {
     if (!unsafe) return '';
     return unsafe.replace(/[<>&'"]/g, function (c) {
@@ -52,13 +44,49 @@ function formatXMLTV(dateStr) {
     const parts = dateStr.split(' ');
     const dateParts = parts[0].split('.');
     const timeParts = parts[1].split(':');
-    const day = dateParts[0].padStart(2, '0');
-    const month = dateParts[1].padStart(2, '0');
-    const year = dateParts[2];
-    const hh = timeParts[0].padStart(2, '0');
-    const mm = timeParts[1].padStart(2, '0');
-    const ss = timeParts[2].padStart(2, '0');
-    return `${year}${month}${day}${hh}${mm}${ss} +0000`;
+    return `${dateParts[2]}${dateParts[1].padStart(2, '0')}${dateParts[0].padStart(2, '0')}${timeParts[0].padStart(2, '0')}${timeParts[1].padStart(2, '0')}${timeParts[2].padStart(2, '0')} +0000`;
+}
+
+// --- THE BULLETPROOF TITLE PARSER ---
+function parseShowMetadata(rawTitle, category) {
+    let showTitle = rawTitle;
+    let episodeName = "";
+    let seasonNum = "";
+    let episodeNum = "";
+
+    if (category !== 'Series') return { showTitle, episodeName, seasonNum, episodeNum };
+
+    // Find Explicit Season (עונה 3)
+    const sMatch = rawTitle.match(/עונה\s*(\d+)/);
+    if (sMatch) seasonNum = sMatch[1];
+
+    // Find Explicit Episode (פרק 2) or Implicit ( - 6)
+    const eMatch = rawTitle.match(/פרק\s*(\d+)/);
+    if (eMatch) {
+        episodeNum = eMatch[1];
+    } else {
+        const numMatch = rawTitle.match(/[-–:]\s*(\d+)[\.\s]*$/) || rawTitle.match(/[-–:]\s*(\d+)\./);
+        if (numMatch) episodeNum = numMatch[1];
+    }
+
+    // Split Show Name from Subtitle
+    const separatorIndex = rawTitle.search(/[-–:]/);
+    if (separatorIndex !== -1) {
+        showTitle = rawTitle.substring(0, separatorIndex).trim();
+        episodeName = rawTitle.substring(separatorIndex + 1).trim();
+    }
+
+    // Strip dangling season numbers from Show Name (e.g. "טהרן 2" -> "טהרן")
+    const implicitSeasonMatch = showTitle.match(/^(.+?)\s+(\d+)$/);
+    if (implicitSeasonMatch) {
+        showTitle = implicitSeasonMatch[1].trim();
+        if (!seasonNum) seasonNum = implicitSeasonMatch[2]; // Captures the '2' as the season!
+    }
+
+    // Default to Season 1 if an episode exists
+    if (episodeNum && !seasonNum) seasonNum = "1";
+
+    return { showTitle, episodeName, seasonNum, episodeNum };
 }
 
 async function processImage(url) {
@@ -66,12 +94,11 @@ async function processImage(url) {
     
     const hash = crypto.createHash('md5').update(url).digest('hex');
     const filename = `${hash}.jpg`;
-    activeImageHashes.add(filename);
+    activeImageHashes.add(filename); // Mark as VIP
 
-    const origPath = path.join(DIR_ORIGINAL, filename);
     const pathLandscape = path.join(DIR_LANDSCAPE, filename);
 
-    if (!fs.existsSync(origPath)) {
+    if (!fs.existsSync(pathLandscape)) {
         try {
             const response = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -79,9 +106,7 @@ async function processImage(url) {
             const arrayBuffer = await response.arrayBuffer();
             const buffer = Buffer.from(arrayBuffer);
             
-            fs.writeFileSync(origPath, buffer);
-            
-            // Just shrink it to 800px wide. No black borders. Plex will crop it naturally.
+            // Clean, borderless landscape resizing (Plex handles the cropping naturally)
             await sharp(buffer)
                 .resize(800, null, { withoutEnlargement: true })
                 .jpeg({ quality: 85 })
@@ -93,25 +118,22 @@ async function processImage(url) {
             return null;
         }
     }
-    
     return `${IMAGES_BASE_URL}/${filename}`;
 }
 
+// Deletes un-used images
 function cleanupOrphans() {
     console.log(`[Kan 11] Running Zero-Bloat Orphan Cleanup...`);
     let deletedCount = 0;
-
-    [DIR_ORIGINAL, DIR_LANDSCAPE].forEach(dir => {
-        if (fs.existsSync(dir)) {
-            const files = fs.readdirSync(dir);
-            files.forEach(file => {
-                if (file.endsWith('.jpg') && !activeImageHashes.has(file)) {
-                    fs.unlinkSync(path.join(dir, file));
-                    deletedCount++;
-                }
-            });
-        }
-    });
+    if (fs.existsSync(DIR_LANDSCAPE)) {
+        const files = fs.readdirSync(DIR_LANDSCAPE);
+        files.forEach(file => {
+            if (file.endsWith('.jpg') && !activeImageHashes.has(file)) {
+                fs.unlinkSync(path.join(DIR_LANDSCAPE, file));
+                deletedCount++;
+            }
+        });
+    }
     console.log(`[Kan 11] Cleanup complete. Deleted ${deletedCount} orphaned files.`);
 }
 
@@ -143,8 +165,6 @@ async function buildGuide() {
 
             if (timeMatch && titleMatch) {
                 let startUtc = timeMatch[1];
-                
-                // Decode HTML gibberish FIRST, then safely strip tags
                 let decodedTitle = decodeHtml(titleMatch[1].trim());
                 let decodedDesc = descMatch ? decodeHtml(descMatch[1].trim()).replace(/<[^>]*>?/gm, '') : '';
                 
@@ -156,7 +176,7 @@ async function buildGuide() {
                 }
 
                 if (!uniquePrograms.has(startUtc)) {
-                    uniquePrograms.set(startUtc, { start: startUtc, title: decodedTitle, desc: decodedDesc, rawIcon: img });
+                    uniquePrograms.set(startUtc, { start: startUtc, rawTitle: decodedTitle, desc: decodedDesc, rawIcon: img });
                 }
             }
         });
@@ -178,38 +198,33 @@ async function buildGuide() {
         const airDate = item.start.split(' ')[0].split('.').reverse().map(n => n.padStart(2, '0')).join('-');
 
         let category = 'Series';
-        let isNews = newsKeywords.some(keyword => item.title.includes(keyword));
+        let isNews = newsKeywords.some(keyword => item.rawTitle.includes(keyword));
         if (isNews) category = 'News';
-        else if (item.title.includes('סרט')) category = 'Movie';
+        else if (item.rawTitle.includes('סרט')) category = 'Movie';
 
-        let episodeNumXml = `<episode-num system="original-air-date">${airDate}</episode-num>`;
-        let cleanTitle = item.title;
-
-        let seasonMatch = item.title.match(/עונה\s*(\d+)/);
-        let episodeMatch = item.title.match(/פרק\s*(\d+)/);
-
-        if (seasonMatch || episodeMatch) {
-            let s = seasonMatch ? seasonMatch[1] : "1";
-            let e = episodeMatch ? episodeMatch[1] : "";
-            if (e) {
-                episodeNumXml = `<episode-num system="onscreen">S${s}E${e}</episode-num>`;
-                cleanTitle = item.title.split(/[-–:]/)[0].trim();
-            }
-        }
+        // MAGIC HAPPENS HERE
+        const { showTitle, episodeName, seasonNum, episodeNum } = parseShowMetadata(item.rawTitle, category);
 
         const finalIconUrl = await processImage(item.rawIcon);
 
-        // Escape everything just before injecting into XML to guarantee Plex doesn't crash
-        const xmlTitle = escapeXml(cleanTitle);
-        const xmlSubTitle = escapeXml(item.title);
-        const xmlDesc = escapeXml(item.desc);
-
         perfectXml += `  <programme start="${startXml}" stop="${stopXml}" channel="Kan 11">\n`;
-        perfectXml += `    <title lang="he">${xmlTitle}</title>\n`;
-        if (cleanTitle !== item.title) perfectXml += `    <sub-title lang="he">${xmlSubTitle}</sub-title>\n`;
-        if (item.desc) perfectXml += `    <desc lang="he">${xmlDesc}</desc>\n`;
+        perfectXml += `    <title lang="he">${escapeXml(showTitle)}</title>\n`;
+        
+        // Put the episode name (e.g. "עונה 3 - פרק 2") as the subtitle
+        if (episodeName) perfectXml += `    <sub-title lang="he">${escapeXml(episodeName)}</sub-title>\n`;
+        
+        if (item.desc) perfectXml += `    <desc lang="he">${escapeXml(item.desc)}</desc>\n`;
         perfectXml += `    <category lang="en">${category}</category>\n`;
-        if (category !== 'Movie') perfectXml += `    ${episodeNumXml}\n`;
+        
+        // Smart Episode Numbering
+        if (category !== 'Movie') {
+            if (episodeNum) {
+                perfectXml += `    <episode-num system="onscreen">S${seasonNum}E${episodeNum}</episode-num>\n`;
+            } else {
+                perfectXml += `    <episode-num system="original-air-date">${airDate}</episode-num>\n`;
+            }
+        }
+        
         if (finalIconUrl) perfectXml += `    <icon src="${finalIconUrl}" />\n`;
         perfectXml += `  </programme>\n`;
     }
