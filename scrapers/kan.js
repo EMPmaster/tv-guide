@@ -5,7 +5,6 @@ const sharp = require('sharp');
 
 const KAN_BASE_API = 'https://www.kan.org.il/umbraco/surface/LoadBroadcastSchedule/LoadSchedule?channelId=4444&currentPageId=1517';
 
-// Folders and URLs
 const XML_DIR = path.join(__dirname, '../xml');
 const IMAGES_DIR = path.join(__dirname, '../images/kan');
 const IMAGES_BASE_URL = 'https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan';
@@ -81,12 +80,10 @@ async function buildGuide() {
 
     const uniquePrograms = new Map();
 
-    // Loop 3 times (Today, Tomorrow, Day After)
     for (let i = 0; i < 3; i++) {
         let targetDate = new Date();
         targetDate.setDate(targetDate.getDate() + i);
         
-        // THE FIX: Format DD-MM-YYYY for the API
         let dd = String(targetDate.getDate()).padStart(2, '0');
         let mm = String(targetDate.getMonth() + 1).padStart(2, '0');
         let yyyy = targetDate.getFullYear();
@@ -148,13 +145,38 @@ async function buildGuide() {
         if (isNews) category = 'News';
         else if (item.title.includes('סרט')) category = 'Movie';
 
+        // --- SMART EPISODE EXTRACTION ---
+        let episodeNumXml = `<episode-num system="original-air-date">${airDate}</episode-num>`;
+        let cleanTitle = item.title;
+
+        // Check if the title has "Season X - Episode Y" (עונה 3 - פרק 7)
+        let seasonMatch = item.title.match(/עונה\s*(\d+)/);
+        let episodeMatch = item.title.match(/פרק\s*(\d+)/);
+
+        if (seasonMatch || episodeMatch) {
+            let s = seasonMatch ? seasonMatch[1] : "1"; // Default to Season 1 if missing
+            let e = episodeMatch ? episodeMatch[1] : "";
+            
+            if (e) {
+                // Generate Plex SxxEyy format
+                episodeNumXml = `<episode-num system="onscreen">S${s}E${e}</episode-num>`;
+                
+                // Clean the title so "Tehran - Season 3 - Episode 7" just becomes "Tehran"
+                cleanTitle = item.title.split(/[-–:]/)[0].trim();
+            }
+        }
+
         const finalIconUrl = await processImage(item.rawIcon);
 
         perfectXml += `  <programme start="${startXml}" stop="${stopXml}" channel="Kan 11">\n`;
-        perfectXml += `    <title lang="he">${item.title}</title>\n`;
+        perfectXml += `    <title lang="he">${cleanTitle}</title>\n`;
+        // Put the original full title back into the subtitle so no info is lost
+        if (cleanTitle !== item.title) perfectXml += `    <sub-title lang="he">${item.title}</sub-title>\n`;
         if (item.desc) perfectXml += `    <desc lang="he">${item.desc}</desc>\n`;
         perfectXml += `    <category lang="en">${category}</category>\n`;
-        if (category !== 'Movie') perfectXml += `    <episode-num system="original-air-date">${airDate}</episode-num>\n`;
+        
+        if (category !== 'Movie') perfectXml += `    ${episodeNumXml}\n`;
+        
         if (finalIconUrl) perfectXml += `    <icon src="${finalIconUrl}" />\n`;
         perfectXml += `  </programme>\n`;
     }
