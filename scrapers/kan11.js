@@ -1,17 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 
-// The URL you found in the Network tab!
 const KAN_API_URL = 'https://www.kan.org.il/umbraco/surface/LoadBroadcastSchedule/LoadSchedule?channelId=4444&currentPageId=1517';
 
 const XML_DIR = path.join(__dirname, '../xml');
 if (!fs.existsSync(XML_DIR)){
     fs.mkdirSync(XML_DIR, { recursive: true });
 }
-const OUTPUT_FILE = path.join(XML_DIR, 'kan11.xml'); 
+const OUTPUT_FILE = path.join(XML_DIR, 'kan.xml'); 
 
 function formatXMLTV(dateStr) {
-    // Input format: "17.3.2026 22:53:00"
     const parts = dateStr.split(' ');
     const dateParts = parts[0].split('.');
     const timeParts = parts[1].split(':');
@@ -35,29 +33,36 @@ async function buildGuide() {
 
     const html = await response.text();
     
-    // We split the HTML into individual "results-item" blocks
     const blocks = html.split('class="results-item').slice(1);
     const programs = [];
 
     blocks.forEach(block => {
-        // Extract Start Time
         const timeMatch = block.match(/data-date-utc="([^"]+)"/);
-        // Extract Title
         const titleMatch = block.match(/class="program-title">([^<]+)<\/h3>/);
-        // Extract Description
         const descMatch = block.match(/class="program-description">([\s\S]*?)<\/div>/);
-        // Extract Image
         const imgMatch = block.match(/src="([^"]+)"/);
 
         if (timeMatch && titleMatch) {
             let startUtc = timeMatch[1];
             let title = titleMatch[1].trim();
             let desc = descMatch ? descMatch[1].trim().replace(/<[^>]*>?/gm, '') : '';
+            
+            // --- THE IMAGE CAR WASH ---
             let img = imgMatch ? imgMatch[1] : '';
-
-            // Handle relative image paths
-            if (img && !img.startsWith('http')) {
-                img = 'https://www.kan.org.il' + img;
+            if (img) {
+                // 1. Strip the resizing query so it ends cleanly in .jpg
+                img = img.split('?')[0];
+                
+                // 2. Force it off the restricted mobapi domain and onto the public www domain
+                img = img.replace('https://mobapi.kan.org.il', 'https://www.kan.org.il');
+                
+                // 3. Fix relative paths
+                if (!img.startsWith('http')) {
+                    img = 'https://www.kan.org.il' + img;
+                }
+                
+                // 4. Safely URL-encode any Hebrew characters so Plex doesn't crash
+                img = encodeURI(decodeURI(img));
             }
 
             programs.push({
@@ -77,10 +82,8 @@ async function buildGuide() {
         const nextItem = programs[i + 1];
         
         const startXml = formatXMLTV(item.start);
-        // Stop time is the start of the next show, or +1 hour for the last one
         const stopXml = nextItem ? formatXMLTV(nextItem.start) : formatXMLTV(item.start.replace(/(\d+):/, (match, p1) => (parseInt(p1)+1) + ":"));
 
-        // Get date for the "Mako Fix"
         const airDate = item.start.split(' ')[0].split('.').reverse().map(n => n.padStart(2, '0')).join('-');
 
         perfectXml += `  <programme start="${startXml}" stop="${stopXml}" channel="Kan 11">\n`;
