@@ -5,7 +5,6 @@ on:
     - cron: '0 */12 * * *'
   workflow_dispatch: 
 
-# This completely disables that yellow Node 20 deprecation warning!
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -36,12 +35,14 @@ jobs:
           git config --global user.name "epg-bot"
           git config --global user.email "bot@epg.local"
           
-          # THE MAGIC FIX: This checks for any changes YOU made and downloads them before saving!
-          git pull --rebase origin main
-          
-          # Add all files, including the new xml/ folder
+          # 1. Stage the new XML files
           git add .
           
-          # Only save if something actually changed
+          # 2. Save (Commit) the files locally first!
           git diff --quiet && git diff --staged --quiet || git commit -m "Automated Data Refresh"
+          
+          # 3. NOW safely check the cloud for any changes you made manually
+          git pull --rebase origin main
+          
+          # 4. Upload everything to GitHub
           git push
