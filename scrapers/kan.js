@@ -9,8 +9,8 @@ if (!fs.existsSync(XML_DIR)){
 }
 const OUTPUT_FILE = path.join(XML_DIR, 'kan.xml'); 
 
-// Added the Keyword list to catch News broadcasts!
-const newsKeywords = ['חדשות', 'מבזק', 'מהדורה', 'משדר', 'מהצד השני', 'כאן'];
+// MAKO LOGIC IMPORTED: This stops Plex from treating News as TV Dramas!
+const newsKeywords = ['חדשות', 'מבזק', 'מהדורה', 'שש עם', 'חמש עם', 'הבוקר', 'תוכנית חיסכון', 'פגוש את העיתונות', 'אולפן שישי', 'דוח מצב', 'שבע עם', 'משדר מיוחד', 'הלילה'];
 
 function formatXMLTV(dateStr) {
     const parts = dateStr.split(' ');
@@ -47,43 +47,24 @@ async function buildGuide() {
 
         if (timeMatch && titleMatch) {
             let startUtc = timeMatch[1];
-            let rawTitle = titleMatch[1].trim();
+            let title = titleMatch[1].trim();
             let desc = descMatch ? descMatch[1].trim().replace(/<[^>]*>?/gm, '') : '';
             
-            // --- MAKO TITLE SPLITTER LOGIC ---
-            let showTitle = rawTitle;
-            let episodeName = '';
-            const dashRegex = /\s*[-–]\s*/;
-            if (dashRegex.test(rawTitle)) {
-                let parts = rawTitle.split(dashRegex);
-                showTitle = parts[0].trim();
-                episodeName = parts.slice(1).join(' - ').trim();
-            }
-
-            // --- MAKO CATEGORY LOGIC ---
-            let category = 'Series';
-            let isNews = newsKeywords.some(keyword => showTitle.includes(keyword));
-            if (isNews) {
-                category = 'News';
-            } else if (showTitle.includes('סרט')) {
-                category = 'Movie';
-            }
-
-            // --- IMAGE CLEANER ---
             let img = imgMatch ? imgMatch[1] : '';
             if (img) {
-                img = img.split('?')[0]; // Strip resizing junk
+                // Keep the native domain (mobapi or www), just fix relative links
                 if (!img.startsWith('http')) {
                     img = 'https://www.kan.org.il' + img;
                 }
-                img = encodeURI(decodeURI(img)); // Safe encode
+                // Safely encode Hebrew characters so Plex's image fetcher doesn't crash
+                img = encodeURI(decodeURI(img));
+                // Strip the resizer query so it ends in a clean .jpg
+                img = img.split('?')[0];
             }
 
             programs.push({
                 start: startUtc,
-                showTitle: showTitle,
-                episodeName: episodeName,
-                category: category,
+                title: title,
                 desc: desc,
                 icon: img
             });
@@ -99,15 +80,22 @@ async function buildGuide() {
         
         const startXml = formatXMLTV(item.start);
         const stopXml = nextItem ? formatXMLTV(nextItem.start) : formatXMLTV(item.start.replace(/(\d+):/, (match, p1) => (parseInt(p1)+1) + ":"));
-
         const airDate = item.start.split(' ')[0].split('.').reverse().map(n => n.padStart(2, '0')).join('-');
 
+        // MAKO CATEGORY LOGIC APPLIED TO KAN 11
+        let category = 'Series';
+        let isNews = newsKeywords.some(keyword => item.title.includes(keyword));
+        if (isNews) category = 'News';
+        else if (item.title.includes('סרט')) category = 'Movie';
+
         perfectXml += `  <programme start="${startXml}" stop="${stopXml}" channel="Kan 11">\n`;
-        perfectXml += `    <title lang="he">${item.showTitle}</title>\n`;
-        if (item.episodeName) perfectXml += `    <sub-title lang="he">${item.episodeName}</sub-title>\n`;
+        perfectXml += `    <title lang="he">${item.title}</title>\n`;
         if (item.desc) perfectXml += `    <desc lang="he">${item.desc}</desc>\n`;
-        perfectXml += `    <category lang="en">${item.category}</category>\n`;
-        if (item.category !== 'Movie') perfectXml += `    <episode-num system="original-air-date">${airDate}</episode-num>\n`;
+        
+        // Output the smart category!
+        perfectXml += `    <category lang="en">${category}</category>\n`;
+        
+        if (category !== 'Movie') perfectXml += `    <episode-num system="original-air-date">${airDate}</episode-num>\n`;
         if (item.icon) perfectXml += `    <icon src="${item.icon}" />\n`;
         perfectXml += `  </programme>\n`;
     }
