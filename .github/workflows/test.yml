@@ -1,0 +1,30 @@
+name: Test Single Scraper
+
+on:
+  workflow_dispatch: # This ensures it ONLY runs when you manually click the button
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Specific Scraper
+        # CHANGE THIS LINE to whichever script you are actively testing!
+        run: |
+          node scrapers/kan.js
+
+      - name: Commit and Push Test XML
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add xml/*.xml
+          git commit -m "🧪 Test Run: Updated specific XML" || true
+          git push
