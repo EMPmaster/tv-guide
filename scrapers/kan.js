@@ -5,15 +5,26 @@ const sharp = require('sharp');
 
 const KAN_BASE_API = 'https://www.kan.org.il/umbraco/surface/LoadBroadcastSchedule/LoadSchedule?channelId=4444&currentPageId=1517';
 
+// --- FOLDER ARCHITECTURE ---
 const XML_DIR = path.join(__dirname, '../xml');
 const IMAGES_DIR = path.join(__dirname, '../images/kan');
-const IMAGES_BASE_URL = 'https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan';
+const DIR_ORIGINAL = path.join(IMAGES_DIR, 'original');
+const DIR_400 = path.join(IMAGES_DIR, 'cropped_400');
+const DIR_SQUARE = path.join(IMAGES_DIR, 'cropped_square');
 
-if (!fs.existsSync(XML_DIR)) fs.mkdirSync(XML_DIR, { recursive: true });
-if (!fs.existsSync(IMAGES_DIR)) fs.mkdirSync(IMAGES_DIR, { recursive: true });
+// Base URL for the XML to point to (we will point Plex to the square ones to prevent cutoff)
+const IMAGES_BASE_URL = 'https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/cropped_square';
+
+// Create all folders if they don't exist
+[XML_DIR, IMAGES_DIR, DIR_ORIGINAL, DIR_400, DIR_SQUARE].forEach(dir => {
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+});
 
 const OUTPUT_FILE = path.join(XML_DIR, 'kan.xml'); 
 const newsKeywords = ['חדשות', 'מבזק', 'מהדורה', 'משדר מיוחד', 'הלילה', 'הבוקר', 'שבע עם', 'שש עם', 'חמש עם'];
+
+// VIP List to track which images are actively being used right now
+const activeImageHashes = new Set();
 
 function formatXMLTV(dateStr) {
     const parts = dateStr.split(' ');
@@ -28,29 +39,23 @@ function formatXMLTV(dateStr) {
     return `${year}${month}${day}${hh}${mm}${ss} +0000`;
 }
 
-function cleanupOldImages() {
-    const files = fs.readdirSync(IMAGES_DIR);
-    const now = Date.now();
-    const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
-    
-    files.forEach(file => {
-        const filePath = path.join(IMAGES_DIR, file);
-        const stats = fs.statSync(filePath);
-        if (now - stats.mtimeMs > SEVEN_DAYS) {
-            fs.unlinkSync(filePath);
-            console.log(`[Kan 11] Deleted old image: ${file}`);
-        }
-    });
-}
-
+// Downloads, caches, and generates the different cropped versions
 async function processImage(url) {
     if (!url) return null;
     
+    // Create a unique hash for the filename
     const hash = crypto.createHash('md5').update(url).digest('hex');
     const filename = `${hash}.jpg`;
-    const filePath = path.join(IMAGES_DIR, filename);
+    
+    // Add to the VIP list so it doesn't get deleted
+    activeImageHashes.add(filename);
 
-    if (!fs.existsSync(filePath)) {
+    const origPath = path.join(DIR_ORIGINAL, filename);
+    const path400 = path.join(DIR_400, filename);
+    const pathSquare = path.join(DIR_SQUARE, filename);
+
+    // If it doesn't exist, we download and process it
+    if (!fs.existsSync(origPath)) {
         try {
             const response = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -58,28 +63,59 @@ async function processImage(url) {
             const arrayBuffer = await response.arrayBuffer();
             const buffer = Buffer.from(arrayBuffer);
             
+            // 1. Save Original
+            fs.writeFileSync(origPath, buffer);
+            
+            // 2. Save Cropped 400 (Landscape - Keeps aspect ratio)
             await sharp(buffer)
                 .resize(400, null, { withoutEnlargement: true })
                 .jpeg({ quality: 80 })
-                .toFile(filePath);
+                .toFile(path400);
+
+            // 3. Save Cropped Square (400x400 - Pads with black borders so NOTHING gets cut off in Plex)
+            await sharp(buffer)
+                .resize(400, 400, {
+                    fit: 'contain',
+                    background: { r: 0, g: 0, b: 0, alpha: 1 } // Black padding
+                })
+                .jpeg({ quality: 80 })
+                .toFile(pathSquare);
                 
-            console.log(`[Kan 11] Downloaded & Resized: ${filename}`);
+            console.log(`[Kan 11] Downloaded & Processed: ${filename}`);
         } catch (err) {
             console.error(`[Kan 11] Failed to process image ${url} - ${err.message}`);
             return null;
         }
     }
     
+    // Return the URL pointing to the perfectly padded square image
     return `${IMAGES_BASE_URL}/${filename}`;
+}
+
+// The Ultimate Zero-Bloat Cleanup Routine
+function cleanupOrphans() {
+    console.log(`[Kan 11] Running Zero-Bloat Orphan Cleanup...`);
+    let deletedCount = 0;
+
+    [DIR_ORIGINAL, DIR_400, DIR_SQUARE].forEach(dir => {
+        if (fs.existsSync(dir)) {
+            const files = fs.readdirSync(dir);
+            files.forEach(file => {
+                if (file.endsWith('.jpg') && !activeImageHashes.has(file)) {
+                    fs.unlinkSync(path.join(dir, file));
+                    deletedCount++;
+                }
+            });
+        }
+    });
+    console.log(`[Kan 11] Cleanup complete. Deleted ${deletedCount} orphaned files.`);
 }
 
 async function buildGuide() {
   try {
-    console.log(`[Kan 11] Cleaning old images...`);
-    cleanupOldImages();
-
     const uniquePrograms = new Map();
 
+    // Loop 3 times (Today, Tomorrow, Day After)
     for (let i = 0; i < 3; i++) {
         let targetDate = new Date();
         targetDate.setDate(targetDate.getDate() + i);
@@ -149,34 +185,30 @@ async function buildGuide() {
         let episodeNumXml = `<episode-num system="original-air-date">${airDate}</episode-num>`;
         let cleanTitle = item.title;
 
-        // Check if the title has "Season X - Episode Y" (עונה 3 - פרק 7)
+        // Check if the title has Season/Episode logic (עונה X / פרק Y)
         let seasonMatch = item.title.match(/עונה\s*(\d+)/);
         let episodeMatch = item.title.match(/פרק\s*(\d+)/);
 
         if (seasonMatch || episodeMatch) {
-            let s = seasonMatch ? seasonMatch[1] : "1"; // Default to Season 1 if missing
+            let s = seasonMatch ? seasonMatch[1] : "1"; // Default to S1 if no season is written
             let e = episodeMatch ? episodeMatch[1] : "";
             
             if (e) {
-                // Generate Plex SxxEyy format
                 episodeNumXml = `<episode-num system="onscreen">S${s}E${e}</episode-num>`;
-                
-                // Clean the title so "Tehran - Season 3 - Episode 7" just becomes "Tehran"
+                // Clean the title by splitting at dashes so "טהרן 2 - פרק 7" becomes just "טהרן 2"
                 cleanTitle = item.title.split(/[-–:]/)[0].trim();
             }
         }
 
+        // Process the image and get the URL pointing to the square padded version
         const finalIconUrl = await processImage(item.rawIcon);
 
         perfectXml += `  <programme start="${startXml}" stop="${stopXml}" channel="Kan 11">\n`;
         perfectXml += `    <title lang="he">${cleanTitle}</title>\n`;
-        // Put the original full title back into the subtitle so no info is lost
         if (cleanTitle !== item.title) perfectXml += `    <sub-title lang="he">${item.title}</sub-title>\n`;
         if (item.desc) perfectXml += `    <desc lang="he">${item.desc}</desc>\n`;
         perfectXml += `    <category lang="en">${category}</category>\n`;
-        
         if (category !== 'Movie') perfectXml += `    ${episodeNumXml}\n`;
-        
         if (finalIconUrl) perfectXml += `    <icon src="${finalIconUrl}" />\n`;
         perfectXml += `  </programme>\n`;
     }
@@ -184,6 +216,9 @@ async function buildGuide() {
     perfectXml += `</tv>`;
     fs.writeFileSync(OUTPUT_FILE, perfectXml, 'utf-8');
     console.log(`[Kan 11] Success! Saved ${programs.length} programs to ${OUTPUT_FILE}`);
+
+    // Call the cleanup routine AFTER all images have been processed and added to the VIP list
+    cleanupOrphans();
 
   } catch (error) {
     console.error(`[Kan 11 Error]`, error.message);
