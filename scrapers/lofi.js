@@ -7,8 +7,7 @@ if (!fs.existsSync(XML_DIR)){
 }
 const OUTPUT_FILE = path.join(XML_DIR, 'lofi.xml'); 
 
-// The classic Lofi Girl artwork
-const LOFI_LOGO = "https://storage.googleapis.com/bitly-image-upload/Ip4f8VcIU3M";
+const LOFI_LOGO = "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Lofi_girl_logo.jpg/500px-Lofi_girl_logo.jpg";
 
 function getXMLTVTime(d) {
   const pad = (n) => String(n).padStart(2, '0');
@@ -19,23 +18,25 @@ function buildGuide() {
   console.log(`[Lofi] Generating continuous EPG...`);
   
   let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Lofi Generator">\n`;
-  // Make sure the channel id matches what you use in your proxy/DVR!
   perfectXml += `  <channel id="LofiGirl">\n    <display-name>Lofi Girl Radio</display-name>\n  </channel>\n`;
 
   const now = new Date();
-  // Start at midnight UTC today
-  const startOfDay = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0));
+  
+  // FIX 1: Start from 24 hours AGO to ensure there are zero timezone gaps right now
+  const startOfDay = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 1, 0, 0, 0));
 
-  // Generate 14 blocks of 12 hours each (7 days of schedule)
-  for (let i = 0; i < 14; i++) { 
-     let blockStart = new Date(startOfDay.getTime() + (i * 12 * 60 * 60 * 1000));
-     let blockEnd = new Date(blockStart.getTime() + (12 * 60 * 60 * 1000));
+  // FIX 2: Generate 42 blocks of 4-hours each (Exactly 7 days of safe, manageable blocks for Plex)
+  for (let i = 0; i < 42; i++) { 
+     let blockStart = new Date(startOfDay.getTime() + (i * 4 * 60 * 60 * 1000));
+     let blockEnd = new Date(blockStart.getTime() + (4 * 60 * 60 * 1000));
 
      const start = getXMLTVTime(blockStart);
      const stop = getXMLTVTime(blockEnd);
 
      perfectXml += `  <programme start="${start}" stop="${stop}" channel="LofiGirl">\n`;
-     perfectXml += `    <title lang="en">lofi hip hop radio - beats to relax/study to</title>\n`;
+     perfectXml += `    <title lang="en">Lofi Girl Radio</title>\n`;
+     // Per your request!
+     perfectXml += `    <sub-title lang="en">Live from YouTube</sub-title>\n`;
      perfectXml += `    <desc lang="en">A 24/7 continuous stream of lo-fi hip hop beats. Perfect for studying, working, or relaxing.</desc>\n`;
      perfectXml += `    <category lang="en">Music</category>\n`;
      perfectXml += `    <icon src="${LOFI_LOGO}" />\n`;
