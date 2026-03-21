@@ -17,7 +17,8 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
           npm install cheerio
 
       - name: Run Specific Scraper
@@ -31,7 +32,7 @@ jobs:
           git add xml/*.xml images/
           git commit -m "🧪 Test Run: Updated skynews.xml and downloaded images" || true
           
-          # This pulls any recent changes you made in the GitHub UI so it doesn't get blocked!
+          # This line downloads any changes you made so GitHub doesn't block the push!
           git pull --rebase origin main 
           
           git push
