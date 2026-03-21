@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const cheerio = require('cheerio');
-const sharp = require('sharp'); // Remember, sharp is already in your package.json!
+const sharp = require('sharp'); 
 
 // --- CLEAN FOLDER ARCHITECTURE ---
 const XML_DIR = path.join(__dirname, '../xml');
@@ -14,6 +14,7 @@ const DIR_LANDSCAPE = path.join(IMAGES_DIR, 'landscape');
 // The base URL where your images are publicly served from GitHub
 const IMAGES_BASE_URL = 'https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/skynews/landscape';
 
+// Ensure all folders exist
 [XML_DIR, IMAGES_DIR, DIR_ORIGINAL, DIR_LANDSCAPE].forEach(dir => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
@@ -49,7 +50,7 @@ async function processImage(url) {
     // Create a unique hash for the image filename
     const hash = crypto.createHash('md5').update(url).digest('hex');
     const filename = `${hash}.jpg`;
-    activeImageHashes.add(filename); // Mark as VIP (Do not delete)
+    activeImageHashes.add(filename); // Mark as active so it isn't deleted
 
     const pathOriginal = path.join(DIR_ORIGINAL, filename);
     const pathLandscape = path.join(DIR_LANDSCAPE, filename);
@@ -68,7 +69,7 @@ async function processImage(url) {
                 fs.writeFileSync(pathOriginal, buffer);
             }
 
-            // 2. Save Resized Landscape
+            // 2. Save Resized Landscape using Sharp
             if (!fs.existsSync(pathLandscape)) {
                 await sharp(buffer)
                     .resize(800, null, { withoutEnlargement: true })
@@ -110,7 +111,7 @@ async function buildGuide() {
     try {
         let uniquePrograms = new Map();
 
-        // Loop for 3 days (0 = Today, 1 = Tomorrow, 2 = Day After)
+        // 1. Loop exactly exactly 3 days utilizing the ?date= parameter
         for (let i = 0; i < 3; i++) {
             let targetDate = new Date();
             targetDate.setDate(targetDate.getDate() + i);
@@ -119,16 +120,17 @@ async function buildGuide() {
             let mm = String(targetDate.getMonth() + 1).padStart(2, '0');
             let dd = String(targetDate.getDate()).padStart(2, '0');
             
-            // Format: ?date=2026-03-21
             let fetchUrl = `https://www.tvguide.co.uk/channel/sky-news?date=${yyyy}-${mm}-${dd}`;
+            console.log(`[Sky News] Fetching day ${i + 1}: ${fetchUrl}`);
             
             const response = await fetch(fetchUrl, {
                 headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
             });
             const html = await response.text();
+            
+            // Use Cheerio to parse the HTML document structure
             const $ = cheerio.load(html);
 
-            // Scrape the DOM
             $('.js-schedule').each((index, element) => {
                 const startTimeISO = $(element).attr('data-date');
                 const title = $(element).find('a.font-semibold').text().trim();
@@ -136,7 +138,6 @@ async function buildGuide() {
                 const image = $(element).find('img').attr('src');
 
                 if (startTimeISO && title) {
-                    // Use a Map to ensure we don't duplicate shows that cross the midnight boundary
                     uniquePrograms.set(startTimeISO, {
                         title: title,
                         desc: description || 'No description available.',
@@ -154,7 +155,7 @@ async function buildGuide() {
 
         console.log(`[Sky News] Successfully scraped ${programs.length} total shows.`);
 
-        // --- BUILD XML ---
+        // --- 2. BUILD XML ---
         let perfectXml = `<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="Sky News Scraper">\n`;
         perfectXml += `  <channel id="Sky News">\n    <display-name>Sky News</display-name>\n    <icon src="https://static-cdn.jtvnw.net/jtv_user_pictures/ed4284f7-da47-4ad3-9f0c-b091d28212b1-profile_banner-480.png" />\n  </channel>\n`;
 
@@ -173,7 +174,7 @@ async function buildGuide() {
                 stopXml = formatXMLTVDate(lastDate.toISOString());
             }
 
-            // Process the image through Sharp!
+            // Download and process the image!
             const finalIconUrl = await processImage(item.rawIcon);
 
             perfectXml += `  <programme start="${startXml}" stop="${stopXml}" channel="Sky News">\n`;
@@ -188,10 +189,11 @@ async function buildGuide() {
 
         perfectXml += `</tv>`;
         
+        // 3. Save the XML file
         fs.writeFileSync(OUTPUT_FILE, perfectXml, 'utf-8');
         console.log(`[Sky News] Successfully generated ${OUTPUT_FILE}`);
         
-        // Run cleanup to delete any old images from 4 days ago
+        // Run cleanup to delete any old images from past days
         cleanupOrphans();
 
     } catch (error) {
