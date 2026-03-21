@@ -19,7 +19,7 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install
-          npm install cheerio
+          npm install cheerio --no-save
 
       - name: Run Specific Scraper
         run: |
@@ -29,7 +29,14 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add our generated files
           git add xml/*.xml images/
           git commit -m "🧪 Test Run: Updated skynews.xml and downloaded images" || true
+          
+          # Force Git to throw away the temporary package.json modifications
+          git restore .
+          
+          # Now Git will happily pull and push!
           git pull --rebase origin main 
           git push
