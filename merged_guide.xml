@@ -3,66 +3,6 @@
 <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260402050000 +0000" stop="20260402060000 +0000" channel="CNBC">
-    <title lang="en">American Greed</title>
-    <desc lang="en">Leaders of a polygamous religious sect demand perfect obedience from followers, luring them into welfare fraud and stealing more than $2 million from American taxpayers.</desc>
-    <category lang="en">Newsmagazine</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S4E240</episode-num>
-  </programme>
-  <programme start="20260402060000 +0000" stop="20260402070000 +0000" channel="CNBC">
-    <title lang="en">Dateline</title>
-    <desc lang="en">Insights into the story of the private royal, including a look at Diana's troubled marriage, her turbulent life in the royal family and the investigation into her death.</desc>
-    <category lang="en">Newsmagazine</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S51E492</episode-num>
-  </programme>
-  <programme start="20260402070000 +0000" stop="20260402080000 +0000" channel="CNBC">
-    <title lang="en">Dateline</title>
-    <desc lang="en">Insights into the story of the private royal, including a look at Diana's troubled marriage, her turbulent life in the royal family, and the investigation into her death.</desc>
-    <category lang="en">Newsmagazine</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S52E493</episode-num>
-  </programme>
-  <programme start="20260402080000 +0000" stop="20260402090000 +0000" channel="CNBC">
-    <title lang="en">Squawk Box Europe</title>
-    <desc lang="en">"Squawk Box Europe" provides three hours of analysis and debate on trading days to lead up to the open of the European markets.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S2026E4020800</episode-num>
-  </programme>
-  <programme start="20260402090000 +0000" stop="20260402100000 +0000" channel="CNBC">
-    <title lang="en">Morning Call</title>
-    <desc lang="en">Morgan Brennan delivers the essential market intelligence that drives the trading day ahead; capture breaking business news as it unfolds and tracks pre-market equity moves, commodity swings, U.S. futures, and overnight action across global markets.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S9E9</episode-num>
-  </programme>
-  <programme start="20260402100000 +0000" stop="20260402130000 +0000" channel="CNBC">
-    <title lang="en">Squawk Box</title>
-    <desc lang="en">The big names in business and politics tell their important stories in this pre-market morning news and talk program; from professional traders to casual investors.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S66E1825</episode-num>
-  </programme>
-  <programme start="20260402130000 +0000" stop="20260402150000 +0000" channel="CNBC">
-    <title lang="en">Squawk on the Street</title>
-    <desc lang="en">Taking viewers onto the floor of the exchange, right to the posts where the big companies in the world trade; tick charts track the action of every trade of every stock; the treasury, currency and commodity action in real time.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S66E2855</episode-num>
-  </programme>
   <programme start="20260402150000 +0000" stop="20260402160000 +0000" channel="CNBC">
     <title lang="en">Money Movers</title>
     <desc lang="en">Anchors Carl Quintanilla and Sara Eisen focus on what is moving the stock markets, the agenda for the business day, detailed data on individual stocks, sectors and the indices that investors and traders want.</desc>
@@ -318,12 +258,20 @@
     <episode-num system="original-air-date">2026-04-02</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/b511f8334036c3a128fec79bfd05c087.jpg" />
   </programme>
-  <programme start="20260402200000 +0000" stop="20260402220000 +0000" channel="Kan 11">
+  <programme start="20260402200000 +0000" stop="20260402213000 +0000" channel="Kan 11">
     <title lang="he">חדשות הלילה עם קרן אוזן</title>
     <desc lang="he">רגע לפני שהיום נגמר, חדשות הלילה תסכם עבורכם את כל הדברים החשובים והמעניינים שקרו היום – מזווית קצת אחרת.</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-04-02</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/4cb0dc1cda860f43b6be7da0eb09fcef.jpg" />
+  </programme>
+  <programme start="20260402213000 +0000" stop="20260402220000 +0000" channel="Kan 11">
+    <title lang="he">שיר אחד</title>
+    <sub-title lang="he">אף אחת</sub-title>
+    <desc lang="he">עיבוד טלוויזיוני להסכת המצליח שמביא את סיפורם של שירים ישראלים אהובים. הפעם: המילים של צרויה להב פגשו את הלחן של שמוליק נויפלד והקול של מירי מסיקה, וכך סיפור האהבה המיתולוגי של מירי קיבל חיים חדשים.</desc>
+    <category lang="en">Series</category>
+    <episode-num system="original-air-date">2026-04-02</episode-num>
+    <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/39b1c9f13414bfbeb7d3602159d674d4.jpg" />
   </programme>
   <programme start="20260402220000 +0000" stop="20260402223000 +0000" channel="Kan 11">
     <title lang="he">היהודים באים</title>
@@ -864,8 +812,17 @@
     <episode-num system="original-air-date">2026-04-03</episode-num>
     <icon src="https://img.mako.co.il/2026/03/04/Yona_SpecialBroadcast_EPG.jpg" />
   </programme>
-  <programme start="20260403090000 +0000" stop="20260403110000 +0000" channel="Keshet 12">
+  <programme start="20260403090000 +0000" stop="20260403100000 +0000" channel="Keshet 12">
+    <title lang="he">עושים חג עם סיון רהב מאיר</title>
+    <sub-title lang="he">ליל הסדר</sub-title>
+    <desc lang="he">סיון רהב-מאיר בתוכנית מיוחדת לחג פסח: עם רס"ן הרב לירז זעירא שידבר על חירות ותקווה, עם סיור בכותל המערבי, עם החטופים המשוחררים שחוגגים את חג החירות, פרשת השבוע בערבית ועוד</desc>
+    <category lang="en">Series</category>
+    <episode-num system="original-air-date">2026-04-03</episode-num>
+    <icon src="https://img.mako.co.il/2026/03/25/OsimHag2026_EPG.jpg" />
+  </programme>
+  <programme start="20260403100000 +0000" stop="20260403110000 +0000" channel="Keshet 12">
     <title lang="he">משדר חדשות מיוחד</title>
+    <sub-title lang="he">אדוה דדון</sub-title>
     <desc lang="he">משדר חדשות מיוחד</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-04-03</episode-num>
@@ -873,7 +830,7 @@
   </programme>
   <programme start="20260403110000 +0000" stop="20260403130000 +0000" channel="Keshet 12">
     <title lang="he">גלית ואילנית</title>
-    <desc lang="he">גלית גוטמן ואילנית לוי מקבלות את סוף השבוע בתכנית אירוח עם כל האנשים הכי מעניינים</desc>
+    <desc lang="he">גלית ואילנית מקבלות את הסופ"ש בתכנית חגיגית: שלומי שבת וספיר סבן סוגרים מעגל, עדי ואור מהמירוץ למיליון מסכמים את השבוע הסוער בגיאורגיה וניצן שיק על ההחלטה להפוך לאמא והזוגיות החדשה</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-04-03</episode-num>
     <icon src="https://img.mako.co.il//2021/08/04/galit_ve_ilanit.jpg" />
@@ -1011,6 +968,7 @@
   </programme>
   <programme start="20260404070000 +0000" stop="20260404090000 +0000" channel="Keshet 12">
     <title lang="he">משדר חדשות מיוחד</title>
+    <sub-title lang="he">לירון זייד</sub-title>
     <desc lang="he">משדר חדשות מיוחד</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-04-04</episode-num>
@@ -1024,7 +982,8 @@
     <icon src="https://img.mako.co.il/2024/05/20/Hadashot_epg.jpg" />
   </programme>
   <programme start="20260404120000 +0000" stop="20260404150000 +0000" channel="Keshet 12">
-    <title lang="he">משדר חדשות מיוחד </title>
+    <title lang="he">משדר חדשות מיוחד</title>
+    <sub-title lang="he">גדעון אוקו</sub-title>
     <desc lang="he">משדר חדשות מיוחד</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-04-04</episode-num>
