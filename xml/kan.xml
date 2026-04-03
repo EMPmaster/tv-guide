@@ -366,12 +366,22 @@
     <episode-num system="original-air-date">2026-04-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/184e38e122683ba5a34b1e1793f3bc28.jpg" />
   </programme>
-  <programme start="20260404230500 +0000" stop="20260405000000 +0000" channel="Kan 11">
-    <title lang="he">האחוזון העליון</title>
-    <desc lang="he">משחק הטלוויזיה שבו חייבים לחשוב מחוץ לקופסה! והפעם, בין מאה המתמודדים: בחור צעיר שחייב את הכסף כדי לקנות טבעת נישואין, וקרובת משפחה רחוקה... של המנחה! האם מישהו ייקח את הכסף הגדול? מנחה: שחר חסון.</desc>
+  <programme start="20260404230500 +0000" stop="20260404234500 +0000" channel="Kan 11">
+    <title lang="he">אתה חייב לקרוא את זה!</title>
+    <sub-title lang="he">עונה חדשה</sub-title>
+    <desc lang="he">קומיקאים ואנשי ספר נאבקים על המלצת הקריאה המושלמת. בלי רחמים. והפעם איל קיציס, ג&apos;רמי פוגל, אלונה סער, איתי רייכר, דינה סנדרסון ופרופ&apos; עודד רכבי ממליצים לחן הפוליאמורית וליודי רועה הצאן מרמת הגולן.</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-04-04</episode-num>
-    <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/2b32a7d0fd038baaeb54c30a1f27691e.jpg" />
+    <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/b511f8334036c3a128fec79bfd05c087.jpg" />
+  </programme>
+  <programme start="20260404234500 +0000" stop="20260405000000 +0000" channel="Kan 11">
+    <title lang="he">אומרים שהיה פה</title>
+    <sub-title lang="he">1989</sub-title>
+    <desc lang="he">1989. כשהחמאס מתחזק, בארץ יוצאים למאבק דווקא נגד הזמרות נורית גלרון וחוה אלברשטיין. 
+עם מי הסתבך יאיר לפיד? איך הגיבו שמיר ופרס כששמעו על העלייה הגדולה הצפויה מרוסיה? וממה התפרנסו החברים של נאטשה?</desc>
+    <category lang="en">Series</category>
+    <episode-num system="onscreen">S1E1989</episode-num>
+    <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/5f4ded6352ee91b840ba8a7370259a12.jpg" />
   </programme>
   <programme start="20260405000000 +0000" stop="20260405000500 +0000" channel="Kan 11">
     <title lang="he">מבזק חדשות</title>
