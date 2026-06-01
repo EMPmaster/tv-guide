@@ -3,7 +3,61 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260601020000 +0000" stop="20260601030000 +0000" channel="CNBC">
+  <programme start="20260601170000 +0000" stop="20260601180000 +0000" channel="CNBC">
+    <title lang="en">The Exchange</title>
+    <desc lang="en">Anchor Kelly Evans reports on the important stories to markets and investors; reporters provide actionable information to viewers as they make daily investment decisions.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S108E1727</episode-num>
+  </programme>
+  <programme start="20260601180000 +0000" stop="20260601190000 +0000" channel="CNBC">
+    <title lang="en">Power Lunch</title>
+    <desc lang="en">Focusing on real-time market coverage, breaking news and up-to-the-instant stock moving information; delving into the economy, the markets, real estate, media and technology -- any place where there's money to be made.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S108E2318</episode-num>
+  </programme>
+  <programme start="20260601190000 +0000" stop="20260601200000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell</title>
+    <desc lang="en">A guide through the most important hour of the Wall Street trading day, and taking a close-up look at how the markets are moving, what's driving them and how investors are reacting; coverage includes reports from the CME Group, NASDAQ and the NYSE.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S108E1760</episode-num>
+  </programme>
+  <programme start="20260601200000 +0000" stop="20260601210000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S108E1099</episode-num>
+  </programme>
+  <programme start="20260601210000 +0000" stop="20260601220000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S108E4149</episode-num>
+  </programme>
+  <programme start="20260601220000 +0000" stop="20260601230000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S108E4228</episode-num>
+  </programme>
+  <programme start="20260601230000 +0000" stop="20260602000000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
     <desc lang="en">A non-toxic product that helps dispose of cooking oils safely; a tool that transforms eating utensils into a common kitchen accessory; a viral device designed to help save time and lessen fatigue; a product designed to keep critters out.</desc>
     <category lang="en">Reality</category>
@@ -11,20 +65,44 @@
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
     <episode-num system="onscreen">S13E315</episode-num>
   </programme>
-  <programme start="20260601030000 +0000" stop="20260601040000 +0000" channel="CNBC">
+  <programme start="20260602000000 +0000" stop="20260602010000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">Life-sized, scientifically accurate animatronic dinosaurs; a caffeinated beverage inspired by Vietnamese heritage; beverage coolers; a tool that helps parents conquer potty training.</desc>
+    <desc lang="en">Stuffed animals that also serve as washcloths; a handmade wearable sling to carry dogs; a darts-like card game.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S25E278</episode-num>
+    <episode-num system="onscreen">S3E102</episode-num>
   </programme>
-  <programme start="20260601040000 +0000" stop="20260601050000 +0000" channel="CNBC">
+  <programme start="20260602010000 +0000" stop="20260602020000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">A damage-free wall light; an umbrella with two handles; a silicone placemat with an edge; a gluten-free alternative to popcorn.</desc>
+    <desc lang="en">A portable three-in-one charger; a DIY electric vehicle kit; a take-home sweet potato pie; indoor bumper cars for kids.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S11E335</episode-num>
+    <episode-num system="onscreen">S11E357</episode-num>
+  </programme>
+  <programme start="20260602020000 +0000" stop="20260602030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Heat and eat paleo meals; a high-tech device for catching fish; reusable magnet stickers for hanging art; customized lapels turn a suit jacket into a tuxedo; an update on the motion-activated toilet-bowl light that Kevin O'Leary invested in.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2E159</episode-num>
+  </programme>
+  <programme start="20260602030000 +0000" stop="20260602040000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A former WNBA player knows what athletes want in a sports drink; an entrepreneur enlists the help of a superstar to show off his work from home necessity; a couple's secret to "sexy time."</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S9E262</episode-num>
+  </programme>
+  <programme start="20260602040000 +0000" stop="20260602050000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A portable three-in-one charger; a DIY electric vehicle kit; a take-home sweet potato pie; indoor bumper cars for kids.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S11E357</episode-num>
   </programme>
 </tv>
