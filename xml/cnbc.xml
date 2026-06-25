@@ -3,12 +3,124 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260625020000 +0000" stop="20260625043000 +0000" channel="CNBC">
-    <title lang="en">WNBA Basketball</title>
-    <desc lang="en">The Golden State Valkyries face the Atlanta Dream as Gabby Williams anchors the offense. The home squad counts on Angel Reese following her 11.9 rebounds per game, while the visiting lineup counters with Janelle Salaün to establish paint presence.</desc>
-    <category lang="en">Basketball</category>
+  <programme start="20260625130000 +0000" stop="20260625160000 +0000" channel="CNBC">
+    <title lang="en">Squawk on the Street</title>
+    <desc lang="en">Taking viewers onto the floor of the exchange, right to the posts where the big companies in the world trade; tick charts track the action of every trade of every stock; the treasury, currency and commodity action in real time.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S2026E6250200</episode-num>
+    <episode-num system="onscreen">S126E2915</episode-num>
+  </programme>
+  <programme start="20260625160000 +0000" stop="20260625170000 +0000" channel="CNBC">
+    <title lang="en">Halftime Report</title>
+    <desc lang="en">The front lines of market coverage; host Scott Wapner and the top investors get to the heart of the action as it's happening and help set the agenda for the rest of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S126E1680</episode-num>
+  </programme>
+  <programme start="20260625170000 +0000" stop="20260625180000 +0000" channel="CNBC">
+    <title lang="en">The Exchange</title>
+    <desc lang="en">Kelly Evans and Brian Sullivan broadcast live from Cboe's Chicago trading floor.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S126E1745</episode-num>
+  </programme>
+  <programme start="20260625180000 +0000" stop="20260625190000 +0000" channel="CNBC">
+    <title lang="en">Power Lunch</title>
+    <desc lang="en">Kelly Evans and Brian Sullivan broadcast live from Cboe's Chicago trading floor.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S126E2336</episode-num>
+  </programme>
+  <programme start="20260625190000 +0000" stop="20260625200000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell</title>
+    <desc lang="en">A guide through the most important hour of the Wall Street trading day, and taking a close-up look at how the markets are moving, what's driving them and how investors are reacting; coverage includes reports from the CME Group, NASDAQ and the NYSE.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S126E1778</episode-num>
+  </programme>
+  <programme start="20260625200000 +0000" stop="20260625210000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S126E1117</episode-num>
+  </programme>
+  <programme start="20260625210000 +0000" stop="20260625220000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S126E4167</episode-num>
+  </programme>
+  <programme start="20260625220000 +0000" stop="20260625230000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S126E4246</episode-num>
+  </programme>
+  <programme start="20260625230000 +0000" stop="20260626000000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Entrepreneurs rent tiny houses in the woods; snack chips made with cricket flour; earplugs for listening to music filter out damaging levels of sound; a modern version of a favorite childhood toy; a profile of Barbara Corcoran.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S14E171</episode-num>
+  </programme>
+  <programme start="20260626000000 +0000" stop="20260626010000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">High heels that are sexy and comfortable; a solution for a common food storage issue; a stylish solution to a common frustration with women's bathing suits; a successful sauce company.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S14E267</episode-num>
+  </programme>
+  <programme start="20260626010000 +0000" stop="20260626020000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Entrepreneurs with military backgrounds present ideas that include nonslip protective gloves for cross-fitness training, an elite canine training program and a bottle opener made of recycled.50 caliber shells.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S8E107</episode-num>
+  </programme>
+  <programme start="20260626020000 +0000" stop="20260626030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Guest shark Nirav Tolia; a solution to a problem for swimmers; a tool to help cat lovers find their perfect match; a product designed to encourage children to wash their hands; a beauty line inspired by a woman's African heritage.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S4E282</episode-num>
+  </programme>
+  <programme start="20260626030000 +0000" stop="20260626040000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A twist on traditional sauces; artisan-made designs inspired by the craftsmanship of each country; a vibrant beauty and lifestyle brand that celebrates the creators' multicultural heritage.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S10E263</episode-num>
+  </programme>
+  <programme start="20260626040000 +0000" stop="20260626050000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A dual-use breath freshener; a functional placemat for children; a subscription service for ugly produce; checking in with the Houston-based founders of LuminAid.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S13E141</episode-num>
   </programme>
 </tv>
