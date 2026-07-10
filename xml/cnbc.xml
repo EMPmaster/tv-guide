@@ -3,36 +3,124 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260710010000 +0000" stop="20260710020000 +0000" channel="CNBC">
+  <programme start="20260710130000 +0000" stop="20260710160000 +0000" channel="CNBC">
+    <title lang="en">Squawk on the Street</title>
+    <desc lang="en">Taking viewers onto the floor of the exchange, right to the posts where the big companies in the world trade; tick charts track the action of every trade of every stock; the treasury, currency and commodity action in real time.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S137E2926</episode-num>
+  </programme>
+  <programme start="20260710160000 +0000" stop="20260710170000 +0000" channel="CNBC">
+    <title lang="en">Halftime Report</title>
+    <desc lang="en">The front lines of market coverage; host Scott Wapner and the top investors get to the heart of the action as it's happening and help set the agenda for the rest of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S137E1691</episode-num>
+  </programme>
+  <programme start="20260710170000 +0000" stop="20260710180000 +0000" channel="CNBC">
+    <title lang="en">The Exchange</title>
+    <desc lang="en">Anchor Kelly Evans reports on the important stories to markets and investors; reporters provide actionable information to viewers as they make daily investment decisions.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S137E1756</episode-num>
+  </programme>
+  <programme start="20260710180000 +0000" stop="20260710190000 +0000" channel="CNBC">
+    <title lang="en">Power Lunch</title>
+    <desc lang="en">Focusing on real-time market coverage, breaking news and up-to-the-instant stock moving information; delving into the economy, the markets, real estate, media and technology -- any place where there's money to be made.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S137E2347</episode-num>
+  </programme>
+  <programme start="20260710190000 +0000" stop="20260710200000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell</title>
+    <desc lang="en">A guide through the most important hour of the Wall Street trading day, and taking a close-up look at how the markets are moving, what's driving them and how investors are reacting; coverage includes reports from the CME Group, NASDAQ and the NYSE.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S137E1789</episode-num>
+  </programme>
+  <programme start="20260710200000 +0000" stop="20260710210000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S137E1128</episode-num>
+  </programme>
+  <programme start="20260710210000 +0000" stop="20260710220000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S137E4178</episode-num>
+  </programme>
+  <programme start="20260710220000 +0000" stop="20260710230000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S137E4257</episode-num>
+  </programme>
+  <programme start="20260710230000 +0000" stop="20260711000000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">A portable athlete recovery device; an automated tattoo machine; eco-friendly buckwheat milk; compression hockey gear; guest shark Rashaun Williams.</desc>
+    <desc lang="en">Kids' shoes designed to be fashionable and save money; a fashion line for people who want to match their best friends; an interesting kitchen tool; a family introduces their "freak shakes."</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S14E360</episode-num>
+    <episode-num system="onscreen">S7E235</episode-num>
   </programme>
-  <programme start="20260710020000 +0000" stop="20260710030000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">A beauty product that combines luxury and glamour with safety and quality; a product for cutting cheese; a space-saving beauty organizer; a way to remove pet hair from clothes; an update on FitFighter.</desc>
-    <category lang="en">Reality</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S20E273</episode-num>
-  </programme>
-  <programme start="20260710030000 +0000" stop="20260710040000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">Equipment for people who want to run a crane or crush a car; a protein-filled pancake mix; keeping ties looking sharp; checking in with Jim Tselikis and Sabin Lomac of Cousins Maine Lobster.</desc>
-    <category lang="en">Reality</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S12E140</episode-num>
-  </programme>
-  <programme start="20260710040000 +0000" stop="20260710050000 +0000" channel="CNBC">
+  <programme start="20260711000000 +0000" stop="20260711010000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
     <desc lang="en">A healthy, hydrating treat for thirsty dogs; a convenient portable outdoor fire; a tree-made product; a healthy meal concept; an update on Benjilock.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
     <episode-num system="onscreen">S21E202</episode-num>
+  </programme>
+  <programme start="20260711010000 +0000" stop="20260711020000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A family-made Eastern European pierogi; a permanent fix for lost phone chargers; a kitchen fan that prevents "onion eyes"; a smart mini fridge designed for drinks.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S18E364</episode-num>
+  </programme>
+  <programme start="20260711020000 +0000" stop="20260711030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Guest shark Kevin Hart; a fun tool that takes snacking to the next level; a product made from space-age materials; an online social network that allows fans to have a real connection with their favorite celebrities and influencers.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S10E288</episode-num>
+  </programme>
+  <programme start="20260711030000 +0000" stop="20260711040000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A unique vegan take on a beloved drink; a product for easily removing hair from one's hands in the shower or bath; a product designed to enhance one's tattoo; an electric bike company; an update on Prime 6, a sustainable charcoal company.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S18E271</episode-num>
+  </programme>
+  <programme start="20260711040000 +0000" stop="20260711050000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A family-made Eastern European pierogi; a permanent fix for lost phone chargers; a kitchen fan that prevents "onion eyes"; a smart mini fridge designed for drinks.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S18E364</episode-num>
   </programme>
 </tv>
