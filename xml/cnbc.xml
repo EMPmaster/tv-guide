@@ -3,7 +3,72 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260816000000 +0000" stop="20260816010000 +0000" channel="CNBC">
+  <programme start="20260816120000 +0000" stop="20260816150000 +0000" channel="CNBC">
+    <title lang="en">The Fine Art Auction - Live!</title>
+    <desc lang="en">Bid on works from the masters to modern contemporary art, all at unbelievable auction prices!</desc>
+    <category lang="en">Art</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S60E80</episode-num>
+  </programme>
+  <programme start="20260816150000 +0000" stop="20260816153000 +0000" channel="CNBC">
+    <title lang="en">Small Stocks Big Money</title>
+    <desc lang="en">Interviews with the CEO's of fast-growing growth companies.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2026E8161500</episode-num>
+  </programme>
+  <programme start="20260816153000 +0000" stop="20260816160000 +0000" channel="CNBC">
+    <title lang="en">Wells Of Wealth</title>
+    <desc lang="en">Join The Chamberlin Group as they discuss common sense retirement planning and achieving financial security in the 21st Century.</desc>
+    <category lang="en">Consumer</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2026E8161530</episode-num>
+  </programme>
+  <programme start="20260816160000 +0000" stop="20260816170000 +0000" channel="CNBC">
+    <title lang="en">Rare 2009 Gold Coin</title>
+    <desc lang="en">Add the ground-breaking 2009 Ultra High Relief Saint Gaudens 1oz Gold Double Eagle in perfect Mint State 70 condition to your collection today. Only 114,427 of these Ultra High Relief coins were struck using Saint Gauden's original plaster models.</desc>
+    <category lang="en">Consumer</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2026E8161600</episode-num>
+  </programme>
+  <programme start="20260816170000 +0000" stop="20260816180000 +0000" channel="CNBC">
+    <title lang="en">Historic Silver Set</title>
+    <desc lang="en">Add the Set of 20 Truly Historic Morgan Silver Dollars in Brilliant Uncirculated condition to your numismatic collection today. With only about 1% of all Morgan Dollars grading in uncirculated condition, examples like these are Condition Rarities.</desc>
+    <category lang="en">Consumer</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2026E8161700</episode-num>
+  </programme>
+  <programme start="20260816180000 +0000" stop="20260816183000 +0000" channel="CNBC">
+    <title lang="en">Interested in Gold? Learn More!</title>
+    <desc lang="en">Gold has been the best long-term asset class for thousands of years; find out how you can protect your financial future by diversifying your nest-egg with physical gold today.</desc>
+    <category lang="en">Consumer</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2026E8161800</episode-num>
+  </programme>
+  <programme start="20260816183000 +0000" stop="20260816190000 +0000" channel="CNBC">
+    <title lang="en">Flawless 1776 Silver</title>
+    <desc lang="en">Secure the first-ever dual-dated 1776-2026 Morgan &amp; Peace Silver Dollars celebrating America's 250th Anniversary. Featuring the first-ever Enhanced Uncirculated issues, one-year-only Liberty Bell 250 privy marks and exceptionally low mintages.</desc>
+    <category lang="en">Consumer</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2026E8161830</episode-num>
+  </programme>
+  <programme start="20260816190000 +0000" stop="20260816200000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A portable basketball shooting machine; no-bake and nutritious snacks; an instant sneaker cleaner; an all-in-one beer-making device; an update on Boost, a portable oxygen canister company; guest Shark Alex Rodriguez.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S23E276</episode-num>
+  </programme>
+  <programme start="20260816200000 +0000" stop="20260816210000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
     <desc lang="en">A solution to make moving to and from college easier; an African-inspired home-decor line; a natural nonalcoholic beverage; a product for bringing clean air into homes; update on the Mad Rabbit tattoo aftercare line.</desc>
     <category lang="en">Reality</category>
@@ -11,36 +76,60 @@
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
     <episode-num system="onscreen">S4E306</episode-num>
   </programme>
-  <programme start="20260816010000 +0000" stop="20260816020000 +0000" channel="CNBC">
-    <title lang="en">American Greed</title>
-    <desc lang="en">From luxury properties to an ostrich coat, the hard charging political insider uses his power and influence to fuel a multimillion-dollar mortgage and tax fraud.</desc>
-    <category lang="en">Newsmagazine</category>
+  <programme start="20260816210000 +0000" stop="20260816220000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A gadget designed to safely and quickly get children in and out of a car; a lower-cost computer for kids; a data-driven approach to skin care; a device created to bring a robot revolution to children's education; Anne Wojcicki guest sharks.</desc>
+    <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S3E248</episode-num>
+    <episode-num system="onscreen">S21E249</episode-num>
   </programme>
-  <programme start="20260816020000 +0000" stop="20260816030000 +0000" channel="CNBC">
-    <title lang="en">American Greed</title>
-    <desc lang="en">Mike The Situation Sorrentino flaunts washboard abs and a party boy image, but when it comes to paying his taxes, he'd rather play than pay.</desc>
-    <category lang="en">Newsmagazine</category>
+  <programme start="20260816220000 +0000" stop="20260816230000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A line of health products using nature's most powerful superfood; an online marketplace designed to help athletes cash in on their fame; an all-in-one total body fitness tool; a plant-based approach to a fast food favorite; Kevin Hart guest sharks.</desc>
+    <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S13E258</episode-num>
+    <episode-num system="onscreen">S24E302</episode-num>
   </programme>
-  <programme start="20260816030000 +0000" stop="20260816040000 +0000" channel="CNBC">
-    <title lang="en">American Greed</title>
-    <desc lang="en">U.S. law enforcement teams up with Jamaican authorities to stop criminals using call centers in Jamaica to flood the U.S. with lies about lottery millions won by unsuspecting victims.</desc>
-    <category lang="en">Newsmagazine</category>
+  <programme start="20260816230000 +0000" stop="20260817010000 +0000" channel="CNBC">
+    <title lang="en">Pro Padel League</title>
+    <desc lang="en">Coverage of the North American padel tennis league.</desc>
+    <category lang="en">Racquet</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S12E197</episode-num>
+    <episode-num system="onscreen">S2026E8162300</episode-num>
   </programme>
-  <programme start="20260816040000 +0000" stop="20260816050000 +0000" channel="CNBC">
-    <title lang="en">American Greed</title>
-    <desc lang="en">Russian gangsters use beautiful women to seduce amorous men in nightclubs out of their money and jewelry.</desc>
-    <category lang="en">Newsmagazine</category>
+  <programme start="20260817010000 +0000" stop="20260817020000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A portable three-in-one charger; a DIY electric vehicle kit; a take-home sweet potato pie; indoor bumper cars for kids.</desc>
+    <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S6E191</episode-num>
+    <episode-num system="onscreen">S11E357</episode-num>
+  </programme>
+  <programme start="20260817020000 +0000" stop="20260817030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A state-of-the-art bionic prosthetic device; artisanal desserts for dogs; a bug-catching device; insulated water bottles guaranteed to keep beverages cold for 36 hours.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S15E339</episode-num>
+  </programme>
+  <programme start="20260817030000 +0000" stop="20260817040000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A gadget designed to safely and quickly get children in and out of a car; a lower-cost computer for kids; a data-driven approach to skin care; a device created to bring a robot revolution to children's education; Anne Wojcicki guest sharks.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S21E249</episode-num>
+  </programme>
+  <programme start="20260817040000 +0000" stop="20260817050000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A line of health products using nature's most powerful superfood; an online marketplace designed to help athletes cash in on their fame; an all-in-one total body fitness tool; a plant-based approach to a fast food favorite; Kevin Hart guest sharks.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S24E302</episode-num>
   </programme>
 </tv>
