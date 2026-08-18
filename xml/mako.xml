@@ -118,16 +118,16 @@
     <episode-num system="original-air-date">2026-08-17</episode-num>
     <icon src="https://img.mako.co.il/2024/05/16/GuyPines_NewLogo_EPG.jpg" />
   </programme>
-  <programme start="20260817203000 +0000" stop="20260817213000 +0000" channel="Keshet 12">
+  <programme start="20260817203000 +0000" stop="20260817213500 +0000" channel="Keshet 12">
     <title lang="he">אברי ושרקי</title>
     <desc lang="he">אברי גלעד ויאיר שרקי בתכנית מיוחדת על כל אירועי היום בארץ ובעולם עם הפרשנים, הכתבים והאורחים המעניינים</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-08-17</episode-num>
     <icon src="https://img.mako.co.il/2024/06/24/Avri_sherki_EPG.jpg" />
   </programme>
-  <programme start="20260817213000 +0000" stop="20260817220000 +0000" channel="Keshet 12">
+  <programme start="20260817213500 +0000" stop="20260817220000 +0000" channel="Keshet 12">
     <title lang="he">אברי ושרקי + אחד</title>
-    <desc lang="he">״אברי ושרקי + אחד״ מביאה מדי לילה ריאיון אחד מעמיק ומרחיב דעת עם האנשים שלא תשמעו במהלך היום</desc>
+    <desc lang="he">״אברי ושרקי + אחד״ מביאה מדי לילה ריאיון אחד מעמיק ומרחיב דעת עם האנשים שלא תשמעו במהלך היום. והפעם: עמר ברלב</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-08-18</episode-num>
     <icon src="https://img.mako.co.il/2025/09/07/AvriSharkiPlus_epg11.jpg" />
@@ -140,14 +140,14 @@
     <episode-num system="original-air-date">2026-08-18</episode-num>
     <icon src="https://img.mako.co.il/2024/09/05/BehindTheScenes_EPG.jpg" />
   </programme>
-  <programme start="20260817223000 +0000" stop="20260817230500 +0000" channel="Keshet 12">
+  <programme start="20260817223000 +0000" stop="20260817231000 +0000" channel="Keshet 12">
     <title lang="he">אולפן שישי הכתבות</title>
     <desc lang="he">מיטב הכתבות של "אולפן שישי" שכל המדינה תדבר עליהן בשבוע הקרוב</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-08-18</episode-num>
     <icon src="https://img.mako.co.il/2026/07/02/OlpanShishiArticles.jpg" />
   </programme>
-  <programme start="20260817230500 +0000" stop="20260818000500 +0000" channel="Keshet 12">
+  <programme start="20260817231000 +0000" stop="20260818001000 +0000" channel="Keshet 12">
     <title lang="he">רוקדים עם כוכבים</title>
     <sub-title lang="he">קרב המנטורים</sub-title>
     <desc lang="he">קרב המנטורים הגדול! ארטיום כבר לא ינצח את העונה, אבל הוא עדיין יכול לנצח את כל שאר המנטורים! האם הריקוד האחרון של ארטיום יהיה ריקוד ניצחון?</desc>
@@ -155,14 +155,22 @@
     <episode-num system="original-air-date">2026-08-18</episode-num>
     <icon src="https://img.mako.co.il/2026/05/20/Rokdim2026_EPG.jpg" />
   </programme>
-  <programme start="20260818000500 +0000" stop="20260818003500 +0000" channel="Keshet 12">
+  <programme start="20260818001000 +0000" stop="20260818003500 +0000" channel="Keshet 12">
     <title lang="he">קליפ טיים</title>
     <desc lang="he">מיטב להיטי המוסיקה הישראלית מכל הזמנים</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-08-18</episode-num>
     <icon src="https://img.mako.co.il/2026/05/18/ClipTime_EPG.jpg" />
   </programme>
-  <programme start="20260818003500 +0000" stop="20260818015000 +0000" channel="Keshet 12">
+  <programme start="20260818003500 +0000" stop="20260818004500 +0000" channel="Keshet 12">
+    <title lang="he">מבחני הדרכים של אוטו</title>
+    <sub-title lang="he">צ'רי טיגו 9 פרו</sub-title>
+    <desc lang="he">צ'רי מוסיפה עוד דגם להיצע המקומי - והפעם היא מגדילה לעשות גם בממדים, גם באבזור, גם ביחידת ההנעה. האם מדובר בחבילה משפחתית ללא נקודות תורפה משמעותיות?</desc>
+    <category lang="en">Series</category>
+    <episode-num system="original-air-date">2026-08-18</episode-num>
+    <icon src="https://img.mako.co.il/2025/01/02/AutoTest_EPG.jpg" />
+  </programme>
+  <programme start="20260818004500 +0000" stop="20260818015000 +0000" channel="Keshet 12">
     <title lang="he">הכוכב הבא לאירוויזיון</title>
     <sub-title lang="he">הקלאסיקה מהעבר</sub-title>
     <desc lang="he">האם החידוש המרגש של יובל גולד לקלאסיקה הנוסטלגית יקרב אותו צעד נוסף לגמר? וגם: הביצוע שייכנס להיסטוריה של הכוכב הבא - יובל הופכת שיר של נינט לווידוי אישי ומרגש</desc>
