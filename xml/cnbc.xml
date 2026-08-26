@@ -3,23 +3,88 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260826000000 +0000" stop="20260826010000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">Guest judge Steve Tisch; one product has all the Sharks interested; gourmet edible cookie dough; organic flavored milk; an app that produces hands-free panoramic picture taking; interactive workout technology; Pro-NRG follow-up.</desc>
-    <category lang="en">Reality</category>
+  <programme start="20260826100000 +0000" stop="20260826130000 +0000" channel="CNBC">
+    <title lang="en">Squawk Box</title>
+    <desc lang="en">The big names in business and politics tell their important stories in this pre-market morning news and talk program; from professional traders to casual investors.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S16E86</episode-num>
+    <episode-num system="onscreen">S170E1929</episode-num>
   </programme>
-  <programme start="20260826010000 +0000" stop="20260826020000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">An all-in-one styling device for textured hair; a multiuse water bottle; a baby bottle monitor that signals spoiled milk; swim goggles that will not pull one's hair; Emma Grede returns as guest shark.</desc>
-    <category lang="en">Reality</category>
+  <programme start="20260826130000 +0000" stop="20260826160000 +0000" channel="CNBC">
+    <title lang="en">Squawk on the Street</title>
+    <desc lang="en">Taking viewers onto the floor of the exchange, right to the posts where the big companies in the world trade; tick charts track the action of every trade of every stock; the treasury, currency and commodity action in real time.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S19E343</episode-num>
+    <episode-num system="onscreen">S170E2959</episode-num>
   </programme>
-  <programme start="20260826020000 +0000" stop="20260826030000 +0000" channel="CNBC">
+  <programme start="20260826160000 +0000" stop="20260826170000 +0000" channel="CNBC">
+    <title lang="en">Halftime Report</title>
+    <desc lang="en">The front lines of market coverage; host Scott Wapner and the top investors get to the heart of the action as it's happening and help set the agenda for the rest of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S170E1724</episode-num>
+  </programme>
+  <programme start="20260826170000 +0000" stop="20260826180000 +0000" channel="CNBC">
+    <title lang="en">The Exchange</title>
+    <desc lang="en">Anchor Kelly Evans reports on the important stories to markets and investors; reporters provide actionable information to viewers as they make daily investment decisions.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S170E1789</episode-num>
+  </programme>
+  <programme start="20260826180000 +0000" stop="20260826190000 +0000" channel="CNBC">
+    <title lang="en">Power Lunch</title>
+    <desc lang="en">Focusing on real-time market coverage, breaking news and up-to-the-instant stock moving information; delving into the economy, the markets, real estate, media and technology -- any place where there's money to be made.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S170E2380</episode-num>
+  </programme>
+  <programme start="20260826190000 +0000" stop="20260826200000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell</title>
+    <desc lang="en">A guide through the most important hour of the Wall Street trading day, and taking a close-up look at how the markets are moving, what's driving them and how investors are reacting; coverage includes reports from the CME Group, NASDAQ and the NYSE.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S170E1822</episode-num>
+  </programme>
+  <programme start="20260826200000 +0000" stop="20260826210000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S170E1161</episode-num>
+  </programme>
+  <programme start="20260826210000 +0000" stop="20260826220000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S170E4211</episode-num>
+  </programme>
+  <programme start="20260826220000 +0000" stop="20260826230000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S170E4290</episode-num>
+  </programme>
+  <programme start="20260826230000 +0000" stop="20260827000000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
     <desc lang="en">A coffee substitute that does not cause jitters; organic plant-care products; an easier way to floss; guest Shark Candace Nelson.</desc>
     <category lang="en">Reality</category>
@@ -27,20 +92,44 @@
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
     <episode-num system="onscreen">S22E346</episode-num>
   </programme>
-  <programme start="20260826030000 +0000" stop="20260826040000 +0000" channel="CNBC">
+  <programme start="20260827000000 +0000" stop="20260827010000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">Guest shark Daniel Lubetzky; a beauty line that uses an ancient symbol of Mexican culture; a product for healthy drinks; an allergen-free snack; an entrepreneur introduces beverages inspired by the flavors of his Latin American culture.</desc>
+    <desc lang="en">Emma Grede, the CEO of Good American, guest sharks; a napping product designed to reduce stress; a product which allows kids to unleash their creativity without the mess; a line of cozy accessories for the great outdoors.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S12E314</episode-num>
+    <episode-num system="onscreen">S5E307</episode-num>
   </programme>
-  <programme start="20260826040000 +0000" stop="20260826050000 +0000" channel="CNBC">
+  <programme start="20260827010000 +0000" stop="20260827020000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">Guest shark Kendra Scott; a women's undergarment subscription service; an effortless approach to a classic breakfast meal; an eco-friendly alternative to collecting dog waste; a healthy take on a beloved snack food.</desc>
+    <desc lang="en">Guest Shark Nick Woodman; a café where the patrons enjoy the company of rescue cats; all-electric compact vehicle; updates.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S2E255</episode-num>
+    <episode-num system="onscreen">S29E128</episode-num>
+  </programme>
+  <programme start="20260827020000 +0000" stop="20260827030000 +0000" channel="CNBC">
+    <title lang="en">American Greed</title>
+    <desc lang="en">A femme fatale, with a way of getting men to do what she wants, sets a trap for a multi-millionaire divorcee.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S1E207</episode-num>
+  </programme>
+  <programme start="20260827030000 +0000" stop="20260827040000 +0000" channel="CNBC">
+    <title lang="en">American Greed</title>
+    <desc lang="en">Musician Donald "Ski" Johnson uses his Jazz for Life foundation to make empty promises that leave generous donors feeling scammed when his bogus trips to the Grammy Awards turn into red carpet nightmares.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S15E221</episode-num>
+  </programme>
+  <programme start="20260827040000 +0000" stop="20260827050000 +0000" channel="CNBC">
+    <title lang="en">American Greed</title>
+    <desc lang="en">A neighborhood ice cream parlor in West Roxbury, Mass., lands the Palladino family in a major case of fraud.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S13E199</episode-num>
   </programme>
 </tv>
