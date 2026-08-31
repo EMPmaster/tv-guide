@@ -3,7 +3,68 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260831020000 +0000" stop="20260831030000 +0000" channel="CNBC">
+  <programme start="20260831180000 +0000" stop="20260831190000 +0000" channel="CNBC">
+    <title lang="en">Power Lunch</title>
+    <desc lang="en">Focusing on real-time market coverage, breaking news and up-to-the-instant stock moving information; delving into the economy, the markets, real estate, media and technology -- any place where there's money to be made.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S173E2383</episode-num>
+  </programme>
+  <programme start="20260831190000 +0000" stop="20260831200000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell</title>
+    <desc lang="en">A guide through the most important hour of the Wall Street trading day, and taking a close-up look at how the markets are moving, what's driving them and how investors are reacting; coverage includes reports from the CME Group, NASDAQ and the NYSE.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S173E1825</episode-num>
+  </programme>
+  <programme start="20260831200000 +0000" stop="20260831210000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S173E1164</episode-num>
+  </programme>
+  <programme start="20260831210000 +0000" stop="20260831220000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S173E4214</episode-num>
+  </programme>
+  <programme start="20260831220000 +0000" stop="20260831230000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S173E4293</episode-num>
+  </programme>
+  <programme start="20260831230000 +0000" stop="20260901000000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A bike lighting system; clothing with reinforced knees and built-in squeakers for crawling babies; a shoe buffing pad that attaches to a power drill; modular shoelaces.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S19E89</episode-num>
+  </programme>
+  <programme start="20260901000000 +0000" stop="20260901010000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Guest shark Troy Carter; a sock-of-the-month club; wooden bow ties, lapel accessories and fedoras; a valet and garage parking app; a balm that stops eyeglasses from slipping; an update on some of Kevin O'Leary's previous deals.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S3E131</episode-num>
+  </programme>
+  <programme start="20260901010000 +0000" stop="20260901020000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
     <desc lang="en">A self-tanner geared toward men; a new-and-improved flashlight; a reusable cup service for marathoners; an authentic instant pho.</desc>
     <category lang="en">Reality</category>
@@ -11,20 +72,28 @@
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
     <episode-num system="onscreen">S8E354</episode-num>
   </programme>
-  <programme start="20260831030000 +0000" stop="20260831040000 +0000" channel="CNBC">
+  <programme start="20260901020000 +0000" stop="20260901030000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">Brothers from Utah introduce their treasure hunt game experience; entrepreneurs from Wisconsin and New York present their line of streetwear that donates a school uniform to a child in need.</desc>
+    <desc lang="en">A lay-flat cosmetics bag; a boutique shave club for women; cat furniture; play dresses for mothers with young children.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S10E215</episode-num>
+    <episode-num system="onscreen">S11E216</episode-num>
   </programme>
-  <programme start="20260831040000 +0000" stop="20260831050000 +0000" channel="CNBC">
+  <programme start="20260901030000 +0000" stop="20260901040000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">A healthy alternative to salt; a spring-loaded cake stand; an entertaining approach to the tried-and-true carving knives often used during holidays; a product designed to attach a cellphone to almost any surface.</desc>
+    <desc lang="en">A subscription service for puppy products; a woman hopes to popularize algae as a nutritional supplement; apparel designed for athletic builds; fishing line cutting tool; follow-up with Bantam Bagels.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S4E257</episode-num>
+    <episode-num system="onscreen">S9E166</episode-num>
+  </programme>
+  <programme start="20260901040000 +0000" stop="20260901050000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A bike lighting system; clothing with reinforced knees and built-in squeakers for crawling babies; a shoe buffing pad that attaches to a power drill; modular shoelaces.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S19E89</episode-num>
   </programme>
 </tv>
