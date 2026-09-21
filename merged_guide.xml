@@ -3,21 +3,107 @@
 <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20260921010000 +0000" stop="20260921033000 +0000" channel="CNBC">
-    <title lang="en">WNBA Basketball</title>
-    <desc lang="en">The Las Vegas Aces host the Seattle Storm at Michelob Ultra Arena. This is their second meeting this season, with Las Vegas leading the series 1-0 after a 101-91 win in June behind A'ja Wilson, who finished with a team-high 34 points in the victory.</desc>
-    <category lang="en">Basketball</category>
+  <programme start="20260921170000 +0000" stop="20260921180000 +0000" channel="CNBC">
+    <title lang="en">The Exchange</title>
+    <desc lang="en">Anchor Kelly Evans reports on the important stories to markets and investors; reporters provide actionable information to viewers as they make daily investment decisions.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S2026E9210100</episode-num>
+    <episode-num system="onscreen">S188E1807</episode-num>
   </programme>
-  <programme start="20260921033000 +0000" stop="20260921043000 +0000" channel="CNBC">
+  <programme start="20260921180000 +0000" stop="20260921190000 +0000" channel="CNBC">
+    <title lang="en">Power Lunch</title>
+    <desc lang="en">Focusing on real-time market coverage, breaking news and up-to-the-instant stock moving information; delving into the economy, the markets, real estate, media and technology -- any place where there's money to be made.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S188E2398</episode-num>
+  </programme>
+  <programme start="20260921190000 +0000" stop="20260921200000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell</title>
+    <desc lang="en">A guide through the most important hour of the Wall Street trading day, and taking a close-up look at how the markets are moving, what's driving them and how investors are reacting; coverage includes reports from the CME Group, NASDAQ and the NYSE.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S188E1840</episode-num>
+  </programme>
+  <programme start="20260921200000 +0000" stop="20260921210000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S188E1179</episode-num>
+  </programme>
+  <programme start="20260921210000 +0000" stop="20260921220000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S188E4229</episode-num>
+  </programme>
+  <programme start="20260921220000 +0000" stop="20260921230000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S188E4308</episode-num>
+  </programme>
+  <programme start="20260921230000 +0000" stop="20260922000000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">Good American CEO Emma Grede guest Sharks; an artisanal vegan cheese company; emergency underwear; a suitcase designed for wine bottles; an alternative to the traditional bra.</desc>
+    <desc lang="en">Fortified, sugar-free nut butters; an acupressure wristband; an at-home tattoo removal device; an update on inventors who created surf-inspired fitness equipment.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S9E333</episode-num>
+    <episode-num system="onscreen">S18E59</episode-num>
+  </programme>
+  <programme start="20260922000000 +0000" stop="20260922010000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">An edible flower company; a way to be active yet protected while under the sun; a clean makeup brand; a modern dental tool used for oral care; an update on Foam Party Hats.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S15E317</episode-num>
+  </programme>
+  <programme start="20260922010000 +0000" stop="20260922020000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A smart plate with food-recognition technology that could help dieters; a sweetener that tastes like honey, but isn't made by bees; a spa business for babies; checking in with Ilumi; guest shark Chris Sacca.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S17E145</episode-num>
+  </programme>
+  <programme start="20260922020000 +0000" stop="20260922030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">An AI tool that offers cost-friendly college admissions support; a Japanese persimmon-based soap; edible candy crafts for kids; sleeping bags made exclusively for children.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S19E365</episode-num>
+  </programme>
+  <programme start="20260922030000 +0000" stop="20260922040000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Guest shark Kevin Hart; a fun tool that takes snacking to the next level; a product made from space-age materials; an online social network that allows fans to have a real connection with their favorite celebrities and influencers.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S10E288</episode-num>
+  </programme>
+  <programme start="20260922040000 +0000" stop="20260922050000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Guest shark Ashton Kutcher; a device to make baby's feeding time easier; wearable transportation; drinking vinegars; protecting consumers from hacking; an update on Pipcorn.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S1E129</episode-num>
   </programme>
 <channel id="Kan 11">
     <display-name>Kan 11</display-name>
@@ -520,92 +606,6 @@
 <channel id="Keshet 12">
     <display-name>Keshet 12</display-name>
   </channel>
-  <programme start="20260920030000 +0000" stop="20260920031000 +0000" channel="Keshet 12">
-    <title lang="he">מבזק חדשות</title>
-    <desc lang="he">עדכוני חדשות ודיווחי אקטואליה שוטפים בזמן אמת מהארץ ומהעולם, כל מה שעומד על סדר היום הציבורי בתחומי ביטחון, פוליטיקה, כלכלה ועוד</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il//2021/08/25/Mivzak_epg.jpg" />
-  </programme>
-  <programme start="20260920031000 +0000" stop="20260920040000 +0000" channel="Keshet 12">
-    <title lang="he">שש עם גלית ויואב</title>
-    <desc lang="he">גלית גוטמן ויואב לימור פותחים את סוף השבוע בכל שישי, עם הסיפורים והאורחים הכי מעניינים שעליהם ידברו כל השבת</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il/2026/07/12/SheshBaBoker_EPG.jpg" />
-  </programme>
-  <programme start="20260920040000 +0000" stop="20260920040800 +0000" channel="Keshet 12">
-    <title lang="he">מבזק חדשות</title>
-    <desc lang="he">עדכוני חדשות ודיווחי אקטואליה שוטפים בזמן אמת מהארץ ומהעולם, כל מה שעומד על סדר היום הציבורי בתחומי ביטחון, פוליטיקה, כלכלה ועוד</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il//2021/08/25/Mivzak_epg.jpg" />
-  </programme>
-  <programme start="20260920040800 +0000" stop="20260920070000 +0000" channel="Keshet 12">
-    <title lang="he">חתימה טובה עם גלית ויואב</title>
-    <desc lang="he">גלית גוטמן ויואב לימור בתוכנית מיוחדת לערב יום כיפור</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il/2025/12/31/ShishiBaBoker_EPG.jpg" />
-  </programme>
-  <programme start="20260920070000 +0000" stop="20260920070500 +0000" channel="Keshet 12">
-    <title lang="he">מבזק חדשות</title>
-    <desc lang="he">עדכוני חדשות ודיווחי אקטואליה שוטפים בזמן אמת מהארץ ומהעולם, כל מה שעומד על סדר היום הציבורי בתחומי ביטחון, פוליטיקה, כלכלה ועוד</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il//2021/08/25/Mivzak_epg.jpg" />
-  </programme>
-  <programme start="20260920070500 +0000" stop="20260920081000 +0000" channel="Keshet 12">
-    <title lang="he">חתימה טובה עם אבי כאכון</title>
-    <desc lang="he">משדר מיוחד לפני יום הכיפורים, בהשתתפות: אביהו מדינה, הרב ניצן ראובן, בן סנוף, יובל טייב, פרופ׳ רפי קרסו, לילך מרקוביץ, רותם זיסמן כהן,יוסי אלפי וניסים זלייט</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il/2026/08/06/AviCachon_EPG.jpg" />
-  </programme>
-  <programme start="20260920081000 +0000" stop="20260920084000 +0000" channel="Keshet 12">
-    <title lang="he">מנחם ותחיה בדרכים</title>
-    <sub-title lang="he">יום כיפור</sub-title>
-    <desc lang="he">מנחם ותחיה יוצאים להכיר את מועצה אזורית חוף אשקלון, את היישובים והקהילות שחיים בין הים לעוטף - וברוח יום כיפור מבקרים בבית הכנסת ומצטרפים לשירת פיוטים</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il/2026/07/09/MenhemTehiya_EPG.jpg" />
-  </programme>
-  <programme start="20260920084000 +0000" stop="20260920093500 +0000" channel="Keshet 12">
-    <title lang="he">חתימה טובה עם סיון רהב מאיר</title>
-    <desc lang="he">משדר הכנה ליום הכיפורים: מוזמנים להיערך ליום הקדוש עם סיון רהב-מאיר ושלל אורחים. יום הכיפורים נמשך כ-25 שעות יוצאות דופן עם תפילה, מחשבה והתחדשות</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il/2026/09/17/SivanKipur2026_EPG.jpg" />
-  </programme>
-  <programme start="20260920093500 +0000" stop="20260920101000 +0000" channel="Keshet 12">
-    <title lang="he">אוחנה וסרי פוגשים את ישראל</title>
-    <desc lang="he">אלי אוחנה וברק סרי בסדרת תעודה ייחודית על הנושאים החמים, והסוגיות הקרובות ביותר לליבו של הבוחר הישראלי. מי ניצח בהתערבות ביניהם? ואיך זה נגמר? והפעם: מעוז ההייטקיסטים</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il/2026/08/04/OhanaVeSari_EPG.jpg" />
-  </programme>
-  <programme start="20260920101000 +0000" stop="20260920105500 +0000" channel="Keshet 12">
-    <title lang="he">מה באמת קרה שם? ארז טל עם חיים כהן</title>
-    <desc lang="he">תכנית האירוח של ארז טל. השף האהוב והמאמי הלאומי, חיים כהן. אבל מאחורי החיוך שלו מסתתרים רגעים לא קלים. ולא תאמינו איך בזכות הסיפור המשפחתי שלו הוא הציל את החיים של חברתו רותי ברודו</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il/2025/04/23/WhatHappened_EPG.jpg" />
-  </programme>
-  <programme start="20260920105500 +0000" stop="20260920115000 +0000" channel="Keshet 12">
-    <title lang="he">ריאיון מיוחד</title>
-    <sub-title lang="he">אמילי דמארי מגיעה</sub-title>
-    <desc lang="he">ריאיון מיוחד כזה עוד לא היה לנו – קבלו את אמילי דמארי המדהימה. היא עונה על השאלות שלא העזו לשאול ומספרת על הרגע בשבי ששינה הכול</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il/2025/03/10/SpecialInterview_EPG.jpg" />
-  </programme>
-  <programme start="20260920115000 +0000" stop="20260920135000 +0000" channel="Keshet 12">
-    <title lang="he">חתימה טובה עם מעיין ויואב</title>
-    <desc lang="he">מעיין אדם ויואב לימור במשדר מיוחד לערב יום כיפור, בהשתתפות גדי איזנקוט, ששי קשת, שמחה גואטה ושורדי שבי ממלחמת יום הכיפורים וה-7.10, ועם סקר מיוחד על החברה הישראלית</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-09-20</episode-num>
-    <icon src="https://img.mako.co.il/2024/04/11/HaimVeMaayan_EPG.jpg" />
-  </programme>
   <programme start="20260921163000 +0000" stop="20260921165000 +0000" channel="Keshet 12">
     <title lang="he">המהדורה המוקדמת</title>
     <desc lang="he">קרן מרציאנו עם כל אירועי היום בכלכלת ישראל והעולם, החידושים וההתפתחויות האחרונות בעולמות הנדל"ן, הצרכנות והטכנולוגיה וכל הדרכים לחסוך את הכסף שלכם</desc>
