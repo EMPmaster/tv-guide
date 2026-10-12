@@ -3,20 +3,79 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20261012030000 +0000" stop="20261012040000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">A nutrient-rich energy bar; a gender-neutral clothing brand; a portable children's toy; a healthy Mexican snack company.</desc>
-    <category lang="en">Reality</category>
+  <programme start="20261012200000 +0000" stop="20261012210000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S20E322</episode-num>
+    <episode-num system="onscreen">S203E1194</episode-num>
   </programme>
-  <programme start="20261012040000 +0000" stop="20261012050000 +0000" channel="CNBC">
+  <programme start="20261012210000 +0000" stop="20261012220000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S203E4244</episode-num>
+  </programme>
+  <programme start="20261012220000 +0000" stop="20261012230000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S203E4323</episode-num>
+  </programme>
+  <programme start="20261012230000 +0000" stop="20261013000000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">A self-tanner geared toward men; a new-and-improved flashlight; a reusable cup service for marathoners; an authentic instant pho.</desc>
+    <desc lang="en">A new twist on frozen food; a state-of-the-art air purifier that works while one sleeps; sheer socks with flair; a rugged liner to protect car seats from active pets.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S8E354</episode-num>
+    <episode-num system="onscreen">S16E362</episode-num>
+  </programme>
+  <programme start="20261013000000 +0000" stop="20261013010000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A solution to combat telemarketers and scammers; an easy-to-use 3D printer for kids to design and make their own toys; a savings and gifting online platform for kids; ethical and customizable meat box subscription delivery service.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S15E220</episode-num>
+  </programme>
+  <programme start="20261013010000 +0000" stop="20261013020000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A healthy alternative to salt; a spring-loaded cake stand; an entertaining approach to the tried-and-true carving knives often used during holidays; a product designed to attach a cellphone to almost any surface.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S4E257</episode-num>
+  </programme>
+  <programme start="20261013020000 +0000" stop="20261013030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A portable outdoor game that combines pickleball and Spikeball; a pet-sitting service for weddings and events; a high-fashion bodysuit; gourmet made-to-order French fries.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S4E328</episode-num>
+  </programme>
+  <programme start="20261013030000 +0000" stop="20261013040000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Three entrepreneurs from California are redefining the art of gifting; a life jacket that is easier to use; an online clothing company with products from Africa; an all-in-one, self-protective silicone infant pacifier; an update on Drop Stop.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S19E200</episode-num>
+  </programme>
+  <programme start="20261013040000 +0000" stop="20261013050000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A solution to combat telemarketers and scammers; an easy-to-use 3D printer for kids to design and make their own toys; a savings and gifting online platform for kids; ethical and customizable meat box subscription delivery service.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S15E220</episode-num>
   </programme>
 </tv>
