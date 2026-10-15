@@ -3,28 +3,124 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20261015020000 +0000" stop="20261015030000 +0000" channel="CNBC">
-    <title lang="en">American Greed</title>
-    <desc lang="en">Leaders of a polygamous religious sect demand perfect obedience from followers, luring them into welfare fraud and stealing more than $2 million from American taxpayers.</desc>
-    <category lang="en">Newsmagazine</category>
+  <programme start="20261015130000 +0000" stop="20261015160000 +0000" channel="CNBC">
+    <title lang="en">Squawk on the Street</title>
+    <desc lang="en">Taking viewers onto the floor of the exchange, right to the posts where the big companies in the world trade; tick charts track the action of every trade of every stock; the treasury, currency and commodity action in real time.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S4E259</episode-num>
+    <episode-num system="onscreen">S206E2995</episode-num>
   </programme>
-  <programme start="20261015030000 +0000" stop="20261015040000 +0000" channel="CNBC">
-    <title lang="en">American Greed</title>
-    <desc lang="en">Daylon Pierce is a consummate ladies' man who claims to be a licensed stockbroker, wooing unsuspecting women through internet dating sites; after the women hand over millions of dollars, Pierce robs them blind and breaks their hearts.</desc>
-    <category lang="en">Newsmagazine</category>
+  <programme start="20261015160000 +0000" stop="20261015170000 +0000" channel="CNBC">
+    <title lang="en">Halftime Report</title>
+    <desc lang="en">The front lines of market coverage; host Scott Wapner and the top investors get to the heart of the action as it's happening and help set the agenda for the rest of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S14E249</episode-num>
+    <episode-num system="onscreen">S206E1760</episode-num>
   </programme>
-  <programme start="20261015040000 +0000" stop="20261015050000 +0000" channel="CNBC">
-    <title lang="en">American Greed</title>
-    <desc lang="en">A man attempts suicide and confesses to an extraordinary fraud that he perpetrated for the past two decades at a leading commodity futures brokerage.</desc>
-    <category lang="en">Newsmagazine</category>
+  <programme start="20261015170000 +0000" stop="20261015180000 +0000" channel="CNBC">
+    <title lang="en">The Exchange</title>
+    <desc lang="en">Anchor Kelly Evans reports on the important stories to markets and investors; reporters provide actionable information to viewers as they make daily investment decisions.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S7E170</episode-num>
+    <episode-num system="onscreen">S206E1825</episode-num>
+  </programme>
+  <programme start="20261015180000 +0000" stop="20261015190000 +0000" channel="CNBC">
+    <title lang="en">Power Lunch</title>
+    <desc lang="en">Focusing on real-time market coverage, breaking news and up-to-the-instant stock moving information; delving into the economy, the markets, real estate, media and technology.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S206E2416</episode-num>
+  </programme>
+  <programme start="20261015190000 +0000" stop="20261015200000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell</title>
+    <desc lang="en">A guide through the most important hour of the Wall Street trading day, and taking a close-up look at how the markets are moving, what's driving them and how investors are reacting; coverage includes reports from the CME Group, NASDAQ and the NYSE.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S206E1858</episode-num>
+  </programme>
+  <programme start="20261015200000 +0000" stop="20261015210000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S206E1197</episode-num>
+  </programme>
+  <programme start="20261015210000 +0000" stop="20261015220000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S206E4247</episode-num>
+  </programme>
+  <programme start="20261015220000 +0000" stop="20261015230000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S206E4326</episode-num>
+  </programme>
+  <programme start="20261015230000 +0000" stop="20261016000000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Home viewers have a chance to weigh in on whether the Sharks should take the plunge and make a deal.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S1E303</episode-num>
+  </programme>
+  <programme start="20261016000000 +0000" stop="20261016010000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A portable tool that instantly turns any standard dumbbell into a dynamic workout; a product to help soothe anxiety; a device that allows for blowing out birthday candles without spreading germs; a chicken coop creation built by Amish craftsmen.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S13E291</episode-num>
+  </programme>
+  <programme start="20261016010000 +0000" stop="20261016020000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Sprinkles Cupcakes founder Candace Nelson returns as a guest shark; a modern tinned seafood company; a diaper-changing helper; a brake for skateboards; lightweight packable meals.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S10E334</episode-num>
+  </programme>
+  <programme start="20261016020000 +0000" stop="20261016030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">An innovative fitness system with on-the-go simplicity; a kitchen gadget; an online self-care program for a different type of workout; a sea creature-inspired all-in-one product for hands-free device holding; an update on Legendary Burgers.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S9E287</episode-num>
+  </programme>
+  <programme start="20261016030000 +0000" stop="20261016040000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Men's swimwear; a "better" version of a popular beauty trend; a solution for eating pasta without the guilt; a hangover cure; a recap of the season's successful entrepreneurs.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S24E205</episode-num>
+  </programme>
+  <programme start="20261016040000 +0000" stop="20261016050000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A product that identifies home visitors; sending imaginative toys to kids through a subscription gift service; a slaw/salsa condiment; a cell phone app.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S9E79</episode-num>
   </programme>
 </tv>
