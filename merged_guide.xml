@@ -3,29 +3,98 @@
 <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20261104030000 +0000" stop="20261104040000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">Mark Cuban's farewell episode; oversized luxury candles; gourmet deviled eggs; a tick-removal mitten; seamless, invisible undergarments.</desc>
-    <category lang="en">Reality</category>
+  <programme start="20261104190000 +0000" stop="20261104200000 +0000" channel="CNBC">
+    <title lang="en">Power Lunch</title>
+    <desc lang="en">Focusing on real-time market coverage, breaking news and up-to-the-instant stock moving information; delving into the economy, the markets, real estate, media and technology.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S20E366</episode-num>
+    <episode-num system="onscreen">S220E2430</episode-num>
   </programme>
-  <programme start="20261104040000 +0000" stop="20261104050000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">Chic fashion accessories for dogs; a breathalyzer app; gourmet mango preserves; an update on the creator of spa-quality body scrubs.</desc>
-    <category lang="en">Reality</category>
+  <programme start="20261104200000 +0000" stop="20261104210000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell</title>
+    <desc lang="en">A guide through the most important hour of the Wall Street trading day; taking a close-up look at how the markets are moving, what's driving them and how investors are reacting; coverage includes reports from the CME Group, NASDAQ and the NYSE.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S2E72</episode-num>
+    <episode-num system="onscreen">S220E1872</episode-num>
   </programme>
-  <programme start="20261104050000 +0000" stop="20261104060000 +0000" channel="CNBC">
+  <programme start="20261104210000 +0000" stop="20261104220000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S220E1211</episode-num>
+  </programme>
+  <programme start="20261104220000 +0000" stop="20261104230000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S220E4261</episode-num>
+  </programme>
+  <programme start="20261104230000 +0000" stop="20261105000000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S220E4340</episode-num>
+  </programme>
+  <programme start="20261105000000 +0000" stop="20261105010000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
     <desc lang="en">A mother and son team pitch affordable wedding cakes; solution to a common dining issue; an update on screen repair kit, Screenmend.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
     <episode-num system="onscreen">S4E103</episode-num>
+  </programme>
+  <programme start="20261105010000 +0000" stop="20261105020000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A tasty improvement on the ice cream cone; a stroller with an athletic twist; a new line of child products to make parents' lives easier; a music-magic spectacle; Gameday Couture follow-up.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S25E153</episode-num>
+  </programme>
+  <programme start="20261105020000 +0000" stop="20261105030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Pitches include a smartphone security app, a bicycle brake system, an app that helps shoppers and diners earn free parking, and a free photo-printing service; follow-up with Al "Bubba" Baker and his deboned rib steaks.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S21E178</episode-num>
+  </programme>
+  <programme start="20261105030000 +0000" stop="20261105040000 +0000" channel="CNBC">
+    <title lang="en">American Greed</title>
+    <desc lang="en">Billy McFarland organizes the Fyre Festival in the Bahamas, selling thousands of tickets on the strength of a social media pitch that results in a disastrous music event that goes up in smoke.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2E259</episode-num>
+  </programme>
+  <programme start="20261105040000 +0000" stop="20261105050000 +0000" channel="CNBC">
+    <title lang="en">American Greed</title>
+    <desc lang="en">A brash New York stockbroker gets sober and reinvents himself as an international power player.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S16E197</episode-num>
+  </programme>
+  <programme start="20261105050000 +0000" stop="20261105060000 +0000" channel="CNBC">
+    <title lang="en">American Greed</title>
+    <desc lang="en">A private security contractor promises to help win the freedom of detained oil executives and claims he can find out who abducted Madeleine McCann.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S15E196</episode-num>
   </programme>
 <channel id="Kan 11">
     <display-name>Kan 11</display-name>
@@ -154,28 +223,28 @@
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/4ffbe9d0b0483b08fc9976d2dc18bf84.jpg" />
   </programme>
-  <programme start="20261104100000 +0000" stop="20261104100500 +0000" channel="Kan 11">
+  <programme start="20261104100000 +0000" stop="20261104102200 +0000" channel="Kan 11">
     <title lang="he">מבזק חדשות</title>
     <desc lang="he">מבזק חדשות</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/98b25e71cfd52db127635f97f3208c7f.jpg" />
   </programme>
-  <programme start="20261104100500 +0000" stop="20261104104000 +0000" channel="Kan 11">
-    <title lang="he">אתה חייב לקרוא את זה!</title>
-    <sub-title lang="he">3</sub-title>
-    <desc lang="he">קומיקאים ואנשי ספר נאבקים על המלצת הקריאה המושלמת. בלי רחמים. והפעם איל קיציס, ג&apos;רמי פוגל, אלונה סער, איתי רייכר, דינה סנדרסון ופרופ&apos; עודד רכבי ממליצים לחן הפוליאמורית וליודי רועה הצאן מרמת הגולן.</desc>
-    <category lang="en">Series</category>
-    <episode-num system="onscreen">S1E3</episode-num>
-    <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/218d8fed7c141e2f62be30d94a016e50.jpg" />
-  </programme>
-  <programme start="20261104104000 +0000" stop="20261104113300 +0000" channel="Kan 11">
+  <programme start="20261104102200 +0000" stop="20261104111800 +0000" channel="Kan 11">
     <title lang="he">חלום החופש</title>
     <sub-title lang="he">פרק 64</sub-title>
     <desc lang="he">דרמה תקופתית ספרדית. פרק 64: חואקין ולואיס חושפים את גונסלו. טסיו מציע לכרמן הצעה בנוגע לילד של קלאודיה, ומרתה ופינה נאלצות לבחון את עתיד הקשר בעקבות החלטתו של חיימה להישאר בטולדו.</desc>
     <category lang="en">Series</category>
     <episode-num system="onscreen">S1E64</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/c319f772cdef3adf06a97c022aa63f22.jpg" />
+  </programme>
+  <programme start="20261104111800 +0000" stop="20261104113300 +0000" channel="Kan 11">
+    <title lang="he">אומרים שהיה פה</title>
+    <sub-title lang="he">1995</sub-title>
+    <desc lang="he">1995. פרק שמוקדש כולו לרצח ראש הממשלה יצחק רבין ז&quot;ל. מדוע לא רצה ראש הממשלה להשתתף בעצרת השלום? מי כמעט ואיחר לאירוע ההיסטורי? ואיך נולדה ההודעה ששינתה את החיים של כולנו: &quot;ממשלת ישראל מודיעה בתדהמה&apos;&apos;?</desc>
+    <category lang="en">Series</category>
+    <episode-num system="onscreen">S1E1995</episode-num>
+    <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/5f4ded6352ee91b840ba8a7370259a12.jpg" />
   </programme>
   <programme start="20261104113300 +0000" stop="20261104123000 +0000" channel="Kan 11">
     <title lang="he">הזירה</title>
@@ -214,28 +283,28 @@
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/a7b813cf5aa922a1cec20e02639c3a38.jpg" />
   </programme>
-  <programme start="20261104165000 +0000" stop="20261104171200 +0000" channel="Kan 11">
+  <programme start="20261104165000 +0000" stop="20261104171130 +0000" channel="Kan 11">
     <title lang="he">הכוורת</title>
     <desc lang="he">מי יפצח את הכוורת? משחק הזוגות של שעשועון הטריוויה בהנחיית שלמור שטרוזמן. שני זוגות מנסים לפצח את הכוורת באמצעות ידע, אסטרטגיה ובניית רצף בקצב מהיר במיוחד. מי יוכתר למלך ומלכת הכוורת?</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/bcfc8a3cd0b4dbf921c96cba5cb1043f.jpg" />
   </programme>
-  <programme start="20261104171200 +0000" stop="20261104175400 +0000" channel="Kan 11">
-    <title lang="he">שבע עם איילה חסון</title>
-    <desc lang="he">כל ענייני היום הבוערים עם איילה חסון, האנשים שבמרכז החדשות ומיטב הפרשנים, מימין ומשמאל.</desc>
+  <programme start="20261104171130 +0000" stop="20261104175000 +0000" channel="Kan 11">
+    <title lang="he">שבע עם אליאור לוי</title>
+    <desc lang="he">כל ענייני היום הבוערים עם אליאור לוי, האנשים שבמרכז החדשות ומיטב הפרשנים, מימין ומשמאל.</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/d7b406c10034d4d3cc2612803b31cc5f.jpg" />
   </programme>
-  <programme start="20261104175400 +0000" stop="20261104193000 +0000" channel="Kan 11">
+  <programme start="20261104175000 +0000" stop="20261104193000 +0000" channel="Kan 11">
     <title lang="he">מהדורת כאן חדשות עם טל ברמן</title>
     <desc lang="he">מהדורת החדשות המרכזית של כאן 11 עם נבחרת הכתבים והפרשנים של כאן חדשות. הפרסומים הראשונים, הכותרות החמות וכל הפרשנויות לצד כתבות מגזין ופינות קבועות.</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/7a04ba8f5e74f1d0dbcb0373d86cf287.jpg" />
   </programme>
-  <programme start="20261104193000 +0000" stop="20261104203500 +0000" channel="Kan 11">
+  <programme start="20261104193000 +0000" stop="20261104203300 +0000" channel="Kan 11">
     <title lang="he">דאבל על הכסף</title>
     <sub-title lang="he">פרק 8</sub-title>
     <desc lang="he">הזוגות החדשים מנסים להתגבר על המכשולים: אלירן נשבר בטורניר הפאדל עם אורית, חזי ושלומי מחפשים משתתפים להרקדה התימנית, והפופ אפ של עדי ואמנון לא עומד בעומס. מי יודח בסוף הפרק? מנחה: אגם רודברג.</desc>
@@ -243,28 +312,28 @@
     <episode-num system="onscreen">S1E8</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/9198c16159830bf3f5830b9b1c0b3cf6.jpg" />
   </programme>
-  <programme start="20261104203500 +0000" stop="20261104210500 +0000" channel="Kan 11">
+  <programme start="20261104203300 +0000" stop="20261104210500 +0000" channel="Kan 11">
     <title lang="he">חדשות הלילה עם שרון דוידוביץ&apos;</title>
     <desc lang="he">רגע לפני שהיום נגמר, חדשות הלילה תסכם עבורכם את כל הדברים החשובים והמעניינים שקרו היום – מזווית קצת אחרת.</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/4cb0dc1cda860f43b6be7da0eb09fcef.jpg" />
   </programme>
-  <programme start="20261104210500 +0000" stop="20261104212000 +0000" channel="Kan 11">
+  <programme start="20261104210500 +0000" stop="20261104212200 +0000" channel="Kan 11">
     <title lang="he">מהצד השני עם גיא זהר</title>
     <desc lang="he">&quot;מהצד השני עם גיא זהר&quot; ממשיכה בעונה חדשה לחשוף את הפער שבין המציאות לבין מה שמשתקף במסכים.</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/7c417777aab847a49679fac92d067480.jpg" />
   </programme>
-  <programme start="20261104212000 +0000" stop="20261104215300 +0000" channel="Kan 11">
+  <programme start="20261104212200 +0000" stop="20261104215600 +0000" channel="Kan 11">
     <title lang="he">הכוורת</title>
     <desc lang="he">מי יפצח את הכוורת? שעשועון טריוויה בהנחיית שלמור שטרוזמן שבו שלושה מתמודדים מתחרים בידע ובאסטרטגיה. מי יצליח לבנות רצף שיוביל אותו לתואר מלך או מלכת הכוורת?</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/bcfc8a3cd0b4dbf921c96cba5cb1043f.jpg" />
   </programme>
-  <programme start="20261104215300 +0000" stop="20261104222000 +0000" channel="Kan 11">
+  <programme start="20261104215600 +0000" stop="20261104222300 +0000" channel="Kan 11">
     <title lang="he">מי זאת?</title>
     <sub-title lang="he">פרק 2</sub-title>
     <desc lang="he">תכנית מערכונים נשית עם מגי אזרזר, ג&apos;וי ריגר, אושרית סרוסי ונעמה אמית. והפעם: תחקיר מטלטל בתכנית &quot;מה הם רוצים?&quot;, סדנת קואוצ&apos;ינג להפגת חרדות, וההרצאה שמטריפה את הקהילה הלסבית: &quot;איך להפיל סטרייטית?&quot;.</desc>
@@ -272,7 +341,7 @@
     <episode-num system="onscreen">S1E2</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/0e57cc2026bbd249d990bf210b960a13.jpg" />
   </programme>
-  <programme start="20261104222000 +0000" stop="20261104230500 +0000" channel="Kan 11">
+  <programme start="20261104222300 +0000" stop="20261104230700 +0000" channel="Kan 11">
     <title lang="he">בוש</title>
     <sub-title lang="he">עונה 7 - פרק 4</sub-title>
     <desc lang="he">עונה שביעית לדרמה הבלשית. בפרק הרביעי - מהלך משולש: בוש נקרא לחקירת רצח כפול בהוליווד הילס. קפטן קופר והפקח ת&apos;ורן כועסים על בילטס שדיווחה על ההטרדה לחקירות פנים. מאדי מגלה תגלית מזעזעת.</desc>
@@ -280,7 +349,7 @@
     <episode-num system="onscreen">S7E4</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/1cce877c8e2c949f3093237cb5fe311d.jpg" />
   </programme>
-  <programme start="20261104230500 +0000" stop="20261104234000 +0000" channel="Kan 11">
+  <programme start="20261104230700 +0000" stop="20261104234200 +0000" channel="Kan 11">
     <title lang="he">הבלתי חשובים</title>
     <sub-title lang="he">הניצב</sub-title>
     <desc lang="he">ההיסטוריה מלאה באירועים קטנים שממרחק השנים מספרים סיפור גדול על מי שהיינו ומי שאנחנו היום. 
@@ -289,7 +358,7 @@
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/061447c05e36d16c82ceed7bd90bcdf2.jpg" />
   </programme>
-  <programme start="20261104234000 +0000" stop="20261105003714 +0000" channel="Kan 11">
+  <programme start="20261104234200 +0000" stop="20261105003800 +0000" channel="Kan 11">
     <title lang="he">המירוץ לאפס זיהום</title>
     <sub-title lang="he">3-טיסות</sub-title>
     <desc lang="he">סדרה תעודה הבוחנת כיצד חיי היומיום משתנים כדי להגיע ליעד של אפס זיהום אויר. הפעם: התמקדות בחידושים טכנולוגיים כמו משאיות חשמליות, שימוש במימן כדלק חלופי ואפשרויות חדשות בתחום התעופה הירוקה.</desc>
@@ -297,7 +366,7 @@
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/29df0030aa5ed06114512e5c4ed48502.jpg" />
   </programme>
-  <programme start="20261105003714 +0000" stop="20261105012139 +0000" channel="Kan 11">
+  <programme start="20261105003800 +0000" stop="20261105012110 +0000" channel="Kan 11">
     <title lang="he">שלומי שבן מארח</title>
     <sub-title lang="he">אלון עדר</sub-title>
     <desc lang="he">שלומי שבן מארח בהיכל התרבות את אלון עדר. השניים משוחחים על מה שמסתובב בראש המשורר, על ההשראה, וגם על מחסום הכתיבה.  כבונוס, שניהם נותנים טעימה משירים שכתבו בגיל 10(!) ובין לבין שרים ומנגנים בכיף.</desc>
@@ -305,14 +374,14 @@
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/656d06f77b98393afc1f2bcb948393cc.jpg" />
   </programme>
-  <programme start="20261105012139 +0000" stop="20261105014031 +0000" channel="Kan 11">
+  <programme start="20261105012110 +0000" stop="20261105014002 +0000" channel="Kan 11">
     <title lang="he">לילה ישראלי</title>
     <desc lang="he">לקט קליפים ישראלים מכל הזמנים.</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/141a530d78060d9c7c184ebbd7903a86.jpg" />
   </programme>
-  <programme start="20261105014031 +0000" stop="20261105015231 +0000" channel="Kan 11">
+  <programme start="20261105014002 +0000" stop="20261105015231 +0000" channel="Kan 11">
     <title lang="he">לילה ישראלי</title>
     <desc lang="he">לקט קליפים ישראלים מכל הזמנים.</desc>
     <category lang="en">Series</category>
@@ -336,10 +405,10 @@
   </programme>
   <programme start="20261105031500 +0000" stop="20261105034900 +0000" channel="Kan 11">
     <title lang="he">אתה חייב לקרוא את זה!</title>
-    <sub-title lang="he">2</sub-title>
-    <desc lang="he">קומיקאים ואנשי ספר נאבקים על המלצת הקריאה המושלמת. בלי רחמים. והפעם גיתית פישר, שיר ראובן, ג&apos;רמי פוגל, אמה אלפי, רבקה מיכאלי ויובל מנדלסון ממליצים לאחות המלווה אנשים להמתת חסד בשוויץ ולנערה &quot;בוקטוקרית&quot;.</desc>
+    <sub-title lang="he">3</sub-title>
+    <desc lang="he">קומיקאים ואנשי ספר נאבקים על המלצת הקריאה המושלמת. בלי רחמים. והפעם איל קיציס, ג&apos;רמי פוגל, אלונה סער, איתי רייכר, דינה סנדרסון ופרופ&apos; עודד רכבי ממליצים לחן הפוליאמורית וליודי רועה הצאן מרמת הגולן.</desc>
     <category lang="en">Series</category>
-    <episode-num system="onscreen">S1E2</episode-num>
+    <episode-num system="onscreen">S1E3</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/218d8fed7c141e2f62be30d94a016e50.jpg" />
   </programme>
   <programme start="20261105034900 +0000" stop="20261105040400 +0000" channel="Kan 11">
@@ -487,8 +556,8 @@
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/a7b813cf5aa922a1cec20e02639c3a38.jpg" />
   </programme>
   <programme start="20261105165500 +0000" stop="20261105175000 +0000" channel="Kan 11">
-    <title lang="he">שבע עם איילה חסון</title>
-    <desc lang="he">כל ענייני היום הבוערים עם איילה חסון, האנשים שבמרכז החדשות ומיטב הפרשנים, מימין ומשמאל.</desc>
+    <title lang="he">שבע עם ליאל קייזר</title>
+    <desc lang="he">כל ענייני היום הבוערים עם ליאל קייזר, האנשים שבמרכז החדשות ומיטב הפרשנים, מימין ומשמאל.</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/d7b406c10034d4d3cc2612803b31cc5f.jpg" />
@@ -591,10 +660,10 @@
   </programme>
   <programme start="20261106031400 +0000" stop="20261106034900 +0000" channel="Kan 11">
     <title lang="he">אתה חייב לקרוא את זה!</title>
-    <sub-title lang="he">3</sub-title>
-    <desc lang="he">קומיקאים ואנשי ספר נאבקים על המלצת הקריאה המושלמת. בלי רחמים. והפעם איל קיציס, ג&apos;רמי פוגל, אלונה סער, איתי רייכר, דינה סנדרסון ופרופ&apos; עודד רכבי ממליצים לחן הפוליאמורית וליודי רועה הצאן מרמת הגולן.</desc>
+    <sub-title lang="he">4</sub-title>
+    <desc lang="he">קומיקאים ואנשי ספר נאבקים על המלצת הקריאה המושלמת. בלי רחמים. והפעם טל פרידמן, גיתית פישר, יובל מנדלסון, איתי רייכר, רביטל ויטלזון יעקבס ואלעד בר נוי ממליצים לספרנית בכלא ולשייט שקורא ספר אחד ביום.</desc>
     <category lang="en">Series</category>
-    <episode-num system="onscreen">S1E3</episode-num>
+    <episode-num system="onscreen">S1E4</episode-num>
     <icon src="https://raw.githubusercontent.com/EMPmaster/tv-guide/main/images/kan/landscape/218d8fed7c141e2f62be30d94a016e50.jpg" />
   </programme>
   <programme start="20261106034900 +0000" stop="20261106040400 +0000" channel="Kan 11">
@@ -781,216 +850,6 @@
 <channel id="Keshet 12">
     <display-name>Keshet 12</display-name>
   </channel>
-  <programme start="20261103040000 +0000" stop="20261103041000 +0000" channel="Keshet 12">
-    <title lang="he">מבזק חדשות</title>
-    <desc lang="he">עדכוני חדשות ודיווחי אקטואליה שוטפים בזמן אמת מהארץ ומהעולם, כל מה שעומד על סדר היום הציבורי בתחומי ביטחון, פוליטיקה, כלכלה ועוד</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756957_41c5df028959d8bd.jpg" />
-  </programme>
-  <programme start="20261103041000 +0000" stop="20261103050000 +0000" channel="Keshet 12">
-    <title lang="he">כותרות הבוקר</title>
-    <desc lang="he">כותרות הבוקר עם אלמוג בוקר - האנשים, הפרשנויות והכותרות שיעשו את היום, דיווחים מהשטח, ראיונות בלעדיים ואורחים באולפן</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756958_b60a6c9126098874.jpg" />
-  </programme>
-  <programme start="20261103050000 +0000" stop="20261103050800 +0000" channel="Keshet 12">
-    <title lang="he">מבזק חדשות</title>
-    <desc lang="he">עדכוני חדשות ודיווחי אקטואליה שוטפים בזמן אמת מהארץ ומהעולם, כל מה שעומד על סדר היום הציבורי בתחומי ביטחון, פוליטיקה, כלכלה ועוד</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756959_5aaa52dbe7249df7.jpg" />
-  </programme>
-  <programme start="20261103050800 +0000" stop="20261103073000 +0000" channel="Keshet 12">
-    <title lang="he">חדשות הבוקר עם אלמוג בוקר</title>
-    <desc lang="he">מהדורת החדשות המרכזית של הבוקר עם אלמוג בוקר - האנשים, הפרשנויות והכותרות שיעשו את היום, דיווחים מהשטח, ראיונות בלעדיים ואורחים באולפן</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756990_9b9a66587c3c332c.jpg" />
-  </programme>
-  <programme start="20261103073000 +0000" stop="20261103073500 +0000" channel="Keshet 12">
-    <title lang="he">מבזק חדשות</title>
-    <desc lang="he">עדכוני חדשות ודיווחי אקטואליה שוטפים בזמן אמת מהארץ ומהעולם, כל מה שעומד על סדר היום הציבורי בתחומי ביטחון, פוליטיקה, כלכלה ועוד</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756964_ce5991fef4fb8151.jpg" />
-  </programme>
-  <programme start="20261103073500 +0000" stop="20261103090000 +0000" channel="Keshet 12">
-    <title lang="he">חדשות הבוקר עם נסלי ויואב</title>
-    <desc lang="he">נסלי ברדה ויואב לימור עם הסיפורים, הדיווחים והעדכונים על כל מה שחשוב לדעת</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756986_767676b7062ccf56.jpg" />
-  </programme>
-  <programme start="20261103090000 +0000" stop="20261103094500 +0000" channel="Keshet 12">
-    <title lang="he">חדשות האוכל</title>
-    <desc lang="he">חדשות האוכל בהגשת ריטה גולדשטיין. מגזין טלוויזיה צעיר, דינמי ועדכני הסוקר את עולם האוכל, הקולינריה והטרנדים הכי חמים. והפעם: טריקים בשיווק בעולם האוכל והמלצת מאפייה נסתרת</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22757137_02df3d2d60a2c67d.jpg" />
-  </programme>
-  <programme start="20261103094500 +0000" stop="20261103105500 +0000" channel="Keshet 12">
-    <title lang="he">הזמר במסכה</title>
-    <sub-title lang="he">השיר שהסגיר את הארנב?</sub-title>
-    <desc lang="he">הארנב מקדיש לאופירה שיר. האם השיר חשף יותר מידי ויסגיר אותו, האם מדובר באקס טלוויזיוני מיתולוגי של אופירה? אם השופטים יצליחו לפצח את השם הנכון הארנב ייחשף</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756977_ad2fa4e50e8d0751.jpg" />
-  </programme>
-  <programme start="20261103105500 +0000" stop="20261103112500 +0000" channel="Keshet 12">
-    <title lang="he">סברי מרנן</title>
-    <sub-title lang="he">תירוצים</sub-title>
-    <desc lang="he">כולם ממציאים תירוצים להיעדרותם מפתיחת המשפט של לירי ומהשבעה של סבתא של ספיר - ואז התירוצים מתערבבים</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22861340_352f568fb6572f51.jpg" />
-  </programme>
-  <programme start="20261103112500 +0000" stop="20261103130000 +0000" channel="Keshet 12">
-    <title lang="he">12 בצוהריים</title>
-    <desc lang="he">משדר חדשות מיוחד עם עדי זריפי ותמיר סטיינמן</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22843408_563f0af6872501b8.jpg" />
-  </programme>
-  <programme start="20261103130000 +0000" stop="20261103145400 +0000" channel="Keshet 12">
-    <title lang="he">מהדורת היום עם עמליה דואק ועופר חדד</title>
-    <desc lang="he">עמליה דואק ועופר חדד עם הכותרות הראשיות, הפאנלים המובילים עם הפרשנים, הפוליטיקאים והמומחים</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756966_dec6f8bdcdc05395.jpg" />
-  </programme>
-  <programme start="20261103145500 +0000" stop="20261103155500 +0000" channel="Keshet 12">
-    <title lang="he">חמש עם ירון אברהם</title>
-    <desc lang="he">בהגשת ירון אברהם. הראיונות המרכזיים עם האנשים שעושים את החדשות, סיפורי היום שעל הפרק, והפאנל הפוליטי שמנתח את אירועי השעה</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756967_fbeeb19404fbcc7b.jpg" />
-  </programme>
-  <programme start="20261103155500 +0000" stop="20261103170000 +0000" channel="Keshet 12">
-    <title lang="he">שש עם...</title>
-    <desc lang="he">משדר חדשות מיוחד עם עודד בן עמי</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756968_dfa27e00a1a7ddba.jpg" />
-  </programme>
-  <programme start="20261103170000 +0000" stop="20261103175000 +0000" channel="Keshet 12">
-    <title lang="he">שבע עם גדעון אוקו</title>
-    <desc lang="he">גדעון אוקו עם כל ההתפתחויות הכי חשובות של היום. בהשתתפות פאנל הפרשנים, בן כספית ועמית סגל</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756974_d6419c333f101bab.jpg" />
-  </programme>
-  <programme start="20261103175000 +0000" stop="20261103193000 +0000" channel="Keshet 12">
-    <title lang="he">חדשות הערב</title>
-    <sub-title lang="he">המהדורה המרכזית</sub-title>
-    <desc lang="he">המהדורה המרכזית עם יונית לוי. רגע לפני מצעד הממליצים לבית הנשיא, מאחורי הקלעים של פגישת ראשי גוש השינוי – כתבינו עם פרטים חדשים. וגם חודש אחרי ניסיון הפיגוע בפליי דובאי, מי בודק את הטייס?</desc>
-    <category lang="en">News</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756969_992a16c422416061.jpg" />
-  </programme>
-  <programme start="20261103193000 +0000" stop="20261103205500 +0000" channel="Keshet 12">
-    <title lang="he">הזמר במסכה</title>
-    <sub-title lang="he">הונאת הענק נחשפת</sub-title>
-    <desc lang="he">זהירות! לפניכם הונאת ענק. אחד המפורסמים רימה אותנו במשך עונה שלמה - הפאשניסטה, העוף המוזר או הפה הגדול. הערב אחד מהם ייחשף. מי זה יהיה?</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756977_ad2fa4e50e8d0751.jpg" />
-  </programme>
-  <programme start="20261103205500 +0000" stop="20261103211800 +0000" channel="Keshet 12">
-    <title lang="he">גיא פינס</title>
-    <desc lang="he">גיא פינס עם מיטב הכתבות הכי חמות בחדשות הבידור - הסיפורים האחרונים, הכוכבים הנוצצים והשערוריות המרתקות ביותר בארץ ובעולם</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756982_f1c415471632cd3f.jpg" />
-  </programme>
-  <programme start="20261103211800 +0000" stop="20261103212100 +0000" channel="Keshet 12">
-    <title lang="he">הגרלת הלוטו</title>
-    <desc lang="he">תוצאות הגרלת הלוטו בשידור חי</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22757163_3365e1156bfe12dc.jpg" />
-  </programme>
-  <programme start="20261103212100 +0000" stop="20261103213500 +0000" channel="Keshet 12">
-    <title lang="he">גיא פינס</title>
-    <desc lang="he">גיא פינס עם מיטב הכתבות הכי חמות בחדשות הבידור - הסיפורים האחרונים, הכוכבים הנוצצים והשערוריות המרתקות ביותר בארץ ובעולם</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756982_f1c415471632cd3f.jpg" />
-  </programme>
-  <programme start="20261103213500 +0000" stop="20261103223000 +0000" channel="Keshet 12">
-    <title lang="he">אברי ושרקי</title>
-    <desc lang="he">אברי גלעד ויאיר שרקי בתכנית מיוחדת על כל אירועי היום בארץ ובעולם עם הפרשנים, הכתבים והאורחים המעניינים</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-03</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756983_0e9f49752ccb497a.jpg" />
-  </programme>
-  <programme start="20261103223000 +0000" stop="20261103225000 +0000" channel="Keshet 12">
-    <title lang="he">אברי ושרקי + אחד</title>
-    <desc lang="he">״אברי ושרקי + אחד״ מביאה מדי לילה ריאיון אחד מעמיק ומרחיב דעת עם האנשים שלא תשמעו במהלך היום. והפעם: ניר ברזילי</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-04</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756984_28c9c57ac2cc5327.jpg" />
-  </programme>
-  <programme start="20261103225000 +0000" stop="20261103234000 +0000" channel="Keshet 12">
-    <title lang="he">סודות הנדל"ן</title>
-    <desc lang="he">מגזין שבועי בהנחיית עו"ד דפנה שחר הפותח דלת לזירה הנדלנית בארץ ובחו״ל. והפעם: הבחירות מאחורינו - הצעדים שהממשלה הבאה צריכה לקדם בתחום הדיור</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-04</episode-num>
-    <icon src="https://img.mako.co.il/epg/22757145_edd5f6a39d75de6f.jpg" />
-  </programme>
-  <programme start="20261103234000 +0000" stop="20261104004500 +0000" channel="Keshet 12">
-    <title lang="he">הזמר במסכה</title>
-    <sub-title lang="he">המפורסם שהמיס את בר</sub-title>
-    <desc lang="he">באף עונה אף מפורסם במסכה לא עשה דבר כזה... מי המפורסם שריגש את בר רפאלי ומה הוא עשה? תתכוננו לחשיפה מטורפת</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-04</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756977_ad2fa4e50e8d0751.jpg" />
-  </programme>
-  <programme start="20261104004500 +0000" stop="20261104011500 +0000" channel="Keshet 12">
-    <title lang="he">קליפ טיים</title>
-    <desc lang="he">מיטב להיטי המוסיקה הישראלית מכל הזמנים</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-04</episode-num>
-    <icon src="https://img.mako.co.il/epg/22757074_25fae803b9342384.jpg" />
-  </programme>
-  <programme start="20261104011500 +0000" stop="20261104022000 +0000" channel="Keshet 12">
-    <title lang="he">הכוכב הבא לאירוויזיון</title>
-    <sub-title lang="he">השיר של יובל</sub-title>
-    <desc lang="he">כולם מכירים את אימא שלו ואת אחותו, אבל הפעם הבמה כולה שלו. תתכוננו לשמוע את השיר שיסחוף את המדינה. האם יובל גולד ייצג אותנו באירוויזיון?</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-04</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756972_14751f2573cca1a4.jpg" />
-  </programme>
-  <programme start="20261104022000 +0000" stop="20261104024500 +0000" channel="Keshet 12">
-    <title lang="he">תוצרת ישראל: במטבח של רן שמואלי</title>
-    <desc lang="he">השף רן שמואלי מצדיע לתוצרת הארץ - בכל פרק יזמין לארוחה במטבח המסעדה שלו חקלאי או יצרן של חומר גלם מקומי והפעם: נועם יעקובא, המגדל יחד עם אשתו וילדיו 500 דונם של ארטישוק</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-04</episode-num>
-    <icon src="https://img.mako.co.il/epg/22757150_d5d80c29221ca943.jpg" />
-  </programme>
-  <programme start="20261104024500 +0000" stop="20261104025500 +0000" channel="Keshet 12">
-    <title lang="he">מבחני הדרכים של אוטו</title>
-    <sub-title lang="he">פיאט גרנדה פנדה</sub-title>
-    <desc lang="he">עם עיצוב שמדליק לצעירים ונוסטלגי למבוגרים, שימושיות טובה מאוד ונוחות נסיעה מרשימה, פיאט פנדה מנסה לשכנע את הלקוחות להתגבר על המגרעות שלה עם הרבה קסם</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-04</episode-num>
-    <icon src="https://img.mako.co.il/epg/22882420_61b72aac04118eba.jpg" />
-  </programme>
-  <programme start="20261104025500 +0000" stop="20261104032000 +0000" channel="Keshet 12">
-    <title lang="he">גיא פינס</title>
-    <desc lang="he">גיא פינס עם מיטב הכתבות הכי חמות בחדשות הבידור - הסיפורים האחרונים, הכוכבים הנוצצים והשערוריות המרתקות ביותר בארץ ובעולם</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-04</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756982_f1c415471632cd3f.jpg" />
-  </programme>
-  <programme start="20261104032000 +0000" stop="20261104040100 +0000" channel="Keshet 12">
-    <title lang="he">אברי ושרקי</title>
-    <desc lang="he">אברי גלעד ויאיר שרקי בתכנית מיוחדת על כל אירועי היום בארץ ובעולם עם הפרשנים, הכתבים והאורחים המעניינים</desc>
-    <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-04</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756983_0e9f49752ccb497a.jpg" />
-  </programme>
   <programme start="20261104040000 +0000" stop="20261104041000 +0000" channel="Keshet 12">
     <title lang="he">מבזק חדשות</title>
     <desc lang="he">עדכוני חדשות ודיווחי אקטואליה שוטפים בזמן אמת מהארץ ומהעולם, כל מה שעומד על סדר היום הציבורי בתחומי ביטחון, פוליטיקה, כלכלה ועוד</desc>
@@ -1033,7 +892,7 @@
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://img.mako.co.il/epg/22756986_767676b7062ccf56.jpg" />
   </programme>
-  <programme start="20261104090000 +0000" stop="20261104094000 +0000" channel="Keshet 12">
+  <programme start="20261104090000 +0000" stop="20261104095000 +0000" channel="Keshet 12">
     <title lang="he">הבתים היפים בישראל</title>
     <desc lang="he">המעצב דניאל חסון פוגש את האדריכלים רן והילה ברוידס בבית שכולו שכבות של חומרים גולמיים, ואת הנדסאית האדריכלות חיננית שריד בבית שכולו חופשה בין הכפר למדבר</desc>
     <category lang="en">Series</category>
@@ -1042,12 +901,13 @@
   </programme>
   <programme start="20261104095000 +0000" stop="20261104100000 +0000" channel="Keshet 12">
     <title lang="he">גיא פינס</title>
-    <desc lang="he">גיא פינס עם מיטב הכתבות הכי חמות בחדשות הבידור - הסיפורים האחרונים, הכוכבים הנוצצים והשערוריות המרתקות ביותר בארץ ובעולם</desc>
+    <sub-title lang="he">קירל ורן דנקר חושפים</sub-title>
+    <desc lang="he">הפה הגדול בריאיון ראשון אחרי החשיפה, וגם: מי יהיה ג'יימס בונד הבא?</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://img.mako.co.il/epg/22891372_f1c415471632cd3f.jpg" />
   </programme>
-  <programme start="20261104100000 +0000" stop="20261104102000 +0000" channel="Keshet 12">
+  <programme start="20261104100000 +0000" stop="20261104130000 +0000" channel="Keshet 12">
     <title lang="he">12 בצוהריים</title>
     <desc lang="he">משדר חדשות מיוחד עם אלמז מנגיסטו</desc>
     <category lang="en">Series</category>
@@ -1085,7 +945,7 @@
   <programme start="20261104175000 +0000" stop="20261104193000 +0000" channel="Keshet 12">
     <title lang="he">חדשות הערב</title>
     <sub-title lang="he">המהדורה המרכזית</sub-title>
-    <desc lang="he">בהגשת דני קושמרו. בכל ערב הכתבים והפרשנים של החדשות 12 מעדכנים על האירועים הבולטים שהיו, וחושפים את מה שאחרים מנסים להסתיר</desc>
+    <desc lang="he">המהדורה המרכזית עם יונית לוי. סערת ראש השב״כ זיני - גילויים חדשים ודרמטיים, וגם: איך תשפיע המפלה של טראמפ על המערכה עם איראן?</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://img.mako.co.il/epg/22756969_992a16c422416061.jpg" />
@@ -1098,14 +958,14 @@
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://img.mako.co.il/epg/22757148_07a799c5de04145b.jpg" />
   </programme>
-  <programme start="20261104205500 +0000" stop="20261104213000 +0000" channel="Keshet 12">
+  <programme start="20261104205500 +0000" stop="20261104212800 +0000" channel="Keshet 12">
     <title lang="he">גיא פינס</title>
     <desc lang="he">גיא פינס עם מיטב הכתבות הכי חמות בחדשות הבידור - הסיפורים האחרונים, הכוכבים הנוצצים והשערוריות המרתקות ביותר בארץ ובעולם</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://img.mako.co.il/epg/22756982_f1c415471632cd3f.jpg" />
   </programme>
-  <programme start="20261104213000 +0000" stop="20261104222000 +0000" channel="Keshet 12">
+  <programme start="20261104212800 +0000" stop="20261104221000 +0000" channel="Keshet 12">
     <title lang="he">רפי רשף</title>
     <sub-title lang="he">אינטימי - דקלה</sub-title>
     <desc lang="he">רפי רשף בשיחה עם דקלה. על ההתנגדות של הוריה לחלום המוזיקלי, הדיכאון והחרדות שחוותה בהצלחתה, למה סירבה לפגוש את הפונדקאית בהליך הלידה? והעימות החריף עם אבי בתה שלומי אלקבץ מיד לאחר שנולדה</desc>
@@ -1113,28 +973,28 @@
     <episode-num system="original-air-date">2026-11-04</episode-num>
     <icon src="https://img.mako.co.il/epg/22757076_705d7ea8f2fc6cc0.jpg" />
   </programme>
-  <programme start="20261104222000 +0000" stop="20261104233000 +0000" channel="Keshet 12">
+  <programme start="20261104221000 +0000" stop="20261104232000 +0000" channel="Keshet 12">
     <title lang="he">בזמן שעבדתם</title>
-    <desc lang="he">דרור גלוברמן ודני פלד עושים לכם סדר בכל מה שקורה בעולם הטכנולוגיה ומדיה</desc>
+    <desc lang="he">במשך יותר מ-100 שנה הארלי דיווידסון מכרה הרבה יותר מאופנועים: היא מכרה דרך חיים. אבל מה קורה כשהמורדים מתברגנים, הלקוחות מזדקנים והעתיד הופך לחשמלי?</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://img.mako.co.il/epg/22757065_dc10f1096e49175d.jpg" />
   </programme>
-  <programme start="20261104233000 +0000" stop="20261105000500 +0000" channel="Keshet 12">
+  <programme start="20261104232000 +0000" stop="20261104235000 +0000" channel="Keshet 12">
     <title lang="he">הבתים היפים בישראל</title>
     <desc lang="he">המעצב דניאל חסון פוגש את האדריכלים רן והילה ברוידס בבית שכולו שכבות של חומרים גולמיים, ואת הנדסאית האדריכלות חיננית שריד בבית שכולו חופשה בין הכפר למדבר</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://img.mako.co.il/epg/22864824_593900d083765d68.jpg" />
   </programme>
-  <programme start="20261105000500 +0000" stop="20261105003500 +0000" channel="Keshet 12">
+  <programme start="20261104235000 +0000" stop="20261105002500 +0000" channel="Keshet 12">
     <title lang="he">קליפ טיים</title>
     <desc lang="he">מיטב להיטי המוסיקה הישראלית מכל הזמנים</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://img.mako.co.il/epg/22757074_25fae803b9342384.jpg" />
   </programme>
-  <programme start="20261105003500 +0000" stop="20261105014500 +0000" channel="Keshet 12">
+  <programme start="20261105002500 +0000" stop="20261105013000 +0000" channel="Keshet 12">
     <title lang="he">הכוכב הבא לאירוויזיון</title>
     <sub-title lang="he">תופעה ושמה נתלי</sub-title>
     <desc lang="he">במבט ראשון השופטים די פקפקו, אבל מהר מאוד הם הבינו שתופעה כזו הם עוד לא פגשו</desc>
@@ -1142,14 +1002,14 @@
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://img.mako.co.il/epg/22756972_14751f2573cca1a4.jpg" />
   </programme>
-  <programme start="20261105014500 +0000" stop="20261105021000 +0000" channel="Keshet 12">
+  <programme start="20261105013000 +0000" stop="20261105020000 +0000" channel="Keshet 12">
     <title lang="he">תוצרת ישראל: במטבח של רן שמואלי</title>
     <desc lang="he">והפעם: תכנית חגיגית לקראת פסח. רן שמואלי מארח במסעדה שלו את חיים כהן ויחד הם מכינים גפילטע פיש וכבד קצוץ</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://img.mako.co.il/epg/22757150_d5d80c29221ca943.jpg" />
   </programme>
-  <programme start="20261105021000 +0000" stop="20261105023000 +0000" channel="Keshet 12">
+  <programme start="20261105020000 +0000" stop="20261105022000 +0000" channel="Keshet 12">
     <title lang="he">סברי מרנן</title>
     <sub-title lang="he">המשואה</sub-title>
     <desc lang="he">איתמר מתעורר במקום לא מוכר. ומה קורה אצל משפחת רוזן, שמגלים שסילבן קיבל את הכבוד להדליק את המשואה השנה בהר הרצל?</desc>
@@ -1157,21 +1017,20 @@
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://img.mako.co.il/epg/22756978_373ccd77683b9135.jpg" />
   </programme>
-  <programme start="20261105023000 +0000" stop="20261105025500 +0000" channel="Keshet 12">
-    <title lang="he">סברי מרנן</title>
-    <sub-title lang="he">מזל טוב</sub-title>
-    <desc lang="he">איך חוגגים יומולדת בבית רוזן, ומה מגישים בארוחת הערב? וגם: איתמר סוף סוף עוזב את הבית</desc>
+  <programme start="20261105022000 +0000" stop="20261105023000 +0000" channel="Keshet 12">
+    <title lang="he">מבחני הדרכים של אוטו</title>
+    <sub-title lang="he">דו - קרב חשמליות</sub-title>
+    <desc lang="he">דונגפנג בוקס הוכתרה לקניית השנה של מגזין אוטו בשנה הקודמת, אבל ב-2025, היא פגשה מתחרה ראויה - BYD דולפין סרף. הפגשנו את שתי הסופר מיני החשמליות הזולות ביותר בשוק המקומי לדו-קרב</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-05</episode-num>
-    <icon src="https://img.mako.co.il/epg/22756978_373ccd77683b9135.jpg" />
+    <icon src="https://img.mako.co.il/epg/22894121_61b72aac04118eba.jpg" />
   </programme>
-  <programme start="20261105025500 +0000" stop="20261105033000 +0000" channel="Keshet 12">
-    <title lang="he">הקומה ה</title>
-    <sub-title lang="he">12 עם ליאון רוזנברג</sub-title>
-    <desc lang="he">מגזין הנדל"ן של קשת. תוצאה ברורה עדיין אין, אבל משבר הדיור עדיין כאן. מה הממשלה הבאה חייבת לעשות כדי להוריד מחירים ולהחזיר את שוק הנדל״ן למסלול?</desc>
+  <programme start="20261105023000 +0000" stop="20261105033000 +0000" channel="Keshet 12">
+    <title lang="he">בזמן שעבדתם</title>
+    <desc lang="he">במשך יותר מ-100 שנה הארלי דיווידסון מכרה הרבה יותר מאופנועים: היא מכרה דרך חיים. אבל מה קורה כשהמורדים מתברגנים, הלקוחות מזדקנים והעתיד הופך לחשמלי?</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-05</episode-num>
-    <icon src="https://img.mako.co.il/epg/22871514_ae88313bebf6eb79.jpg" />
+    <icon src="https://img.mako.co.il/epg/22893881_dc10f1096e49175d.jpg" />
   </programme>
   <programme start="20261105033000 +0000" stop="20261105040000 +0000" channel="Keshet 12">
     <title lang="he">רפי רשף</title>
@@ -1292,7 +1151,7 @@
   <programme start="20261105175000 +0000" stop="20261105193000 +0000" channel="Keshet 12">
     <title lang="he">חדשות הערב</title>
     <sub-title lang="he">המהדורה המרכזית</sub-title>
-    <desc lang="he">בהגשת יונית לוי. בכל ערב הכתבים והפרשנים של החדשות 12 מעדכנים על האירועים הבולטים שהיו, וחושפים את מה שאחרים מנסים להסתיר</desc>
+    <desc lang="he">בהגשת דני קושמרו. בכל ערב הכתבים והפרשנים של החדשות 12 מעדכנים על האירועים הבולטים שהיו, וחושפים את מה שאחרים מנסים להסתיר</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://img.mako.co.il/epg/22756969_992a16c422416061.jpg" />
@@ -1300,7 +1159,7 @@
   <programme start="20261105193000 +0000" stop="20261105204500 +0000" channel="Keshet 12">
     <title lang="he">הבריחה</title>
     <sub-title lang="he">המהפך</sub-title>
-    <desc lang="he">יש רגעים שאין מהם חזרה...המהפך של יואל משנה את הכול</desc>
+    <desc lang="he">יש רגעים שאין מהם דרך חזרה...המהפך של יואל משנה את הכול</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://img.mako.co.il/epg/22757004_a2916b888e730d1a.jpg" />
@@ -1320,7 +1179,7 @@
     <episode-num system="original-air-date">2026-11-05</episode-num>
     <icon src="https://img.mako.co.il/epg/22756976_ae88313bebf6eb79.jpg" />
   </programme>
-  <programme start="20261105224500 +0000" stop="20261105231000 +0000" channel="Keshet 12">
+  <programme start="20261105224500 +0000" stop="20261105225500 +0000" channel="Keshet 12">
     <title lang="he">מבחני הדרכים של אוטו</title>
     <sub-title lang="he">קיה נירו</sub-title>
     <desc lang="he">הדור השני של רכב הפנאי ההיברידי של קיה חוזר אחרי מתיחת פנים חיצונית קלה, אבל שדרוג משמעותי בכל מה שקורה בתא הנוסעים ועם הצעה משופרת במחיר נמוך מבעבר</desc>
@@ -1328,7 +1187,7 @@
     <episode-num system="original-air-date">2026-11-06</episode-num>
     <icon src="https://img.mako.co.il/epg/22856197_61b72aac04118eba.jpg" />
   </programme>
-  <programme start="20261105231000 +0000" stop="20261105235000 +0000" channel="Keshet 12">
+  <programme start="20261105225500 +0000" stop="20261105234000 +0000" channel="Keshet 12">
     <title lang="he">קקטוס הזהב הפודקאסט</title>
     <sub-title lang="he">עמית משיח</sub-title>
     <desc lang="he">קקטוס הזהב, הפודקאסט של עולם השיווק והפרסום, מארח את האנשים שמאחורי המותגים המצליחים בישראל</desc>
@@ -1336,14 +1195,14 @@
     <episode-num system="original-air-date">2026-11-06</episode-num>
     <icon src="https://img.mako.co.il/epg/22757098_e0eb35726a3dfd0e.jpg" />
   </programme>
-  <programme start="20261105235000 +0000" stop="20261106005000 +0000" channel="Keshet 12">
+  <programme start="20261105234000 +0000" stop="20261106003500 +0000" channel="Keshet 12">
     <title lang="he">בזמן שעבדתם</title>
     <desc lang="he">דרור גלוברמן ודני פלד עושים לכם סדר בכל מה שקורה בעולם הטכנולוגיה ומדיה</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-06</episode-num>
     <icon src="https://img.mako.co.il/epg/22757065_dc10f1096e49175d.jpg" />
   </programme>
-  <programme start="20261106005000 +0000" stop="20261106012000 +0000" channel="Keshet 12">
+  <programme start="20261106003500 +0000" stop="20261106011000 +0000" channel="Keshet 12">
     <title lang="he">נכס צאן ברזל</title>
     <sub-title lang="he">השירים</sub-title>
     <desc lang="he">אמני ישראל עושים כבוד ליורם טהרלב. מיזם מוזיקלי שנועד להנציח ולכבד את יצירותיהם של גיבורי תרבות ישראלים, משוררים ופזמונאים</desc>
@@ -1351,14 +1210,14 @@
     <episode-num system="original-air-date">2026-11-06</episode-num>
     <icon src="https://img.mako.co.il/epg/22757090_12aefe082cdbeb05.jpg" />
   </programme>
-  <programme start="20261106012000 +0000" stop="20261106013000 +0000" channel="Keshet 12">
+  <programme start="20261106011000 +0000" stop="20261106012000 +0000" channel="Keshet 12">
     <title lang="he">שירים בלילה</title>
     <desc lang="he">שירים מתוך פרויקט- כל מה שעוזר- אסי עזר</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-06</episode-num>
     <icon src="https://img.mako.co.il/epg/22757091_0d10be6eb5c180da.jpg" />
   </programme>
-  <programme start="20261106013000 +0000" stop="20261106024000 +0000" channel="Keshet 12">
+  <programme start="20261106012000 +0000" stop="20261106022500 +0000" channel="Keshet 12">
     <title lang="he">הכוכב הבא לאירוויזיון</title>
     <sub-title lang="he">הקאמבק הבא</sub-title>
     <desc lang="he">הם היו הלהקה הכי חמה במדינה - האם הקאמבק הזה הוא בדיוק מה שאנחנו צריכים לאירוויזיון?</desc>
@@ -1366,12 +1225,20 @@
     <episode-num system="original-air-date">2026-11-06</episode-num>
     <icon src="https://img.mako.co.il/epg/22756972_14751f2573cca1a4.jpg" />
   </programme>
-  <programme start="20261106024000 +0000" stop="20261106030500 +0000" channel="Keshet 12">
+  <programme start="20261106022500 +0000" stop="20261106025000 +0000" channel="Keshet 12">
     <title lang="he">תוצרת ישראל: במטבח של רן שמואלי</title>
     <desc lang="he">השף רן שמואלי מצדיע לתוצרת הארץ - בכל פרק יזמין לארוחה במטבח המסעדה שלו חקלאי או יצרן של חומר גלם מקומי. והפעם: תותים אדומים ומתוקים, הגדלים תלויים מעל האדמה</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-06</episode-num>
     <icon src="https://img.mako.co.il/epg/22757150_d5d80c29221ca943.jpg" />
+  </programme>
+  <programme start="20261106025000 +0000" stop="20261106030500 +0000" channel="Keshet 12">
+    <title lang="he">מבחני הדרכים של אוטו</title>
+    <sub-title lang="he">קיה נירו</sub-title>
+    <desc lang="he">הדור השני של רכב הפנאי ההיברידי של קיה חוזר אחרי מתיחת פנים חיצונית קלה, אבל שדרוג משמעותי בכל מה שקורה בתא הנוסעים ועם הצעה משופרת במחיר נמוך מבעבר</desc>
+    <category lang="en">Series</category>
+    <episode-num system="original-air-date">2026-11-06</episode-num>
+    <icon src="https://img.mako.co.il/epg/22894121_61b72aac04118eba.jpg" />
   </programme>
   <programme start="20261106030500 +0000" stop="20261106040000 +0000" channel="Keshet 12">
     <title lang="he">דוח מצב עם עינב וירון</title>
@@ -1508,7 +1375,7 @@
     <episode-num system="original-air-date">2026-11-06</episode-num>
     <icon src="https://img.mako.co.il/epg/22757130_938787e6b8b5956a.jpg" />
   </programme>
-  <programme start="20261106210000 +0000" stop="20261106211000 +0000" channel="Keshet 12">
+  <programme start="20261106210000 +0000" stop="20261106221000 +0000" channel="Keshet 12">
     <title lang="he">ארץ נהדרת</title>
     <sub-title lang="he">מסיבת ההמלצות הגדולה</sub-title>
     <desc lang="he">פעם בכמה שנים בית הנשיא מארח את האירוע הכי נוצץ בעיר - כולם מגיעים למסיבת ההמלצות של בוז'י! מי ימליץ על מי? מי יתהפך על מי? ומי יקבל את המנדט?</desc>
@@ -1516,12 +1383,12 @@
     <episode-num system="original-air-date">2026-11-06</episode-num>
     <icon src="https://img.mako.co.il/epg/22757148_07a799c5de04145b.jpg" />
   </programme>
-  <programme start="20261106211000 +0000" stop="20261106225000 +0000" channel="Keshet 12">
+  <programme start="20261106221000 +0000" stop="20261106225000 +0000" channel="Keshet 12">
     <title lang="he">רפי רשף</title>
     <sub-title lang="he">אינטימי - דקלה</sub-title>
     <desc lang="he">רפי רשף בשיחה עם דקלה. על ההתנגדות של הוריה לחלום המוזיקלי, הדיכאון והחרדות שחוותה בהצלחתה, למה סירבה לפגוש את הפונדקאית בהליך הלידה? והעימות החריף עם אבי בתה שלומי אלקבץ מיד לאחר שנולדה</desc>
     <category lang="en">Series</category>
-    <episode-num system="original-air-date">2026-11-06</episode-num>
+    <episode-num system="original-air-date">2026-11-07</episode-num>
     <icon src="https://img.mako.co.il/epg/22856749_705d7ea8f2fc6cc0.jpg" />
   </programme>
   <programme start="20261106225000 +0000" stop="20261107001500 +0000" channel="Keshet 12">
@@ -1541,8 +1408,8 @@
   </programme>
   <programme start="20261107013000 +0000" stop="20261107015000 +0000" channel="Keshet 12">
     <title lang="he">סברי מרנן</title>
-    <sub-title lang="he">נזדרוביה</sub-title>
-    <desc lang="he">אלין עושה פיילוט לערוץ הרוסי, לתוכנית על קיבוץ גלויות, ומארחת את משפחת רוזן ומשפחת חסון לראיון משותף, וגם את דודו אהרון</desc>
+    <sub-title lang="he">מזל טוב</sub-title>
+    <desc lang="he">איך חוגגים יומולדת בבית רוזן, ומה מגישים בארוחת הערב? וגם: איתמר סוף סוף עוזב את הבית</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-07</episode-num>
     <icon src="https://img.mako.co.il/epg/22856213_373ccd77683b9135.jpg" />
@@ -1585,7 +1452,7 @@
   </programme>
   <programme start="20261107053000 +0000" stop="20261107060000 +0000" channel="Keshet 12">
     <title lang="he">חדשות האוכל</title>
-    <desc lang="he">חדשות האוכל בהגשת ריטה גולדשטיין. מגזין טלוויזיה צעיר, דינמי ועדכני הסוקר את עולם האוכל, הקולינריה והטרנדים הכי חמים. והפעם: טריקים בשיווק בעולם האוכל והמלצת מאפייה נסתרת</desc>
+    <desc lang="he">חדשות האוכל בהגשת ריטה גולדשטיין. מגזין טלוויזיה צעיר, דינמי ועדכני הסוקר את עולם האוכל, הקולינריה והטרנדים הכי חמים. והפעם: הרוסטביף של אבי ביטון, פלפלים שלא הכרתם והמלצת מסעדה של ריטה</desc>
     <category lang="en">News</category>
     <episode-num system="original-air-date">2026-11-07</episode-num>
     <icon src="https://img.mako.co.il/epg/22757137_02df3d2d60a2c67d.jpg" />
@@ -1615,7 +1482,7 @@
   <programme start="20261107102500 +0000" stop="20261107114500 +0000" channel="Keshet 12">
     <title lang="he">הזמר במסכה</title>
     <sub-title lang="he">הונאת הענק נחשפת</sub-title>
-    <desc lang="he">זהירות! לפניכם הונאת ענק. אחד המפורסמים רימה אותנו במשך עונה שלמה - הפאשניסטה, העוף המוזר או הפה הגדול. הערב אחד מהם ייחשף. מי זה יהיה?</desc>
+    <desc lang="he">זהירות! לפניכם הונאת ענק. אחד המפורסמים רימה אותנו במשך עונה שלמה - הפאשניסטה, העוף המוזר או הפה הגדול. אחד מהם ייחשף. מי זה יהיה?</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-07</episode-num>
     <icon src="https://img.mako.co.il/epg/22756977_ad2fa4e50e8d0751.jpg" />
@@ -1658,8 +1525,8 @@
   </programme>
   <programme start="20261107193000 +0000" stop="20261107210500 +0000" channel="Keshet 12">
     <title lang="he">הזמר במסכה</title>
-    <sub-title lang="he">החשיפה התשיעית</sub-title>
-    <desc lang="he">החשיפה התשיעית של העונה. מי המפורסם שעומד מאחורי המסכה?</desc>
+    <sub-title lang="he">הארנב נתפס ונחשף</sub-title>
+    <desc lang="he">קבלו ספוילר! השופטים תפסו את הארנב והם לא האמינו כשהם זרקו את השם, אבל זה באמת הוא. מי המפורסם מאחורי המסכה? זמן הארנב הגיע</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-07</episode-num>
     <icon src="https://img.mako.co.il/epg/22756977_ad2fa4e50e8d0751.jpg" />
@@ -1687,7 +1554,7 @@
   </programme>
   <programme start="20261107224500 +0000" stop="20261107233000 +0000" channel="Keshet 12">
     <title lang="he">סודות הנדל"ן</title>
-    <desc lang="he">מגזין שבועי בהנחיית עורכת הדין דפנה שחר הפותח דלת לזירה הנדל"נית בארץ ובחו״ל</desc>
+    <desc lang="he">מגזין שבועי בהנחיית עו"ד דפנה שחר הפותח דלת לזירה הנדלנית בארץ ובחו״ל. והפעם: שירה תלמי־בבאי, יו"ר הוועדה המחוזית י־ם, על הרובע המרכזי בבית שמש, התשתיות והבנייה לגובה בירושלים</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-08</episode-num>
     <icon src="https://img.mako.co.il/epg/22757145_edd5f6a39d75de6f.jpg" />
@@ -1722,7 +1589,7 @@
     <episode-num system="original-air-date">2026-11-08</episode-num>
     <icon src="https://img.mako.co.il/epg/22757150_d5d80c29221ca943.jpg" />
   </programme>
-  <programme start="20261108023500 +0000" stop="20261108040000 +0000" channel="Keshet 12">
+  <programme start="20261108023500 +0000" stop="20261108035900 +0000" channel="Keshet 12">
     <title lang="he">אופירה אוחנה סרי</title>
     <desc lang="he">אופירה אוחנה סרי עם האורחים והסיפורים המעניינים, השאלות הקשות והרגעים הלא צפויים</desc>
     <category lang="en">Series</category>
@@ -1838,11 +1705,20 @@
     <episode-num system="original-air-date">2026-11-08</episode-num>
     <icon src="https://img.mako.co.il/epg/22757209_992a16c422416061.jpg" />
   </programme>
-  <programme start="20261108193000 +0000" stop="20261108205500 +0000" channel="Keshet 12">
-    <title lang="he">פרטים יפורסמו בהמשך</title>
+  <programme start="20261108193000 +0000" stop="20261108204500 +0000" channel="Keshet 12">
+    <title lang="he">המתחזים</title>
+    <desc lang="he">תכנית התחקירים בהגשת חיים אתגר, החושפת שורה ארוכה של מתחזים סדרתיים, שהמשותף לכולם הוא שהפילו בפח מספר רב של קורבנות. בכל פרק יתנהל מרדף אחר מתחזה אחר</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-08</episode-num>
-    <icon src="https://img.mako.co.il/2019/10/03/epglogo12a.jpg" />
+    <icon src="https://img.mako.co.il/epg/22856997_2e5bfdd930a3c1a0.jpg" />
+  </programme>
+  <programme start="20261108204500 +0000" stop="20261108205500 +0000" channel="Keshet 12">
+    <title lang="he">המתחזים</title>
+    <sub-title lang="he">אולפן</sub-title>
+    <desc lang="he">תכנית התחקירים בהגשת חיים אתגר, החושפת שורה ארוכה של מתחזים סדרתיים, שהמשותף לכולם הוא שהפילו בפח מספר רב של קורבנות. בכל פרק יתנהל מרדף אחר מתחזה אחר</desc>
+    <category lang="en">Series</category>
+    <episode-num system="original-air-date">2026-11-08</episode-num>
+    <icon src="https://img.mako.co.il/epg/22875664_c064431006d5cae6.jpg" />
   </programme>
   <programme start="20261108205500 +0000" stop="20261108213000 +0000" channel="Keshet 12">
     <title lang="he">גיא פינס</title>
@@ -1875,7 +1751,7 @@
   <programme start="20261108235500 +0000" stop="20261109005500 +0000" channel="Keshet 12">
     <title lang="he">הזמר במסכה</title>
     <sub-title lang="he">הונאת הענק נחשפת</sub-title>
-    <desc lang="he">זהירות! לפניכם הונאת ענק. אחד המפורסמים רימה אותנו במשך עונה שלמה - הפאשניסטה, העוף המוזר או הפה הגדול. הערב אחד מהם ייחשף. מי זה יהיה?</desc>
+    <desc lang="he">זהירות! לפניכם הונאת ענק. אחד המפורסמים רימה אותנו במשך עונה שלמה - הפאשניסטה, העוף המוזר או הפה הגדול. אחד מהם ייחשף. מי זה יהיה?</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-09</episode-num>
     <icon src="https://img.mako.co.il/epg/22757212_ad2fa4e50e8d0751.jpg" />
@@ -1897,8 +1773,8 @@
   </programme>
   <programme start="20261109023000 +0000" stop="20261109025000 +0000" channel="Keshet 12">
     <title lang="he">סברי מרנן</title>
-    <sub-title lang="he">מבחנים</sub-title>
-    <desc lang="he">שי ושני מחליטים לברר מה באמת ריקי חושבת על שני, וריקי בודקת מתי תפקע הסבלנות של ספיר</desc>
+    <sub-title lang="he">נזדרוביה</sub-title>
+    <desc lang="he">אלין עושה פיילוט לערוץ הרוסי, לתוכנית על קיבוץ גלויות, ומארחת את משפחת רוזן ומשפחת חסון לראיון משותף, וגם את דודו אהרון</desc>
     <category lang="en">Series</category>
     <episode-num system="original-air-date">2026-11-09</episode-num>
     <icon src="https://img.mako.co.il/epg/22757185_373ccd77683b9135.jpg" />
@@ -1910,7 +1786,7 @@
     <episode-num system="original-air-date">2026-11-09</episode-num>
     <icon src="https://img.mako.co.il/epg/22757189_f1c415471632cd3f.jpg" />
   </programme>
-  <programme start="20261109031500 +0000" stop="20261109040000 +0000" channel="Keshet 12">
+  <programme start="20261109031500 +0000" stop="20261109035700 +0000" channel="Keshet 12">
     <title lang="he">אברי ושרקי</title>
     <desc lang="he">אברי גלעד ויאיר שרקי בתכנית מיוחדת על כל אירועי היום בארץ ובעולם עם הפרשנים, הכתבים והאורחים המעניינים</desc>
     <category lang="en">Series</category>
