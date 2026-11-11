@@ -3,28 +3,106 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20261111030000 +0000" stop="20261111040000 +0000" channel="CNBC">
+  <programme start="20261111180000 +0000" stop="20261111190000 +0000" channel="CNBC">
+    <title lang="en">The Exchange</title>
+    <desc lang="en">Anchor Kelly Evans reports on the important stories to markets and investors; reporters provide actionable information to viewers as they make daily investment decisions.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S225E1844</episode-num>
+  </programme>
+  <programme start="20261111190000 +0000" stop="20261111200000 +0000" channel="CNBC">
+    <title lang="en">Power Lunch</title>
+    <desc lang="en">Focusing on real-time market coverage, breaking news and up-to-the-instant stock moving information; delving into the economy, the markets, real estate, media and technology.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S225E2435</episode-num>
+  </programme>
+  <programme start="20261111200000 +0000" stop="20261111210000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell</title>
+    <desc lang="en">A guide through the most important hour of the Wall Street trading day; taking a close-up look at how the markets are moving, what's driving them and how investors are reacting; coverage includes reports from the CME Group, NASDAQ and the NYSE.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S225E1877</episode-num>
+  </programme>
+  <programme start="20261111210000 +0000" stop="20261111220000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S225E1216</episode-num>
+  </programme>
+  <programme start="20261111220000 +0000" stop="20261111230000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S225E4266</episode-num>
+  </programme>
+  <programme start="20261111230000 +0000" stop="20261112000000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S225E4345</episode-num>
+  </programme>
+  <programme start="20261112000000 +0000" stop="20261112010000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">Two women pitch their military-inspired jewelry line; traditional British scone; custom furniture; door-to-door luggage pickup service; update on the Scrub Daddy cleaning tool.</desc>
+    <desc lang="en">A convenient new style of eating authentic Korean food; a product designed to help with one's wellness routine; a take on a common cooking tool; a version of a sports medicine product specifically designed for athletes; an update on Souper Cubes.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S25E66</episode-num>
+    <episode-num system="onscreen">S21E299</episode-num>
   </programme>
-  <programme start="20261111040000 +0000" stop="20261111050000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">A state-of-the-art bionic prosthetic device; artisanal desserts for dogs; a bug-catching device; insulated water bottles guaranteed to keep beverages cold for 36 hours.</desc>
-    <category lang="en">Reality</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S15E339</episode-num>
-  </programme>
-  <programme start="20261111050000 +0000" stop="20261111060000 +0000" channel="CNBC">
+  <programme start="20261112010000 +0000" stop="20261112020000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
     <desc lang="en">A portable product for those who enjoy camping without the dangers of creating a wildfire; a smoothie-making machine; an oral health product; a portable cooler accessory; an update on fashion business No Limbits; guest shark Daniel Lubetzky.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
     <episode-num system="onscreen">S18E320</episode-num>
+  </programme>
+  <programme start="20261112020000 +0000" stop="20261112030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A convenient way to eat healthier meals while bettering the planet; stress-relief tools; innovative apparel that keeps drinks cool and hands free; a no-fuss solution to keeping babies busy and entertained.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S16E269</episode-num>
+  </programme>
+  <programme start="20261112030000 +0000" stop="20261112040000 +0000" channel="CNBC">
+    <title lang="en">American Greed</title>
+    <desc lang="en">Purported entrepreneur Antonio Mariot Wilson changes his name, pitch, and act to play a series of roles, and the inveterate huckster fleeces unsuspecting investors for decades, including television star Jenifer Lewis.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S11E298</episode-num>
+  </programme>
+  <programme start="20261112040000 +0000" stop="20261112050000 +0000" channel="CNBC">
+    <title lang="en">American Greed</title>
+    <desc lang="en">A famous Texas fruitcake bakery's accountant conducts a check writing scam; a self-proclaimed financial wiz rips off investors while he funds a professional race team with money stolen from his church.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S6E225</episode-num>
+  </programme>
+  <programme start="20261112050000 +0000" stop="20261112060000 +0000" channel="CNBC">
+    <title lang="en">American Greed</title>
+    <desc lang="en">A former Army intelligence officer steals millions through a fake veterans' charity.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S14E180</episode-num>
   </programme>
 </tv>
