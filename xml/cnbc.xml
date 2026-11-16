@@ -3,28 +3,79 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20261116030000 +0000" stop="20261116040000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">Guest judge Emma Grede; a healthy alternative to bacon; a product designed to aid a favorite childhood activity; an adaptive clothing line with a mission to increase comfort for those struggling due to a disability; a product designed for dancers.</desc>
-    <category lang="en">Reality</category>
+  <programme start="20261116210000 +0000" stop="20261116220000 +0000" channel="CNBC">
+    <title lang="en">Closing Bell: Overtime</title>
+    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S18E296</episode-num>
+    <episode-num system="onscreen">S228E1219</episode-num>
   </programme>
-  <programme start="20261116040000 +0000" stop="20261116050000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">A portable basketball shooting machine; no-bake and nutritious snacks; an instant sneaker cleaner; an all-in-one beer-making device; an update on Boost, a portable oxygen canister company; guest Shark Alex Rodriguez.</desc>
-    <category lang="en">Reality</category>
+  <programme start="20261116220000 +0000" stop="20261116230000 +0000" channel="CNBC">
+    <title lang="en">Fast Money</title>
+    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S23E276</episode-num>
+    <episode-num system="onscreen">S228E4269</episode-num>
   </programme>
-  <programme start="20261116050000 +0000" stop="20261116060000 +0000" channel="CNBC">
+  <programme start="20261116230000 +0000" stop="20261117000000 +0000" channel="CNBC">
+    <title lang="en">Mad Money</title>
+    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S228E4348</episode-num>
+  </programme>
+  <programme start="20261117000000 +0000" stop="20261117010000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
-    <desc lang="en">TV personality Bethenny Frankel; a brand of teas with attitude; a solution to messy diaper changes; a technology that can improve sleep and reduce stress.</desc>
+    <desc lang="en">KIND Snacks founder Daniel Lubetzky guest hosts; vegan mushroom bacon, a mobile bartending class, peanut butter for dogs and plush toys.</desc>
     <category lang="en">Reality</category>
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S8E189</episode-num>
+    <episode-num system="onscreen">S12E336</episode-num>
+  </programme>
+  <programme start="20261117010000 +0000" stop="20261117020000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">An energy and nutritional supplement designed and tested by active members of the military; a new way to shop for bridal wear; a wine tasting cruise.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S10E51</episode-num>
+  </programme>
+  <programme start="20261117020000 +0000" stop="20261117030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A portable ping pong game; an at-home bar experience; a T-shirt brand that aims to preserve family memories; a lightweight foam cooler fit for any occasion; Todd Graves returns.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S6E352</episode-num>
+  </programme>
+  <programme start="20261117030000 +0000" stop="20261117040000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Tilt-able and flippable reading glasses; an exciting educational game for kids; high-tech ski goggles; a line of delicious dessert toppings.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S7E331</episode-num>
+  </programme>
+  <programme start="20261117040000 +0000" stop="20261117050000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Singer Pat Boone and a man from Brattleboro, Vt., present a new eco-friendly car that runs on compressed air; snack bars with a connection to a popular diet; a fisherman seeks an investment in a unique lure; an update on Heidi Ho Organics.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S27E126</episode-num>
+  </programme>
+  <programme start="20261117050000 +0000" stop="20261117060000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">An energy and nutritional supplement designed and tested by active members of the military; a new way to shop for bridal wear; a wine tasting cruise.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S10E51</episode-num>
   </programme>
 </tv>
