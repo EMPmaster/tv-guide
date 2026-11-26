@@ -3,82 +3,6 @@
   <channel id="CNBC">
     <display-name>CNBC</display-name>
   </channel>
-  <programme start="20261125200000 +0000" stop="20261125210000 +0000" channel="CNBC">
-    <title lang="en">Closing Bell</title>
-    <desc lang="en">A guide through the most important hour of the Wall Street trading day; taking a close-up look at how the markets are moving, what's driving them and how investors are reacting; coverage includes reports from the CME Group, NASDAQ and the NYSE.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S235E1887</episode-num>
-  </programme>
-  <programme start="20261125210000 +0000" stop="20261125220000 +0000" channel="CNBC">
-    <title lang="en">Closing Bell: Overtime</title>
-    <desc lang="en">Melissa Lee and Michael Santoli take viewers through all the after-hours moves including breaking news, corporate earnings and post-market trading; strategists and money managers debate actionable ideas and the market themes of the day.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S235E1226</episode-num>
-  </programme>
-  <programme start="20261125220000 +0000" stop="20261125230000 +0000" channel="CNBC">
-    <title lang="en">Fast Money</title>
-    <desc lang="en">The information normally reserved for the Wall Street trading floor, enabling viewers to make decisions that give them a chance to make money; the news with an angle that won't be seen until tomorrow's papers.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S235E4276</episode-num>
-  </programme>
-  <programme start="20261125230000 +0000" stop="20261126000000 +0000" channel="CNBC">
-    <title lang="en">Mad Money</title>
-    <desc lang="en">Taking viewers inside the mind of one of Wall Street's most respected and successful money managers; Jim Cramer guides viewers through the confusing jungle of Wall Street investing, navigating through both opportunities and pitfalls.</desc>
-    <category lang="en">Business</category>
-    <category lang="en">News</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S235E4355</episode-num>
-  </programme>
-  <programme start="20261126000000 +0000" stop="20261126010000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">Brothers from Utah introduce their treasure hunt game experience; entrepreneurs from Wisconsin and New York present their line of streetwear that donates a school uniform to a child in need.</desc>
-    <category lang="en">Reality</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S10E215</episode-num>
-  </programme>
-  <programme start="20261126010000 +0000" stop="20261126020000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">A unique way to swaddle a baby; a nail salon for men; an improved athletic sock; a charging station for cell phones.</desc>
-    <category lang="en">Reality</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S1E100</episode-num>
-  </programme>
-  <programme start="20261126020000 +0000" stop="20261126030000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">A twist on traditional sauces; artisan-made designs inspired by the craftsmanship of each country; a vibrant beauty and lifestyle brand that celebrates the creators' multicultural heritage.</desc>
-    <category lang="en">Reality</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S10E263</episode-num>
-  </programme>
-  <programme start="20261126030000 +0000" stop="20261126040000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">A portable three-in-one charger; a DIY electric vehicle kit; a take-home sweet potato pie; indoor bumper cars for kids.</desc>
-    <category lang="en">Reality</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S11E357</episode-num>
-  </programme>
-  <programme start="20261126040000 +0000" stop="20261126050000 +0000" channel="CNBC">
-    <title lang="en">Shark Tank</title>
-    <desc lang="en">A portable product meant for beach hangs; an all-in-one meal prep system to help cooks stay organized; a portable and private workspace design; a product for bringing joy to new couples; an update on Chapul Cricket Bars.</desc>
-    <category lang="en">Reality</category>
-    <category lang="en">Series</category>
-    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
-    <episode-num system="onscreen">S16E294</episode-num>
-  </programme>
   <programme start="20261126050000 +0000" stop="20261126060000 +0000" channel="CNBC">
     <title lang="en">Shark Tank</title>
     <desc lang="en">Good American CEO Emma Grede guest judges; a line of beauty products formulated for melanin-rich skin; a product to help eliminate diaper odor; a line of products made from an ancient superfood; a way to help new moms during breastfeeding.</desc>
@@ -86,5 +10,198 @@
     <category lang="en">Series</category>
     <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
     <episode-num system="onscreen">S14E292</episode-num>
+  </programme>
+  <programme start="20261126060000 +0000" stop="20261126070000 +0000" channel="CNBC">
+    <title lang="en">American Greed</title>
+    <desc lang="en">An international crook steals more than 40 million dollars from investors and the US government through a sham computer company and bogus plots to build homes for the poor.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S7E192</episode-num>
+  </programme>
+  <programme start="20261126070000 +0000" stop="20261126080000 +0000" channel="CNBC">
+    <title lang="en">Dateline</title>
+    <desc lang="en">The investigation into the death of a pregnant woman just months after she wed her high school sweetheart reveals secret lives and feuds.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S67E376</episode-num>
+  </programme>
+  <programme start="20261126080000 +0000" stop="20261126090000 +0000" channel="CNBC">
+    <title lang="en">Dateline</title>
+    <desc lang="en">The investigation into the death of a pregnant woman just months after she wed her high school sweetheart reveals secret lives and feuds.</desc>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S68E377</episode-num>
+  </programme>
+  <programme start="20261126090000 +0000" stop="20261126100000 +0000" channel="CNBC">
+    <title lang="en">Squawk Box Europe</title>
+    <desc lang="en">"Squawk Box Europe" provides three hours of analysis and debate on trading days to lead up to the open of the European markets.</desc>
+    <category lang="en">Business</category>
+    <category lang="en">News</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S100E260</episode-num>
+  </programme>
+  <programme start="20261126100000 +0000" stop="20261126110000 +0000" channel="CNBC">
+    <title lang="en">Super Heists</title>
+    <desc lang="en">The best bank robbers in American history hatch an ingenious plan to steal 30 million from a rumored Nixon slush fund, sparking the biggest FBI manhunt since the Kennedy assassination.</desc>
+    <category lang="en">Documentary</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S1E1</episode-num>
+  </programme>
+  <programme start="20261126110000 +0000" stop="20261126120000 +0000" channel="CNBC">
+    <title lang="en">Super Heists</title>
+    <desc lang="en">Four clean-cut college students risk it all to become super-thieves by targeting $12 million in rare books in a brash daylight heist that baffles the cops hunting them.</desc>
+    <category lang="en">Documentary</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2E2</episode-num>
+  </programme>
+  <programme start="20261126120000 +0000" stop="20261126130000 +0000" channel="CNBC">
+    <title lang="en">Super Heists</title>
+    <desc lang="en">A model bank employee pulls off the second-biggest cash heist in history when he stuffs a work van with $17 million in untraceable cash and flees to Mexico, only to be betrayed by his partners when greed fuels a murder plot.</desc>
+    <category lang="en">Documentary</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S3E3</episode-num>
+  </programme>
+  <programme start="20261126130000 +0000" stop="20261126140000 +0000" channel="CNBC">
+    <title lang="en">Super Heists</title>
+    <desc lang="en">When a violent gang of bank robbers executes a perfect heist, cops don't realize that one of the terrified bank tellers is actually the mastermind behind it all.</desc>
+    <category lang="en">Documentary</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S4E4</episode-num>
+  </programme>
+  <programme start="20261126140000 +0000" stop="20261126150000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Guest shark Ashton Kutcher; a device to make baby's feeding time easier; wearable transportation; drinking vinegars; protecting consumers from hacking; an update on Pipcorn.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S1E129</episode-num>
+  </programme>
+  <programme start="20261126150000 +0000" stop="20261126160000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Guest shark Peter Jones; a one-of-a-kind custom song service; a work-from-home product that increases productivity; a mail-order meal service; an apparel company focused on helping clean the world's oceans.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2E280</episode-num>
+  </programme>
+  <programme start="20261126160000 +0000" stop="20261126170000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Eyewear designed to eliminate eyestrain; an avocado bar serves as healthy fast food; a portable solar cooker; an all-natural beverage; an update on Honeyfund, a unique wedding gift registry that helps couples raise funds for their dream honeymoon.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S22E203</episode-num>
+  </programme>
+  <programme start="20261126170000 +0000" stop="20261126180000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A portable three-in-one charger; a DIY electric vehicle kit; a take-home sweet potato pie; indoor bumper cars for kids.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S11E357</episode-num>
+  </programme>
+  <programme start="20261126180000 +0000" stop="20261126190000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A unique way to swaddle a baby; a nail salon for men; an improved athletic sock; a charging station for cell phones.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S1E100</episode-num>
+  </programme>
+  <programme start="20261126190000 +0000" stop="20261126200000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A twist on traditional sauces; artisan-made designs inspired by the craftsmanship of each country; a vibrant beauty and lifestyle brand that celebrates the creators' multicultural heritage.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S10E263</episode-num>
+  </programme>
+  <programme start="20261126200000 +0000" stop="20261126210000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Cosmetics to help clear up imperfections; a water sports apparel brand; a product designed to keep dogs hydrated during any excursion; a solution to drinking a beverage while fishing; an update on Doughp.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S23E301</episode-num>
+  </programme>
+  <programme start="20261126210000 +0000" stop="20261126220000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A vegan marshmallow crème; a non-invasive digital pet thermometer; a drawing app that utilizes augmented reality; a line of Filipino American sauces and condiments.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S16E340</episode-num>
+  </programme>
+  <programme start="20261126220000 +0000" stop="20261126230000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Eyewear designed to eliminate eyestrain; an avocado bar serves as healthy fast food; a portable solar cooker; an all-natural beverage; an update on Honeyfund, a unique wedding gift registry that helps couples raise funds for their dream honeymoon.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S22E203</episode-num>
+  </programme>
+  <programme start="20261126230000 +0000" stop="20261127000000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Guest shark Ashton Kutcher; a device to make baby's feeding time easier; wearable transportation; drinking vinegars; protecting consumers from hacking; an update on Pipcorn.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S1E129</episode-num>
+  </programme>
+  <programme start="20261127000000 +0000" stop="20261127010000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">At-home seafood steam pots; fried chicken-shaped ice cream; a magnetic solution to safely secure skis and snowboards; a portable backyard golf game; Todd Graves guest sharks.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2E348</episode-num>
+  </programme>
+  <programme start="20261127010000 +0000" stop="20261127020000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Beauty products specially formulated for redheads; a stylish bird house equipped with a hidden camera; an app for plant care; a splash guard for bath time.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S14E338</episode-num>
+  </programme>
+  <programme start="20261127020000 +0000" stop="20261127030000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A handheld personal groomer; a picturesque alternative to a cat perch; scented nasal diffusers; gourmet mozzarella sticks one can make at home.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S17E363</episode-num>
+  </programme>
+  <programme start="20261127030000 +0000" stop="20261127040000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">A self-tanner geared toward men; a new-and-improved flashlight; a reusable cup service for marathoners; an authentic instant pho.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S8E354</episode-num>
+  </programme>
+  <programme start="20261127040000 +0000" stop="20261127050000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Cosmetics to help clear up imperfections; a water sports apparel brand; a product designed to keep dogs hydrated during any excursion; a solution to drinking a beverage while fishing; an update on Doughp.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S23E301</episode-num>
+  </programme>
+  <programme start="20261127050000 +0000" stop="20261127060000 +0000" channel="CNBC">
+    <title lang="en">Shark Tank</title>
+    <desc lang="en">Guest shark Peter Jones; a one-of-a-kind custom song service; a work-from-home product that increases productivity; a mail-order meal service; an apparel company focused on helping clean the world's oceans.</desc>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <icon src="https://cdn.drgundry.com/wp-content/uploads/2026/01/logo-cnbc.png" />
+    <episode-num system="onscreen">S2E280</episode-num>
   </programme>
 </tv>
